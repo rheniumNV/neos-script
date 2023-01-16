@@ -8,6 +8,7 @@
     "build": "run-s build:*",
     "build:jsx-runtime": "tsc --project ./src/jsx-runtime",
     "build:neos": "tsc --project ./src/neos",
+    "generate:components": "ts-node ./src/dev/componentGenerator",
     "prepare": "npm run build"
   },
   "keywords": [

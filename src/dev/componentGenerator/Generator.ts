@@ -76,7 +76,7 @@ const anyType = {
 export function generateComponent({
   fixedName,
   fullName,
-  members,
+  members: rawMembers,
   types,
   depth,
 }: {
@@ -86,6 +86,12 @@ export function generateComponent({
   types: string[];
   depth: number;
 }) {
+  const members = rawMembers.map(({ name, type, default: def, readonly }) => ({
+    name: name === "true" ? "True" : name === "false" ? "False" : name,
+    type,
+    default: def,
+    readonly,
+  }));
   const interfaceUnit = _(members)
     .map(({ name, type }) => {
       return `${name}?: member<${_.get(TypeMap, type, anyType).define}>;`;

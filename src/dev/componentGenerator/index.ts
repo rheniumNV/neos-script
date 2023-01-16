@@ -3,31 +3,32 @@ import { createFile } from "../util";
 import { generateComponent } from "./Generator";
 const Components = require("./Components.json");
 
-const targetComponents = _(Components).filter(
-  ({ name, pathName }) =>
-    _.includes(
-      [
-        "BoxCollider",
-        "Grabbable",
-        "ObjectRoot",
-        "UI_UnlitMaterial",
-        "SpriteProvider",
-        "StaticTexture2D",
-        "ValueCopy<T>",
-        "BoxMesh",
-        "MeshRenderer",
-        "PBS_Metallic",
-      ],
-      name
-    ) ||
-    _.includes(pathName, "/Assets/") ||
-    _.includes(pathName, "/Data") ||
-    _.includes(pathName, "/UIX/") ||
-    _.includes(pathName, "/Common UI/") ||
-    _.includes(pathName, "/Utility/") ||
-    _.includes(pathName, "/Cloud") ||
-    _.includes(pathName, "/Transform/Drivers/")
-);
+const targetComponents = _(Components);
+// .filter(
+//   ({ name, pathName }) =>
+//     _.includes(
+//       [
+//         "BoxCollider",
+//         "Grabbable",
+//         "ObjectRoot",
+//         "UI_UnlitMaterial",
+//         "SpriteProvider",
+//         "StaticTexture2D",
+//         "ValueCopy<T>",
+//         "BoxMesh",
+//         "MeshRenderer",
+//         "PBS_Metallic",
+//       ],
+//       name
+//     ) ||
+//     _.includes(pathName, "/Assets/") ||
+//     _.includes(pathName, "/Data") ||
+//     _.includes(pathName, "/UIX/") ||
+//     _.includes(pathName, "/Common UI/") ||
+//     _.includes(pathName, "/Utility/") ||
+//     _.includes(pathName, "/Cloud") ||
+//     _.includes(pathName, "/Transform/Drivers/")
+// );
 
 targetComponents.forEach(
   ({
