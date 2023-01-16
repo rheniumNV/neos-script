@@ -1,0 +1,39 @@
+import { member, Member, Component } from "../../../../core";
+    
+    declare global {
+      namespace JSX {
+        interface IntrinsicElements {
+          component: any;
+        }
+      }
+    }
+    export interface TorqueEstimateNodeInput {
+        
+        id?:string;
+        persistentId?:string;
+        updateOrder?:member<number>;
+        Enabled?: member<boolean>;
+_activeVisual?: member<any>;
+InitialTorque?: member<any>;
+Drag?: member<any>;
+Time?: member<any>;
+    }
+    
+    export function TorqueEstimateNode(props: TorqueEstimateNodeInput){
+      const { id, persistentId, updateOrder, Enabled,
+_activeVisual,
+InitialTorque,
+Drag,
+Time, } = props;
+    
+      return (
+        <Component type="FrooxEngine.LogiX.Math.TorqueEstimateNode" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.CleanupRef\`1[FrooxEngine.Slot]`} name="_activeVisual" id={typeof _activeVisual === "object" && "id" in _activeVisual ? _activeVisual?.id : undefined} value={typeof _activeVisual === "object" && "value" in _activeVisual ? _activeVisual?.value : _activeVisual} /* default: ID0 */  />
+<Member type={`FrooxEngine.LogiX.Input\`1[BaseX.float3]`} name="InitialTorque" id={typeof InitialTorque === "object" && "id" in InitialTorque ? InitialTorque?.id : undefined} value={typeof InitialTorque === "object" && "value" in InitialTorque ? InitialTorque?.value : InitialTorque} /* default: ID0 */  />
+<Member type={`FrooxEngine.LogiX.Input\`1[System.Single]`} name="Drag" id={typeof Drag === "object" && "id" in Drag ? Drag?.id : undefined} value={typeof Drag === "object" && "value" in Drag ? Drag?.value : Drag} /* default: ID0 */  />
+<Member type={`FrooxEngine.LogiX.Input\`1[System.Single]`} name="Time" id={typeof Time === "object" && "id" in Time ? Time?.id : undefined} value={typeof Time === "object" && "value" in Time ? Time?.value : Time} /* default: ID0 */  />
+        </Component>
+      );
+    };
+    

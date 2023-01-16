@@ -1,0 +1,33 @@
+import { member, Member, Component } from "../../core";
+    
+    declare global {
+      namespace JSX {
+        interface IntrinsicElements {
+          component: any;
+        }
+      }
+    }
+    export interface IcoSphereMeshGizmoInput {
+        
+        id?:string;
+        persistentId?:string;
+        updateOrder?:member<number>;
+        Enabled?: member<boolean>;
+_target?: member<any>;
+_sphereGizmo?: member<any>;
+    }
+    
+    export function IcoSphereMeshGizmo(props: IcoSphereMeshGizmoInput){
+      const { id, persistentId, updateOrder, Enabled,
+_target,
+_sphereGizmo, } = props;
+    
+      return (
+        <Component type="FrooxEngine.IcoSphereMeshGizmo" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.RelayRef\`1[FrooxEngine.IcoSphereMesh]`} name="_target" id={typeof _target === "object" && "id" in _target ? _target?.id : undefined} value={typeof _target === "object" && "value" in _target ? _target?.value : _target} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.SphereGizmo]`} name="_sphereGizmo" id={typeof _sphereGizmo === "object" && "id" in _sphereGizmo ? _sphereGizmo?.id : undefined} value={typeof _sphereGizmo === "object" && "value" in _sphereGizmo ? _sphereGizmo?.value : _sphereGizmo} /* default: ID0 */  />
+        </Component>
+      );
+    };
+    

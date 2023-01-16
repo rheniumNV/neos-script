@@ -1,0 +1,51 @@
+import { member, Member, Component } from "../../core";
+    
+    declare global {
+      namespace JSX {
+        interface IntrinsicElements {
+          component: any;
+        }
+      }
+    }
+    export interface FontMaterialInput {
+        
+        id?:string;
+        persistentId?:string;
+        updateOrder?:member<number>;
+        Enabled?: member<boolean>;
+OutlineThickness?: member<number>;
+OutlineColor?: member<[number, number, number, number]>;
+FaceSoftness?: member<number>;
+FaceDilate?: member<number>;
+Culling?: member<any>;
+ZTest?: member<any>;
+RenderQueue?: member<number>;
+_convertedMaterial?: member<any>;
+    }
+    
+    export function FontMaterial(props: FontMaterialInput){
+      const { id, persistentId, updateOrder, Enabled,
+OutlineThickness,
+OutlineColor,
+FaceSoftness,
+FaceDilate,
+Culling,
+ZTest,
+RenderQueue,
+_convertedMaterial, } = props;
+    
+      return (
+        <Component type="FrooxEngine.FontMaterial" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.Sync\`1[System.Single]`} name="OutlineThickness" id={typeof OutlineThickness === "object" && "id" in OutlineThickness ? OutlineThickness?.id : undefined} value={typeof OutlineThickness === "object" && "value" in OutlineThickness ? OutlineThickness?.value : OutlineThickness} /* default: 0 */  />
+<Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="OutlineColor" id={typeof OutlineColor === "object" && "id" in OutlineColor ? OutlineColor?.id : undefined} value={typeof OutlineColor === "object" && "value" in OutlineColor ? OutlineColor?.value : OutlineColor} /* default: [0; 0; 0; 0] */  />
+<Member type={`FrooxEngine.Sync\`1[System.Single]`} name="FaceSoftness" id={typeof FaceSoftness === "object" && "id" in FaceSoftness ? FaceSoftness?.id : undefined} value={typeof FaceSoftness === "object" && "value" in FaceSoftness ? FaceSoftness?.value : FaceSoftness} /* default: 0 */  />
+<Member type={`FrooxEngine.Sync\`1[System.Single]`} name="FaceDilate" id={typeof FaceDilate === "object" && "id" in FaceDilate ? FaceDilate?.id : undefined} value={typeof FaceDilate === "object" && "value" in FaceDilate ? FaceDilate?.value : FaceDilate} /* default: 0 */  />
+<Member type={`FrooxEngine.Sync\`1[FrooxEngine.Culling]`} name="Culling" id={typeof Culling === "object" && "id" in Culling ? Culling?.id : undefined} value={typeof Culling === "object" && "value" in Culling ? Culling?.value : Culling} /* default: Off */  />
+<Member type={`FrooxEngine.Sync\`1[FrooxEngine.ZTest]`} name="ZTest" id={typeof ZTest === "object" && "id" in ZTest ? ZTest?.id : undefined} value={typeof ZTest === "object" && "value" in ZTest ? ZTest?.value : ZTest} /* default: Less */  />
+<Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="RenderQueue" id={typeof RenderQueue === "object" && "id" in RenderQueue ? RenderQueue?.id : undefined} value={typeof RenderQueue === "object" && "value" in RenderQueue ? RenderQueue?.value : RenderQueue} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.TextUnlitMaterial]`} name="_convertedMaterial" id={typeof _convertedMaterial === "object" && "id" in _convertedMaterial ? _convertedMaterial?.id : undefined} value={typeof _convertedMaterial === "object" && "value" in _convertedMaterial ? _convertedMaterial?.value : _convertedMaterial} /* default: ID0 */  />
+        </Component>
+      );
+    };
+    
