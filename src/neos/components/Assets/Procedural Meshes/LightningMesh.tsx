@@ -24,6 +24,7 @@ Ends?: member<any>;
 DualSided?: member<boolean>;
 Point0?: member<[number, number, number]>;
 Point1?: member<[number, number, number]>;
+StrikeLevels?: member<any>;
     }
     
     export function LightningMesh(props: LightningMeshInput){
@@ -38,7 +39,8 @@ Shading,
 Ends,
 DualSided,
 Point0,
-Point1, } = props;
+Point1,
+StrikeLevels, } = props;
     
       return (
         <Component type="FrooxEngine.LightningMesh" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -54,6 +56,7 @@ Point1, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="DualSided" id={typeof DualSided === "object" && "id" in DualSided ? DualSided?.id : undefined} value={typeof DualSided === "object" && "value" in DualSided ? DualSided?.value : DualSided} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.float3]`} name="Point0" id={typeof Point0 === "object" && "id" in Point0 ? Point0?.id : undefined} value={typeof Point0 === "object" && "value" in Point0 ? Point0?.value : Point0} /* default: [0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.float3]`} name="Point1" id={typeof Point1 === "object" && "id" in Point1 ? Point1?.id : undefined} value={typeof Point1 === "object" && "value" in Point1 ? Point1?.value : Point1} /* default: [0; 0; 0] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.LightningMesh+StrikeProperties]`} name="StrikeLevels" id={typeof StrikeLevels === "object" && "id" in StrikeLevels ? StrikeLevels?.id : undefined} value={typeof StrikeLevels === "object" && "value" in StrikeLevels ? StrikeLevels?.value : StrikeLevels} /* default: FrooxEngine.SyncList`1[FrooxEngine.LightningMesh+StrikeProperties] */  />
         </Component>
       );
     };

@@ -13,6 +13,7 @@ import { member, Member, Component } from "../../../core";
         persistentId?:string;
         updateOrder?:member<number>;
         Enabled?: member<boolean>;
+_objectGroups?: member<any>;
 _currentAnchor?: member<any>;
 AutoAddNameBadge?: member<boolean>;
 AutoAddIconBadge?: member<boolean>;
@@ -31,6 +32,7 @@ _autoLiveIndicator?: member<any>;
     
     export function AvatarManager(props: AvatarManagerInput){
       const { id, persistentId, updateOrder, Enabled,
+_objectGroups,
 _currentAnchor,
 AutoAddNameBadge,
 AutoAddIconBadge,
@@ -49,6 +51,7 @@ _autoLiveIndicator, } = props;
       return (
         <Component type="FrooxEngine.CommonAvatar.AvatarManager" id={id} persistentId={persistentId} updateOrder={updateOrder}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.CommonAvatar.AvatarManager+EquippedGroup]`} name="_objectGroups" id={typeof _objectGroups === "object" && "id" in _objectGroups ? _objectGroups?.id : undefined} value={typeof _objectGroups === "object" && "value" in _objectGroups ? _objectGroups?.value : _objectGroups} /* default: FrooxEngine.SyncList`1[FrooxEngine.CommonAvatar.AvatarManager+EquippedGroup] */  />
 <Member type={`FrooxEngine.LinkRef\`1[FrooxEngine.CommonAvatar.AvatarAnchor]`} name="_currentAnchor" id={typeof _currentAnchor === "object" && "id" in _currentAnchor ? _currentAnchor?.id : undefined} value={typeof _currentAnchor === "object" && "value" in _currentAnchor ? _currentAnchor?.value : _currentAnchor} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AutoAddNameBadge" id={typeof AutoAddNameBadge === "object" && "id" in AutoAddNameBadge ? AutoAddNameBadge?.id : undefined} value={typeof AutoAddNameBadge === "object" && "value" in AutoAddNameBadge ? AutoAddNameBadge?.value : AutoAddNameBadge} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AutoAddIconBadge" id={typeof AutoAddIconBadge === "object" && "id" in AutoAddIconBadge ? AutoAddIconBadge?.id : undefined} value={typeof AutoAddIconBadge === "object" && "value" in AutoAddIconBadge ? AutoAddIconBadge?.value : AutoAddIconBadge} /* default: false */  />

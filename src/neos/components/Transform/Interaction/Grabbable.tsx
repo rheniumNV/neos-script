@@ -23,6 +23,7 @@ EditModeOnly?: member<boolean>;
 AllowSteal?: member<boolean>;
 DropOnDisable?: member<boolean>;
 ActiveUserFilter?: member<any>;
+OnlyUsers?: member<any>;
 Scalable?: member<boolean>;
 Receivable?: member<boolean>;
 AllowOnlyPhysicalGrab?: member<boolean>;
@@ -44,6 +45,7 @@ EditModeOnly,
 AllowSteal,
 DropOnDisable,
 ActiveUserFilter,
+OnlyUsers,
 Scalable,
 Receivable,
 AllowOnlyPhysicalGrab,
@@ -65,6 +67,7 @@ __legacyActiveUserRootOnly, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AllowSteal" id={typeof AllowSteal === "object" && "id" in AllowSteal ? AllowSteal?.id : undefined} value={typeof AllowSteal === "object" && "value" in AllowSteal ? AllowSteal?.value : AllowSteal} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="DropOnDisable" id={typeof DropOnDisable === "object" && "id" in DropOnDisable ? DropOnDisable?.id : undefined} value={typeof DropOnDisable === "object" && "value" in DropOnDisable ? DropOnDisable?.value : DropOnDisable} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.ActiveUserHandling]`} name="ActiveUserFilter" id={typeof ActiveUserFilter === "object" && "id" in ActiveUserFilter ? ActiveUserFilter?.id : undefined} value={typeof ActiveUserFilter === "object" && "value" in ActiveUserFilter ? ActiveUserFilter?.value : ActiveUserFilter} /* default: Disabled */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.UserRef]`} name="OnlyUsers" id={typeof OnlyUsers === "object" && "id" in OnlyUsers ? OnlyUsers?.id : undefined} value={typeof OnlyUsers === "object" && "value" in OnlyUsers ? OnlyUsers?.value : OnlyUsers} /* default: FrooxEngine.SyncList`1[FrooxEngine.UserRef] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Scalable" id={typeof Scalable === "object" && "id" in Scalable ? Scalable?.id : undefined} value={typeof Scalable === "object" && "value" in Scalable ? Scalable?.value : Scalable} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Receivable" id={typeof Receivable === "object" && "id" in Receivable ? Receivable?.id : undefined} value={typeof Receivable === "object" && "value" in Receivable ? Receivable?.value : Receivable} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AllowOnlyPhysicalGrab" id={typeof AllowOnlyPhysicalGrab === "object" && "id" in AllowOnlyPhysicalGrab ? AllowOnlyPhysicalGrab?.id : undefined} value={typeof AllowOnlyPhysicalGrab === "object" && "value" in AllowOnlyPhysicalGrab ? AllowOnlyPhysicalGrab?.value : AllowOnlyPhysicalGrab} /* default: false */  />

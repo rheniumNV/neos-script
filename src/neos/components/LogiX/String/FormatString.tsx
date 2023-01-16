@@ -15,6 +15,7 @@ import { member, Member, Component } from "../../../core";
         Enabled?: member<boolean>;
 _activeVisual?: member<any>;
 Format?: member<any>;
+Parameters?: member<any>;
 FormatProvider?: member<any>;
     }
     
@@ -22,6 +23,7 @@ FormatProvider?: member<any>;
       const { id, persistentId, updateOrder, Enabled,
 _activeVisual,
 Format,
+Parameters,
 FormatProvider, } = props;
     
       return (
@@ -29,6 +31,7 @@ FormatProvider, } = props;
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.CleanupRef\`1[FrooxEngine.Slot]`} name="_activeVisual" id={typeof _activeVisual === "object" && "id" in _activeVisual ? _activeVisual?.id : undefined} value={typeof _activeVisual === "object" && "value" in _activeVisual ? _activeVisual?.value : _activeVisual} /* default: ID0 */  />
 <Member type={`FrooxEngine.LogiX.Input\`1[System.String]`} name="Format" id={typeof Format === "object" && "id" in Format ? Format?.id : undefined} value={typeof Format === "object" && "value" in Format ? Format?.value : Format} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.LogiX.Input\`1[System.Object]]`} name="Parameters" id={typeof Parameters === "object" && "id" in Parameters ? Parameters?.id : undefined} value={typeof Parameters === "object" && "value" in Parameters ? Parameters?.value : Parameters} /* default: FrooxEngine.SyncList`1[FrooxEngine.LogiX.Input`1[System.Object]] */  />
 <Member type={`FrooxEngine.LogiX.Input\`1[System.IFormatProvider]`} name="FormatProvider" id={typeof FormatProvider === "object" && "id" in FormatProvider ? FormatProvider?.id : undefined} value={typeof FormatProvider === "object" && "value" in FormatProvider ? FormatProvider?.value : FormatProvider} /* default: ID0 */  />
         </Component>
       );

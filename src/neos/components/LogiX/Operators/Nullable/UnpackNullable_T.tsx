@@ -12,15 +12,21 @@ import { member, Member, Component } from "../../../../core";
         id?:string;
         persistentId?:string;
         updateOrder?:member<number>;
-        
+        Enabled?: member<boolean>;
+_activeVisual?: member<any>;
+Nullable?: member<any>;
     }
     
     export function UnpackNullable_T(props: UnpackNullable_TInput){
-      const {type:{T:{name: T},}, id, persistentId, updateOrder,  } = props;
+      const {type:{T:{name: T},}, id, persistentId, updateOrder, Enabled,
+_activeVisual,
+Nullable, } = props;
     
       return (
         <Component type={`FrooxEngine.LogiX.Operators.UnpackNullable\`1[${[T,]}]`} id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.CleanupRef\`1[FrooxEngine.Slot]`} name="_activeVisual" id={typeof _activeVisual === "object" && "id" in _activeVisual ? _activeVisual?.id : undefined} value={typeof _activeVisual === "object" && "value" in _activeVisual ? _activeVisual?.value : _activeVisual} /* default: ID0 */  />
+<Member type={`FrooxEngine.LogiX.Input\`1[System.Nullable\`1[${T}]]`} name="Nullable" id={typeof Nullable === "object" && "id" in Nullable ? Nullable?.id : undefined} value={typeof Nullable === "object" && "value" in Nullable ? Nullable?.value : Nullable} /* default: null */  />
         </Component>
       );
     };

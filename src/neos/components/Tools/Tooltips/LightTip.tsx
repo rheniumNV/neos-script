@@ -29,6 +29,7 @@ SpotAngle?: member<number>;
 PointLightVisual?: member<any>;
 SpotlightVisual?: member<any>;
 DirectionalLightVisual?: member<any>;
+ColorIndicators?: member<any>;
 ShowGizmo?: member<boolean>;
 _pointLightItem?: member<any>;
 _spotLightItem?: member<any>;
@@ -55,6 +56,7 @@ SpotAngle,
 PointLightVisual,
 SpotlightVisual,
 DirectionalLightVisual,
+ColorIndicators,
 ShowGizmo,
 _pointLightItem,
 _spotLightItem,
@@ -81,6 +83,7 @@ _colorPicker, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="PointLightVisual" id={typeof PointLightVisual === "object" && "id" in PointLightVisual ? PointLightVisual?.id : undefined} value={typeof PointLightVisual === "object" && "value" in PointLightVisual ? PointLightVisual?.value : PointLightVisual} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="SpotlightVisual" id={typeof SpotlightVisual === "object" && "id" in SpotlightVisual ? SpotlightVisual?.id : undefined} value={typeof SpotlightVisual === "object" && "value" in SpotlightVisual ? SpotlightVisual?.value : SpotlightVisual} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="DirectionalLightVisual" id={typeof DirectionalLightVisual === "object" && "id" in DirectionalLightVisual ? DirectionalLightVisual?.id : undefined} value={typeof DirectionalLightVisual === "object" && "value" in DirectionalLightVisual ? DirectionalLightVisual?.value : DirectionalLightVisual} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.FieldDrive\`1[BaseX.color]]`} name="ColorIndicators" id={typeof ColorIndicators === "object" && "id" in ColorIndicators ? ColorIndicators?.id : undefined} value={typeof ColorIndicators === "object" && "value" in ColorIndicators ? ColorIndicators?.value : ColorIndicators} /* default: FrooxEngine.SyncList`1[FrooxEngine.FieldDrive`1[BaseX.color]] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="ShowGizmo" id={typeof ShowGizmo === "object" && "id" in ShowGizmo ? ShowGizmo?.id : undefined} value={typeof ShowGizmo === "object" && "value" in ShowGizmo ? ShowGizmo?.value : ShowGizmo} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosLogoMenuController+Item]`} name="_pointLightItem" id={typeof _pointLightItem === "object" && "id" in _pointLightItem ? _pointLightItem?.id : undefined} value={typeof _pointLightItem === "object" && "value" in _pointLightItem ? _pointLightItem?.value : _pointLightItem} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosLogoMenuController+Item]`} name="_spotLightItem" id={typeof _spotLightItem === "object" && "id" in _spotLightItem ? _spotLightItem?.id : undefined} value={typeof _spotLightItem === "object" && "value" in _spotLightItem ? _spotLightItem?.value : _spotLightItem} /* default: ID0 */  />

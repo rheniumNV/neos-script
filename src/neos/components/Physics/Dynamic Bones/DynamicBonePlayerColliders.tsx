@@ -18,6 +18,7 @@ DisableDefaultHeadColliders?: member<boolean>;
 DisableDefaultBodyColliders?: member<boolean>;
 DisableDefaultLeftHandColliders?: member<boolean>;
 DisableDefaultRightHandColliders?: member<boolean>;
+Colliders?: member<any>;
     }
     
     export function DynamicBonePlayerColliders(props: DynamicBonePlayerCollidersInput){
@@ -26,7 +27,8 @@ VisualizeColliders,
 DisableDefaultHeadColliders,
 DisableDefaultBodyColliders,
 DisableDefaultLeftHandColliders,
-DisableDefaultRightHandColliders, } = props;
+DisableDefaultRightHandColliders,
+Colliders, } = props;
     
       return (
         <Component type="FrooxEngine.DynamicBonePlayerColliders" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -36,6 +38,7 @@ DisableDefaultRightHandColliders, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="DisableDefaultBodyColliders" id={typeof DisableDefaultBodyColliders === "object" && "id" in DisableDefaultBodyColliders ? DisableDefaultBodyColliders?.id : undefined} value={typeof DisableDefaultBodyColliders === "object" && "value" in DisableDefaultBodyColliders ? DisableDefaultBodyColliders?.value : DisableDefaultBodyColliders} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="DisableDefaultLeftHandColliders" id={typeof DisableDefaultLeftHandColliders === "object" && "id" in DisableDefaultLeftHandColliders ? DisableDefaultLeftHandColliders?.id : undefined} value={typeof DisableDefaultLeftHandColliders === "object" && "value" in DisableDefaultLeftHandColliders ? DisableDefaultLeftHandColliders?.value : DisableDefaultLeftHandColliders} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="DisableDefaultRightHandColliders" id={typeof DisableDefaultRightHandColliders === "object" && "id" in DisableDefaultRightHandColliders ? DisableDefaultRightHandColliders?.id : undefined} value={typeof DisableDefaultRightHandColliders === "object" && "value" in DisableDefaultRightHandColliders ? DisableDefaultRightHandColliders?.value : DisableDefaultRightHandColliders} /* default: false */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.IDynamicBoneCollider]`} name="Colliders" id={typeof Colliders === "object" && "id" in Colliders ? Colliders?.id : undefined} value={typeof Colliders === "object" && "value" in Colliders ? Colliders?.value : Colliders} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.IDynamicBoneCollider] */  />
         </Component>
       );
     };

@@ -22,6 +22,8 @@ ElementAxisXAlign?: member<any>;
 ElementAxisYAlign?: member<any>;
 ElementAxisZAlign?: member<any>;
 Separation?: member<number>;
+ExcludeList?: member<any>;
+_targets?: member<any>;
     }
     
     export function AxisAligner(props: AxisAlignerInput){
@@ -34,7 +36,9 @@ GlobalAxisZAlign,
 ElementAxisXAlign,
 ElementAxisYAlign,
 ElementAxisZAlign,
-Separation, } = props;
+Separation,
+ExcludeList,
+_targets, } = props;
     
       return (
         <Component type="FrooxEngine.AxisAligner" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -48,6 +52,8 @@ Separation, } = props;
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.AxisAligner+Align]`} name="ElementAxisYAlign" id={typeof ElementAxisYAlign === "object" && "id" in ElementAxisYAlign ? ElementAxisYAlign?.id : undefined} value={typeof ElementAxisYAlign === "object" && "value" in ElementAxisYAlign ? ElementAxisYAlign?.value : ElementAxisYAlign} /* default: Neg */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.AxisAligner+Align]`} name="ElementAxisZAlign" id={typeof ElementAxisZAlign === "object" && "id" in ElementAxisZAlign ? ElementAxisZAlign?.id : undefined} value={typeof ElementAxisZAlign === "object" && "value" in ElementAxisZAlign ? ElementAxisZAlign?.value : ElementAxisZAlign} /* default: Neg */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Separation" id={typeof Separation === "object" && "id" in Separation ? Separation?.id : undefined} value={typeof Separation === "object" && "value" in Separation ? Separation?.value : Separation} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.IBounded]`} name="ExcludeList" id={typeof ExcludeList === "object" && "id" in ExcludeList ? ExcludeList?.id : undefined} value={typeof ExcludeList === "object" && "value" in ExcludeList ? ExcludeList?.value : ExcludeList} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.IBounded] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.AxisAligner+Target]`} name="_targets" id={typeof _targets === "object" && "id" in _targets ? _targets?.id : undefined} value={typeof _targets === "object" && "value" in _targets ? _targets?.value : _targets} /* default: FrooxEngine.SyncList`1[FrooxEngine.AxisAligner+Target] */  />
         </Component>
       );
     };

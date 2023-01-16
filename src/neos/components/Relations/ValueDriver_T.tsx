@@ -12,15 +12,21 @@ import { member, Member, Component } from "../../core";
         id?:string;
         persistentId?:string;
         updateOrder?:member<number>;
-        
+        Enabled?: member<boolean>;
+ValueSource?: member<any>;
+DriveTarget?: member<any>;
     }
     
     export function ValueDriver_T(props: ValueDriver_TInput){
-      const {type:{T:{name: T},}, id, persistentId, updateOrder,  } = props;
+      const {type:{T:{name: T},}, id, persistentId, updateOrder, Enabled,
+ValueSource,
+DriveTarget, } = props;
     
       return (
         <Component type={`FrooxEngine.ValueDriver\`1[${[T,]}]`} id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.IValue\`1[${T}]]`} name="ValueSource" id={typeof ValueSource === "object" && "id" in ValueSource ? ValueSource?.id : undefined} value={typeof ValueSource === "object" && "value" in ValueSource ? ValueSource?.value : ValueSource} /* default: null */  />
+<Member type={`FrooxEngine.FieldDrive\`1[${T}]`} name="DriveTarget" id={typeof DriveTarget === "object" && "id" in DriveTarget ? DriveTarget?.id : undefined} value={typeof DriveTarget === "object" && "value" in DriveTarget ? DriveTarget?.value : DriveTarget} /* default: null */  />
         </Component>
       );
     };

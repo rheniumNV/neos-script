@@ -21,6 +21,7 @@ _overrideActiveTool?: member<any>;
 _gripPosesGenerated?: member<boolean>;
 GlueMode?: member<any>;
 _indicatorColor?: member<any>;
+_activeGlues?: member<any>;
     }
     
     export function GlueTip(props: GlueTipInput){
@@ -32,7 +33,8 @@ EquipName,
 _overrideActiveTool,
 _gripPosesGenerated,
 GlueMode,
-_indicatorColor, } = props;
+_indicatorColor,
+_activeGlues, } = props;
     
       return (
         <Component type="FrooxEngine.GlueTip" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -45,6 +47,7 @@ _indicatorColor, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_gripPosesGenerated" id={typeof _gripPosesGenerated === "object" && "id" in _gripPosesGenerated ? _gripPosesGenerated?.id : undefined} value={typeof _gripPosesGenerated === "object" && "value" in _gripPosesGenerated ? _gripPosesGenerated?.value : _gripPosesGenerated} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.Glue+Mode]`} name="GlueMode" id={typeof GlueMode === "object" && "id" in GlueMode ? GlueMode?.id : undefined} value={typeof GlueMode === "object" && "value" in GlueMode ? GlueMode?.value : GlueMode} /* default: ParentObjects */  />
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.color]`} name="_indicatorColor" id={typeof _indicatorColor === "object" && "id" in _indicatorColor ? _indicatorColor?.id : undefined} value={typeof _indicatorColor === "object" && "value" in _indicatorColor ? _indicatorColor?.value : _indicatorColor} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.Glue]`} name="_activeGlues" id={typeof _activeGlues === "object" && "id" in _activeGlues ? _activeGlues?.id : undefined} value={typeof _activeGlues === "object" && "value" in _activeGlues ? _activeGlues?.value : _activeGlues} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.Glue] */  />
         </Component>
       );
     };

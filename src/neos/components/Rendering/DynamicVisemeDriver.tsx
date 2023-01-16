@@ -16,13 +16,15 @@ import { member, Member, Component } from "../../core";
 Source?: member<any>;
 MouthTrackingSource?: member<any>;
 VoiceMouthSupressWeight?: member<number>;
+Drivers?: member<any>;
     }
     
     export function DynamicVisemeDriver(props: DynamicVisemeDriverInput){
       const { id, persistentId, updateOrder, Enabled,
 Source,
 MouthTrackingSource,
-VoiceMouthSupressWeight, } = props;
+VoiceMouthSupressWeight,
+Drivers, } = props;
     
       return (
         <Component type="FrooxEngine.DynamicVisemeDriver" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -30,6 +32,7 @@ VoiceMouthSupressWeight, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.VisemeAnalyzer]`} name="Source" id={typeof Source === "object" && "id" in Source ? Source?.id : undefined} value={typeof Source === "object" && "value" in Source ? Source?.value : Source} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.IMouthTrackingSourceComponent]`} name="MouthTrackingSource" id={typeof MouthTrackingSource === "object" && "id" in MouthTrackingSource ? MouthTrackingSource?.id : undefined} value={typeof MouthTrackingSource === "object" && "value" in MouthTrackingSource ? MouthTrackingSource?.value : MouthTrackingSource} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="VoiceMouthSupressWeight" id={typeof VoiceMouthSupressWeight === "object" && "id" in VoiceMouthSupressWeight ? VoiceMouthSupressWeight?.id : undefined} value={typeof VoiceMouthSupressWeight === "object" && "value" in VoiceMouthSupressWeight ? VoiceMouthSupressWeight?.value : VoiceMouthSupressWeight} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.DynamicVisemeDriver+TargetDriver]`} name="Drivers" id={typeof Drivers === "object" && "id" in Drivers ? Drivers?.id : undefined} value={typeof Drivers === "object" && "value" in Drivers ? Drivers?.value : Drivers} /* default: FrooxEngine.SyncList`1[FrooxEngine.DynamicVisemeDriver+TargetDriver] */  />
         </Component>
       );
     };

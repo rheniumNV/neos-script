@@ -19,6 +19,7 @@ AvatarHeight?: member<number>;
 UserResizeThreshold?: member<number>;
 FeetIgnoreOtherPlayers?: member<boolean>;
 FeetCollisionListMode?: member<any>;
+FeetCollisionList?: member<any>;
 HeadMaxFixDistance?: member<number>;
 ForceUseFeetProxies?: member<boolean>;
 ForceUsePelvisProxy?: member<boolean>;
@@ -49,6 +50,7 @@ HoverVelocityThreshold?: member<number>;
 HorizontalBodyAngle?: member<number>;
 SupressWalkAnimationWhenHorizontal?: member<boolean>;
 AlwaysUseTrackersWhenHorizontal?: member<boolean>;
+Gaits?: member<any>;
 GaitTransitionSpeed?: member<number>;
 GaitMovementDirectionSmoothSpeed?: member<number>;
 RigCollidersRadiusRatio?: member<number>;
@@ -117,6 +119,7 @@ _leftFootRelativeToRoot?: member<any>;
 _rightFootRelativeToRoot?: member<any>;
 _locomotionOffset?: member<any>;
 _simplifiedColliderEnabled?: member<any>;
+_rigCollidersEnabledStates?: member<any>;
 _horizontalTrackingLocked?: member<boolean>;
     }
     
@@ -128,6 +131,7 @@ AvatarHeight,
 UserResizeThreshold,
 FeetIgnoreOtherPlayers,
 FeetCollisionListMode,
+FeetCollisionList,
 HeadMaxFixDistance,
 ForceUseFeetProxies,
 ForceUsePelvisProxy,
@@ -158,6 +162,7 @@ HoverVelocityThreshold,
 HorizontalBodyAngle,
 SupressWalkAnimationWhenHorizontal,
 AlwaysUseTrackersWhenHorizontal,
+Gaits,
 GaitTransitionSpeed,
 GaitMovementDirectionSmoothSpeed,
 RigCollidersRadiusRatio,
@@ -226,6 +231,7 @@ _leftFootRelativeToRoot,
 _rightFootRelativeToRoot,
 _locomotionOffset,
 _simplifiedColliderEnabled,
+_rigCollidersEnabledStates,
 _horizontalTrackingLocked, } = props;
     
       return (
@@ -237,6 +243,7 @@ _horizontalTrackingLocked, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="UserResizeThreshold" id={typeof UserResizeThreshold === "object" && "id" in UserResizeThreshold ? UserResizeThreshold?.id : undefined} value={typeof UserResizeThreshold === "object" && "value" in UserResizeThreshold ? UserResizeThreshold?.value : UserResizeThreshold} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="FeetIgnoreOtherPlayers" id={typeof FeetIgnoreOtherPlayers === "object" && "id" in FeetIgnoreOtherPlayers ? FeetIgnoreOtherPlayers?.id : undefined} value={typeof FeetIgnoreOtherPlayers === "object" && "value" in FeetIgnoreOtherPlayers ? FeetIgnoreOtherPlayers?.value : FeetIgnoreOtherPlayers} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.ListFilterMode]`} name="FeetCollisionListMode" id={typeof FeetCollisionListMode === "object" && "id" in FeetCollisionListMode ? FeetCollisionListMode?.id : undefined} value={typeof FeetCollisionListMode === "object" && "value" in FeetCollisionListMode ? FeetCollisionListMode?.value : FeetCollisionListMode} /* default: Whitelist */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.Slot]`} name="FeetCollisionList" id={typeof FeetCollisionList === "object" && "id" in FeetCollisionList ? FeetCollisionList?.id : undefined} value={typeof FeetCollisionList === "object" && "value" in FeetCollisionList ? FeetCollisionList?.value : FeetCollisionList} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.Slot] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="HeadMaxFixDistance" id={typeof HeadMaxFixDistance === "object" && "id" in HeadMaxFixDistance ? HeadMaxFixDistance?.id : undefined} value={typeof HeadMaxFixDistance === "object" && "value" in HeadMaxFixDistance ? HeadMaxFixDistance?.value : HeadMaxFixDistance} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="ForceUseFeetProxies" id={typeof ForceUseFeetProxies === "object" && "id" in ForceUseFeetProxies ? ForceUseFeetProxies?.id : undefined} value={typeof ForceUseFeetProxies === "object" && "value" in ForceUseFeetProxies ? ForceUseFeetProxies?.value : ForceUseFeetProxies} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="ForceUsePelvisProxy" id={typeof ForceUsePelvisProxy === "object" && "id" in ForceUsePelvisProxy ? ForceUsePelvisProxy?.id : undefined} value={typeof ForceUsePelvisProxy === "object" && "value" in ForceUsePelvisProxy ? ForceUsePelvisProxy?.value : ForceUsePelvisProxy} /* default: false */  />
@@ -267,6 +274,7 @@ _horizontalTrackingLocked, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="HorizontalBodyAngle" id={typeof HorizontalBodyAngle === "object" && "id" in HorizontalBodyAngle ? HorizontalBodyAngle?.id : undefined} value={typeof HorizontalBodyAngle === "object" && "value" in HorizontalBodyAngle ? HorizontalBodyAngle?.value : HorizontalBodyAngle} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="SupressWalkAnimationWhenHorizontal" id={typeof SupressWalkAnimationWhenHorizontal === "object" && "id" in SupressWalkAnimationWhenHorizontal ? SupressWalkAnimationWhenHorizontal?.id : undefined} value={typeof SupressWalkAnimationWhenHorizontal === "object" && "value" in SupressWalkAnimationWhenHorizontal ? SupressWalkAnimationWhenHorizontal?.value : SupressWalkAnimationWhenHorizontal} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AlwaysUseTrackersWhenHorizontal" id={typeof AlwaysUseTrackersWhenHorizontal === "object" && "id" in AlwaysUseTrackersWhenHorizontal ? AlwaysUseTrackersWhenHorizontal?.id : undefined} value={typeof AlwaysUseTrackersWhenHorizontal === "object" && "value" in AlwaysUseTrackersWhenHorizontal ? AlwaysUseTrackersWhenHorizontal?.value : AlwaysUseTrackersWhenHorizontal} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.FinalIK.VRIKAvatar+Gait]`} name="Gaits" id={typeof Gaits === "object" && "id" in Gaits ? Gaits?.id : undefined} value={typeof Gaits === "object" && "value" in Gaits ? Gaits?.value : Gaits} /* default: FrooxEngine.SyncList`1[FrooxEngine.FinalIK.VRIKAvatar+Gait] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="GaitTransitionSpeed" id={typeof GaitTransitionSpeed === "object" && "id" in GaitTransitionSpeed ? GaitTransitionSpeed?.id : undefined} value={typeof GaitTransitionSpeed === "object" && "value" in GaitTransitionSpeed ? GaitTransitionSpeed?.value : GaitTransitionSpeed} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="GaitMovementDirectionSmoothSpeed" id={typeof GaitMovementDirectionSmoothSpeed === "object" && "id" in GaitMovementDirectionSmoothSpeed ? GaitMovementDirectionSmoothSpeed?.id : undefined} value={typeof GaitMovementDirectionSmoothSpeed === "object" && "value" in GaitMovementDirectionSmoothSpeed ? GaitMovementDirectionSmoothSpeed?.value : GaitMovementDirectionSmoothSpeed} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="RigCollidersRadiusRatio" id={typeof RigCollidersRadiusRatio === "object" && "id" in RigCollidersRadiusRatio ? RigCollidersRadiusRatio?.id : undefined} value={typeof RigCollidersRadiusRatio === "object" && "value" in RigCollidersRadiusRatio ? RigCollidersRadiusRatio?.value : RigCollidersRadiusRatio} /* default: 0 */  />
@@ -335,6 +343,7 @@ _horizontalTrackingLocked, } = props;
 <Member type={`FrooxEngine.Sync\`1[BaseX.floatQ]`} name="_rightFootRelativeToRoot" id={typeof _rightFootRelativeToRoot === "object" && "id" in _rightFootRelativeToRoot ? _rightFootRelativeToRoot?.id : undefined} value={typeof _rightFootRelativeToRoot === "object" && "value" in _rightFootRelativeToRoot ? _rightFootRelativeToRoot?.value : _rightFootRelativeToRoot} /* default: [0; 0; 0; 1] */  />
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.float3]`} name="_locomotionOffset" id={typeof _locomotionOffset === "object" && "id" in _locomotionOffset ? _locomotionOffset?.id : undefined} value={typeof _locomotionOffset === "object" && "value" in _locomotionOffset ? _locomotionOffset?.value : _locomotionOffset} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[System.Boolean]`} name="_simplifiedColliderEnabled" id={typeof _simplifiedColliderEnabled === "object" && "id" in _simplifiedColliderEnabled ? _simplifiedColliderEnabled?.id : undefined} value={typeof _simplifiedColliderEnabled === "object" && "value" in _simplifiedColliderEnabled ? _simplifiedColliderEnabled?.value : _simplifiedColliderEnabled} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.FieldDrive\`1[System.Boolean]]`} name="_rigCollidersEnabledStates" id={typeof _rigCollidersEnabledStates === "object" && "id" in _rigCollidersEnabledStates ? _rigCollidersEnabledStates?.id : undefined} value={typeof _rigCollidersEnabledStates === "object" && "value" in _rigCollidersEnabledStates ? _rigCollidersEnabledStates?.value : _rigCollidersEnabledStates} /* default: FrooxEngine.SyncList`1[FrooxEngine.FieldDrive`1[System.Boolean]] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_horizontalTrackingLocked" id={typeof _horizontalTrackingLocked === "object" && "id" in _horizontalTrackingLocked ? _horizontalTrackingLocked?.id : undefined} value={typeof _horizontalTrackingLocked === "object" && "value" in _horizontalTrackingLocked ? _horizontalTrackingLocked?.value : _horizontalTrackingLocked} /* default: false */  />
         </Component>
       );

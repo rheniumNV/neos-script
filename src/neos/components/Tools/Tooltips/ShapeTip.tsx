@@ -20,6 +20,7 @@ EquipName?: member<any>;
 _overrideActiveTool?: member<any>;
 _gripPosesGenerated?: member<boolean>;
 activeShape?: member<any>;
+shapes?: member<any>;
 Material?: member<any>;
     }
     
@@ -32,6 +33,7 @@ EquipName,
 _overrideActiveTool,
 _gripPosesGenerated,
 activeShape,
+shapes,
 Material, } = props;
     
       return (
@@ -44,6 +46,7 @@ Material, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.CommonTool]`} name="_overrideActiveTool" id={typeof _overrideActiveTool === "object" && "id" in _overrideActiveTool ? _overrideActiveTool?.id : undefined} value={typeof _overrideActiveTool === "object" && "value" in _overrideActiveTool ? _overrideActiveTool?.value : _overrideActiveTool} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_gripPosesGenerated" id={typeof _gripPosesGenerated === "object" && "id" in _gripPosesGenerated ? _gripPosesGenerated?.id : undefined} value={typeof _gripPosesGenerated === "object" && "value" in _gripPosesGenerated ? _gripPosesGenerated?.value : _gripPosesGenerated} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.ShapeTip+Shape]`} name="activeShape" id={typeof activeShape === "object" && "id" in activeShape ? activeShape?.id : undefined} value={typeof activeShape === "object" && "value" in activeShape ? activeShape?.value : activeShape} /* default: Cube */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.SyncRef\`1[FrooxEngine.Slot]]`} name="shapes" id={typeof shapes === "object" && "id" in shapes ? shapes?.id : undefined} value={typeof shapes === "object" && "value" in shapes ? shapes?.value : shapes} /* default: FrooxEngine.SyncList`1[FrooxEngine.SyncRef`1[FrooxEngine.Slot]] */  />
 <Member type={`FrooxEngine.AssetRef\`1[FrooxEngine.Material]`} name="Material" id={typeof Material === "object" && "id" in Material ? Material?.id : undefined} value={typeof Material === "object" && "value" in Material ? Material?.value : Material} /* default: ID0 */  />
         </Component>
       );

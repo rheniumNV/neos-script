@@ -37,6 +37,7 @@ CurrentStretchRatio?: member<any>;
 StretchRestoreSpeed?: member<number>;
 UseLocalUserSpace?: member<boolean>;
 SimulationSpace?: member<any>;
+StaticColliders?: member<any>;
 VisualizeColliders?: member<boolean>;
 VisualizeBones?: member<boolean>;
 IsGrabbable?: member<boolean>;
@@ -55,6 +56,7 @@ EffectorTarget?: member<any>;
 EffectorBoneIndex?: member<number>;
 EffectorBoneOffset?: member<[number, number, number]>;
 _activeGrabber?: member<any>;
+Bones?: member<any>;
     }
     
     export function DynamicBoneChain(props: DynamicBoneChainInput){
@@ -83,6 +85,7 @@ CurrentStretchRatio,
 StretchRestoreSpeed,
 UseLocalUserSpace,
 SimulationSpace,
+StaticColliders,
 VisualizeColliders,
 VisualizeBones,
 IsGrabbable,
@@ -100,7 +103,8 @@ IgnoreOwnRightHand,
 EffectorTarget,
 EffectorBoneIndex,
 EffectorBoneOffset,
-_activeGrabber, } = props;
+_activeGrabber,
+Bones, } = props;
     
       return (
         <Component type="FrooxEngine.DynamicBoneChain" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -129,6 +133,7 @@ _activeGrabber, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="StretchRestoreSpeed" id={typeof StretchRestoreSpeed === "object" && "id" in StretchRestoreSpeed ? StretchRestoreSpeed?.id : undefined} value={typeof StretchRestoreSpeed === "object" && "value" in StretchRestoreSpeed ? StretchRestoreSpeed?.value : StretchRestoreSpeed} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="UseLocalUserSpace" id={typeof UseLocalUserSpace === "object" && "id" in UseLocalUserSpace ? UseLocalUserSpace?.id : undefined} value={typeof UseLocalUserSpace === "object" && "value" in UseLocalUserSpace ? UseLocalUserSpace?.value : UseLocalUserSpace} /* default: false */  />
 <Member type={`FrooxEngine.RootSpace`} name="SimulationSpace" id={typeof SimulationSpace === "object" && "id" in SimulationSpace ? SimulationSpace?.id : undefined} value={typeof SimulationSpace === "object" && "value" in SimulationSpace ? SimulationSpace?.value : SimulationSpace} /* default: Element:\ ID0,\ Type:\ FrooxEngine\.RootSpace,\ World:\ null,\ IsRemoved:\ false,\ Name:\ \r\n */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.IDynamicBoneCollider]`} name="StaticColliders" id={typeof StaticColliders === "object" && "id" in StaticColliders ? StaticColliders?.id : undefined} value={typeof StaticColliders === "object" && "value" in StaticColliders ? StaticColliders?.value : StaticColliders} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.IDynamicBoneCollider] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="VisualizeColliders-ID" id={typeof VisualizeColliders === "object" && "id" in VisualizeColliders ? VisualizeColliders?.id : undefined} value={typeof VisualizeColliders === "object" && "value" in VisualizeColliders ? VisualizeColliders?.value : VisualizeColliders} /* default: false */ idOnly />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="VisualizeBones-ID" id={typeof VisualizeBones === "object" && "id" in VisualizeBones ? VisualizeBones?.id : undefined} value={typeof VisualizeBones === "object" && "value" in VisualizeBones ? VisualizeBones?.value : VisualizeBones} /* default: false */ idOnly />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="IsGrabbable" id={typeof IsGrabbable === "object" && "id" in IsGrabbable ? IsGrabbable?.id : undefined} value={typeof IsGrabbable === "object" && "value" in IsGrabbable ? IsGrabbable?.value : IsGrabbable} /* default: false */  />
@@ -147,6 +152,7 @@ _activeGrabber, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="EffectorBoneIndex" id={typeof EffectorBoneIndex === "object" && "id" in EffectorBoneIndex ? EffectorBoneIndex?.id : undefined} value={typeof EffectorBoneIndex === "object" && "value" in EffectorBoneIndex ? EffectorBoneIndex?.value : EffectorBoneIndex} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.float3]`} name="EffectorBoneOffset" id={typeof EffectorBoneOffset === "object" && "id" in EffectorBoneOffset ? EffectorBoneOffset?.id : undefined} value={typeof EffectorBoneOffset === "object" && "value" in EffectorBoneOffset ? EffectorBoneOffset?.value : EffectorBoneOffset} /* default: [0; 0; 0] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Grabber]`} name="_activeGrabber" id={typeof _activeGrabber === "object" && "id" in _activeGrabber ? _activeGrabber?.id : undefined} value={typeof _activeGrabber === "object" && "value" in _activeGrabber ? _activeGrabber?.value : _activeGrabber} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.DynamicBoneChain+Bone]`} name="Bones" id={typeof Bones === "object" && "id" in Bones ? Bones?.id : undefined} value={typeof Bones === "object" && "value" in Bones ? Bones?.value : Bones} /* default: FrooxEngine.SyncList`1[FrooxEngine.DynamicBoneChain+Bone] */  />
         </Component>
       );
     };

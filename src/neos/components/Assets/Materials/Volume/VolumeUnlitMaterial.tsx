@@ -27,6 +27,8 @@ HitThreshold?: member<number>;
 InputRange?: member<number>;
 InputOffset?: member<number>;
 UseAlphaChannel?: member<boolean>;
+Slices?: member<any>;
+Highlights?: member<any>;
     }
     
     export function VolumeUnlitMaterial(props: VolumeUnlitMaterialInput){
@@ -44,7 +46,9 @@ AccumulationCutoff,
 HitThreshold,
 InputRange,
 InputOffset,
-UseAlphaChannel, } = props;
+UseAlphaChannel,
+Slices,
+Highlights, } = props;
     
       return (
         <Component type="FrooxEngine.VolumeUnlitMaterial" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -63,6 +67,8 @@ UseAlphaChannel, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="InputRange" id={typeof InputRange === "object" && "id" in InputRange ? InputRange?.id : undefined} value={typeof InputRange === "object" && "value" in InputRange ? InputRange?.value : InputRange} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="InputOffset" id={typeof InputOffset === "object" && "id" in InputOffset ? InputOffset?.id : undefined} value={typeof InputOffset === "object" && "value" in InputOffset ? InputOffset?.value : InputOffset} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="UseAlphaChannel" id={typeof UseAlphaChannel === "object" && "id" in UseAlphaChannel ? UseAlphaChannel?.id : undefined} value={typeof UseAlphaChannel === "object" && "value" in UseAlphaChannel ? UseAlphaChannel?.value : UseAlphaChannel} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.VolumeUnlitMaterial+SlicePlane]`} name="Slices" id={typeof Slices === "object" && "id" in Slices ? Slices?.id : undefined} value={typeof Slices === "object" && "value" in Slices ? Slices?.value : Slices} /* default: FrooxEngine.SyncList`1[FrooxEngine.VolumeUnlitMaterial+SlicePlane] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.VolumeUnlitMaterial+Highlight]`} name="Highlights" id={typeof Highlights === "object" && "id" in Highlights ? Highlights?.id : undefined} value={typeof Highlights === "object" && "value" in Highlights ? Highlights?.value : Highlights} /* default: FrooxEngine.SyncList`1[FrooxEngine.VolumeUnlitMaterial+Highlight] */  />
         </Component>
       );
     };

@@ -20,6 +20,7 @@ EquipName?: member<any>;
 _overrideActiveTool?: member<any>;
 _gripPosesGenerated?: member<boolean>;
 ActiveTooltipIndex?: member<number>;
+Tooltips?: member<any>;
     }
     
     export function TooltipMultiplexer(props: TooltipMultiplexerInput){
@@ -30,7 +31,8 @@ BlockRemoteEquip,
 EquipName,
 _overrideActiveTool,
 _gripPosesGenerated,
-ActiveTooltipIndex, } = props;
+ActiveTooltipIndex,
+Tooltips, } = props;
     
       return (
         <Component type="FrooxEngine.TooltipMultiplexer" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -42,6 +44,7 @@ ActiveTooltipIndex, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.CommonTool]`} name="_overrideActiveTool" id={typeof _overrideActiveTool === "object" && "id" in _overrideActiveTool ? _overrideActiveTool?.id : undefined} value={typeof _overrideActiveTool === "object" && "value" in _overrideActiveTool ? _overrideActiveTool?.value : _overrideActiveTool} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_gripPosesGenerated" id={typeof _gripPosesGenerated === "object" && "id" in _gripPosesGenerated ? _gripPosesGenerated?.id : undefined} value={typeof _gripPosesGenerated === "object" && "value" in _gripPosesGenerated ? _gripPosesGenerated?.value : _gripPosesGenerated} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="ActiveTooltipIndex" id={typeof ActiveTooltipIndex === "object" && "id" in ActiveTooltipIndex ? ActiveTooltipIndex?.id : undefined} value={typeof ActiveTooltipIndex === "object" && "value" in ActiveTooltipIndex ? ActiveTooltipIndex?.value : ActiveTooltipIndex} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.IToolTip]`} name="Tooltips" id={typeof Tooltips === "object" && "id" in Tooltips ? Tooltips?.id : undefined} value={typeof Tooltips === "object" && "value" in Tooltips ? Tooltips?.value : Tooltips} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.IToolTip] */  />
         </Component>
       );
     };

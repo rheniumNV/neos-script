@@ -25,6 +25,7 @@ HorizontalAlign?: member<any>;
 VerticalAlign?: member<any>;
 AlignmentMode?: member<any>;
 Color?: member<[number, number, number, number]>;
+Materials?: member<Array<{ID:string, Data:string}>>;
 LineHeight?: member<number>;
 Bounded?: member<boolean>;
 BoundsSize?: member<[number, number]>;
@@ -54,6 +55,7 @@ HorizontalAlign,
 VerticalAlign,
 AlignmentMode,
 Color,
+Materials,
 LineHeight,
 Bounded,
 BoundsSize,
@@ -83,6 +85,7 @@ _legacyAlign, } = props;
 <Member type={`FrooxEngine.Sync\`1[CodeX.TextVerticalAlignment]`} name="VerticalAlign" id={typeof VerticalAlign === "object" && "id" in VerticalAlign ? VerticalAlign?.id : undefined} value={typeof VerticalAlign === "object" && "value" in VerticalAlign ? VerticalAlign?.value : VerticalAlign} /* default: Top */  />
 <Member type={`FrooxEngine.Sync\`1[CodeX.AlignmentMode]`} name="AlignmentMode" id={typeof AlignmentMode === "object" && "id" in AlignmentMode ? AlignmentMode?.id : undefined} value={typeof AlignmentMode === "object" && "value" in AlignmentMode ? AlignmentMode?.value : AlignmentMode} /* default: Geometric */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="Color" id={typeof Color === "object" && "id" in Color ? Color?.id : undefined} value={typeof Color === "object" && "value" in Color ? Color?.value : Color} /* default: [0; 0; 0; 0] */  />
+<Member type={`FrooxEngine.SyncAssetList\`1[FrooxEngine.Material]`} name="Materials" id={typeof Materials === "object" && "id" in Materials ? Materials?.id : undefined} value={typeof Materials === "object" && "value" in Materials ? Materials?.value : Materials} /* default: FrooxEngine.SyncAssetList`1[FrooxEngine.Material] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="LineHeight" id={typeof LineHeight === "object" && "id" in LineHeight ? LineHeight?.id : undefined} value={typeof LineHeight === "object" && "value" in LineHeight ? LineHeight?.value : LineHeight} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Bounded" id={typeof Bounded === "object" && "id" in Bounded ? Bounded?.id : undefined} value={typeof Bounded === "object" && "value" in Bounded ? Bounded?.value : Bounded} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.float2]`} name="BoundsSize" id={typeof BoundsSize === "object" && "id" in BoundsSize ? BoundsSize?.id : undefined} value={typeof BoundsSize === "object" && "value" in BoundsSize ? BoundsSize?.value : BoundsSize} /* default: [0; 0] */  />

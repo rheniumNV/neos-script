@@ -12,15 +12,24 @@ import { member, Member, Component } from "../../core";
         id?:string;
         persistentId?:string;
         updateOrder?:member<number>;
-        
+        Enabled?: member<boolean>;
+_activeVisual?: member<any>;
+RefTarget?: member<any>;
+_registeredReference?: member<any>;
     }
     
     export function ReferenceNode_T(props: ReferenceNode_TInput){
-      const {type:{T:{name: T},}, id, persistentId, updateOrder,  } = props;
+      const {type:{T:{name: T},}, id, persistentId, updateOrder, Enabled,
+_activeVisual,
+RefTarget,
+_registeredReference, } = props;
     
       return (
         <Component type={`FrooxEngine.LogiX.ReferenceNode\`1[${[T,]}]`} id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.CleanupRef\`1[FrooxEngine.Slot]`} name="_activeVisual" id={typeof _activeVisual === "object" && "id" in _activeVisual ? _activeVisual?.id : undefined} value={typeof _activeVisual === "object" && "value" in _activeVisual ? _activeVisual?.value : _activeVisual} /* default: ID0 */  />
+<Member type={`FrooxEngine.RelayRef\`1[${T}]`} name="RefTarget" id={typeof RefTarget === "object" && "id" in RefTarget ? RefTarget?.id : undefined} value={typeof RefTarget === "object" && "value" in RefTarget ? RefTarget?.value : RefTarget} /* default: null */  />
+<Member type={`FrooxEngine.CleanupRef\`1[FrooxEngine.LogiX.LogixReference]`} name="_registeredReference" id={typeof _registeredReference === "object" && "id" in _registeredReference ? _registeredReference?.id : undefined} value={typeof _registeredReference === "object" && "value" in _registeredReference ? _registeredReference?.value : _registeredReference} /* default: ID0 */  />
         </Component>
       );
     };

@@ -14,6 +14,7 @@ import { member, Member, Component } from "../../core";
         updateOrder?:member<number>;
         Enabled?: member<boolean>;
 swapPanel?: member<any>;
+path?: member<any>;
 _scale?: member<number>;
 _autoScale?: member<boolean>;
 _material?: member<any>;
@@ -60,6 +61,7 @@ ForceAsPointCloud?: member<boolean>;
     export function ModelImportDialog(props: ModelImportDialogInput){
       const { id, persistentId, updateOrder, Enabled,
 swapPanel,
+path,
 _scale,
 _autoScale,
 _material,
@@ -106,6 +108,7 @@ ForceAsPointCloud, } = props;
         <Component type="FrooxEngine.ModelImportDialog" id={id} persistentId={persistentId} updateOrder={updateOrder}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosSwapCanvasPanel]`} name="swapPanel" id={typeof swapPanel === "object" && "id" in swapPanel ? swapPanel?.id : undefined} value={typeof swapPanel === "object" && "value" in swapPanel ? swapPanel?.value : swapPanel} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncDelegateList\`1[System.Action\`1[FrooxEngine.UIX.UIBuilder]]`} name="path" id={typeof path === "object" && "id" in path ? path?.id : undefined} value={typeof path === "object" && "value" in path ? path?.value : path} /* default: FrooxEngine.SyncDelegateList`1[System.Action`1[FrooxEngine.UIX.UIBuilder]] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="_scale" id={typeof _scale === "object" && "id" in _scale ? _scale?.id : undefined} value={typeof _scale === "object" && "value" in _scale ? _scale?.value : _scale} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_autoScale" id={typeof _autoScale === "object" && "id" in _autoScale ? _autoScale?.id : undefined} value={typeof _autoScale === "object" && "value" in _autoScale ? _autoScale?.value : _autoScale} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.ModelImportDialog+MaterialType]`} name="_material" id={typeof _material === "object" && "id" in _material ? _material?.id : undefined} value={typeof _material === "object" && "value" in _material ? _material?.value : _material} /* default: PBS */  />

@@ -32,6 +32,7 @@ DetailNormalMap?: member<any>;
 DetailNormalScale?: member<number>;
 Culling?: member<any>;
 HideSlicers?: member<boolean>;
+Slicers?: member<any>;
 LocalSpace?: member<boolean>;
 EdgeTransitionStart?: member<number>;
 EdgeTransitionEnd?: member<number>;
@@ -68,6 +69,7 @@ DetailNormalMap,
 DetailNormalScale,
 Culling,
 HideSlicers,
+Slicers,
 LocalSpace,
 EdgeTransitionStart,
 EdgeTransitionEnd,
@@ -104,6 +106,7 @@ _transparent, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="DetailNormalScale" id={typeof DetailNormalScale === "object" && "id" in DetailNormalScale ? DetailNormalScale?.id : undefined} value={typeof DetailNormalScale === "object" && "value" in DetailNormalScale ? DetailNormalScale?.value : DetailNormalScale} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.Culling]`} name="Culling" id={typeof Culling === "object" && "id" in Culling ? Culling?.id : undefined} value={typeof Culling === "object" && "value" in Culling ? Culling?.value : Culling} /* default: Off */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="HideSlicers" id={typeof HideSlicers === "object" && "id" in HideSlicers ? HideSlicers?.id : undefined} value={typeof HideSlicers === "object" && "value" in HideSlicers ? HideSlicers?.value : HideSlicers} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.PBS_Slice+Slicer]`} name="Slicers" id={typeof Slicers === "object" && "id" in Slicers ? Slicers?.id : undefined} value={typeof Slicers === "object" && "value" in Slicers ? Slicers?.value : Slicers} /* default: FrooxEngine.SyncList`1[FrooxEngine.PBS_Slice+Slicer] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="LocalSpace" id={typeof LocalSpace === "object" && "id" in LocalSpace ? LocalSpace?.id : undefined} value={typeof LocalSpace === "object" && "value" in LocalSpace ? LocalSpace?.value : LocalSpace} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="EdgeTransitionStart" id={typeof EdgeTransitionStart === "object" && "id" in EdgeTransitionStart ? EdgeTransitionStart?.id : undefined} value={typeof EdgeTransitionStart === "object" && "value" in EdgeTransitionStart ? EdgeTransitionStart?.value : EdgeTransitionStart} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="EdgeTransitionEnd" id={typeof EdgeTransitionEnd === "object" && "id" in EdgeTransitionEnd ? EdgeTransitionEnd?.id : undefined} value={typeof EdgeTransitionEnd === "object" && "value" in EdgeTransitionEnd ? EdgeTransitionEnd?.value : EdgeTransitionEnd} /* default: 0 */  />

@@ -22,6 +22,7 @@ RotationSpeed?: member<number>;
 _menu?: member<any>;
 _progressText?: member<any>;
 _detailText?: member<any>;
+_itemOffsets?: member<any>;
     }
     
     export function NeosLogoMenuProgress(props: NeosLogoMenuProgressInput){
@@ -34,7 +35,8 @@ DetailTextSizeRatio,
 RotationSpeed,
 _menu,
 _progressText,
-_detailText, } = props;
+_detailText,
+_itemOffsets, } = props;
     
       return (
         <Component type="FrooxEngine.NeosLogoMenuProgress" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -48,6 +50,7 @@ _detailText, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosLogoMenuController]`} name="_menu" id={typeof _menu === "object" && "id" in _menu ? _menu?.id : undefined} value={typeof _menu === "object" && "value" in _menu ? _menu?.value : _menu} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.TextRenderer]`} name="_progressText" id={typeof _progressText === "object" && "id" in _progressText ? _progressText?.id : undefined} value={typeof _progressText === "object" && "value" in _progressText ? _progressText?.value : _progressText} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.TextRenderer]`} name="_detailText" id={typeof _detailText === "object" && "id" in _detailText ? _detailText?.id : undefined} value={typeof _detailText === "object" && "value" in _detailText ? _detailText?.value : _detailText} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.FieldDrive\`1[System.Single]]`} name="_itemOffsets" id={typeof _itemOffsets === "object" && "id" in _itemOffsets ? _itemOffsets?.id : undefined} value={typeof _itemOffsets === "object" && "value" in _itemOffsets ? _itemOffsets?.value : _itemOffsets} /* default: FrooxEngine.SyncList`1[FrooxEngine.FieldDrive`1[System.Single]] */  />
         </Component>
       );
     };

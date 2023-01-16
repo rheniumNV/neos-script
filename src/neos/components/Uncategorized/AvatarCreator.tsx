@@ -35,6 +35,7 @@ _setupFaceTracking?: member<boolean>;
 _calibrateFeet?: member<boolean>;
 _calibratePelvis?: member<boolean>;
 _symmetrySetup?: member<boolean>;
+_anchors?: member<any>;
 _scale?: member<number>;
 _protectAvatarEnabled?: member<any>;
 _createEnabled?: member<any>;
@@ -64,6 +65,7 @@ _setupFaceTracking,
 _calibrateFeet,
 _calibratePelvis,
 _symmetrySetup,
+_anchors,
 _scale,
 _protectAvatarEnabled,
 _createEnabled, } = props;
@@ -93,6 +95,7 @@ _createEnabled, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_calibrateFeet" id={typeof _calibrateFeet === "object" && "id" in _calibrateFeet ? _calibrateFeet?.id : undefined} value={typeof _calibrateFeet === "object" && "value" in _calibrateFeet ? _calibrateFeet?.value : _calibrateFeet} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_calibratePelvis" id={typeof _calibratePelvis === "object" && "id" in _calibratePelvis ? _calibratePelvis?.id : undefined} value={typeof _calibratePelvis === "object" && "value" in _calibratePelvis ? _calibratePelvis?.value : _calibratePelvis} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_symmetrySetup" id={typeof _symmetrySetup === "object" && "id" in _symmetrySetup ? _symmetrySetup?.id : undefined} value={typeof _symmetrySetup === "object" && "value" in _symmetrySetup ? _symmetrySetup?.value : _symmetrySetup} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.AvatarCreator+Anchor]`} name="_anchors" id={typeof _anchors === "object" && "id" in _anchors ? _anchors?.id : undefined} value={typeof _anchors === "object" && "value" in _anchors ? _anchors?.value : _anchors} /* default: FrooxEngine.SyncList`1[FrooxEngine.AvatarCreator+Anchor] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="_scale" id={typeof _scale === "object" && "id" in _scale ? _scale?.id : undefined} value={typeof _scale === "object" && "value" in _scale ? _scale?.value : _scale} /* default: 0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[System.Boolean]`} name="_protectAvatarEnabled" id={typeof _protectAvatarEnabled === "object" && "id" in _protectAvatarEnabled ? _protectAvatarEnabled?.id : undefined} value={typeof _protectAvatarEnabled === "object" && "value" in _protectAvatarEnabled ? _protectAvatarEnabled?.value : _protectAvatarEnabled} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[System.Boolean]`} name="_createEnabled" id={typeof _createEnabled === "object" && "id" in _createEnabled ? _createEnabled?.id : undefined} value={typeof _createEnabled === "object" && "value" in _createEnabled ? _createEnabled?.value : _createEnabled} /* default: ID0 */  />

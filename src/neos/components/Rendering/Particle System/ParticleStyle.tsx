@@ -33,6 +33,8 @@ GravityStrength?: member<number>;
 MinStartColor?: member<[number, number, number, number]>;
 MaxStartColor?: member<[number, number, number, number]>;
 UseColorOverLifetime?: member<boolean>;
+AlphaOverLifetime?: member<any>;
+ColorOverLifetime?: member<any>;
 Collisions?: member<boolean>;
 Bounce?: member<number>;
 LifetimeLoss?: member<number>;
@@ -99,6 +101,8 @@ GravityStrength,
 MinStartColor,
 MaxStartColor,
 UseColorOverLifetime,
+AlphaOverLifetime,
+ColorOverLifetime,
 Collisions,
 Bounce,
 LifetimeLoss,
@@ -165,6 +169,8 @@ UseRandomRow, } = props;
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="MinStartColor" id={typeof MinStartColor === "object" && "id" in MinStartColor ? MinStartColor?.id : undefined} value={typeof MinStartColor === "object" && "value" in MinStartColor ? MinStartColor?.value : MinStartColor} /* default: [0; 0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="MaxStartColor" id={typeof MaxStartColor === "object" && "id" in MaxStartColor ? MaxStartColor?.id : undefined} value={typeof MaxStartColor === "object" && "value" in MaxStartColor ? MaxStartColor?.value : MaxStartColor} /* default: [0; 0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="UseColorOverLifetime" id={typeof UseColorOverLifetime === "object" && "id" in UseColorOverLifetime ? UseColorOverLifetime?.id : undefined} value={typeof UseColorOverLifetime === "object" && "value" in UseColorOverLifetime ? UseColorOverLifetime?.value : UseColorOverLifetime} /* default: false */  />
+<Member type={`FrooxEngine.SyncLinear\`1[System.Single]`} name="AlphaOverLifetime" id={typeof AlphaOverLifetime === "object" && "id" in AlphaOverLifetime ? AlphaOverLifetime?.id : undefined} value={typeof AlphaOverLifetime === "object" && "value" in AlphaOverLifetime ? AlphaOverLifetime?.value : AlphaOverLifetime} /* default: FrooxEngine.SyncLinear`1[System.Single] */  />
+<Member type={`FrooxEngine.SyncLinear\`1[BaseX.color]`} name="ColorOverLifetime" id={typeof ColorOverLifetime === "object" && "id" in ColorOverLifetime ? ColorOverLifetime?.id : undefined} value={typeof ColorOverLifetime === "object" && "value" in ColorOverLifetime ? ColorOverLifetime?.value : ColorOverLifetime} /* default: FrooxEngine.SyncLinear`1[BaseX.color] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Collisions" id={typeof Collisions === "object" && "id" in Collisions ? Collisions?.id : undefined} value={typeof Collisions === "object" && "value" in Collisions ? Collisions?.value : Collisions} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Bounce" id={typeof Bounce === "object" && "id" in Bounce ? Bounce?.id : undefined} value={typeof Bounce === "object" && "value" in Bounce ? Bounce?.value : Bounce} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="LifetimeLoss" id={typeof LifetimeLoss === "object" && "id" in LifetimeLoss ? LifetimeLoss?.id : undefined} value={typeof LifetimeLoss === "object" && "value" in LifetimeLoss ? LifetimeLoss?.value : LifetimeLoss} /* default: 0 */  />

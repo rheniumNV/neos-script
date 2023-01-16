@@ -35,14 +35,17 @@ StrokesRootOverride?: member<any>;
 PickMaterials?: member<boolean>;
 PickColors?: member<boolean>;
 CurrentMaterial?: member<any>;
+ColorMappings?: member<any>;
 _colorPicker?: member<any>;
 _pickedColor?: member<[number, number, number, number]>;
+_hideOnStroke?: member<any>;
 _lastUsedMaterial?: member<any>;
 _lastCreatedMaterial?: member<any>;
 MinHullPointDistance?: member<number>;
 FlatShading?: member<boolean>;
 PointSpread?: member<number>;
 TipAnchor?: member<any>;
+MaterialPreviews?: member<any>;
 _currentHull?: member<any>;
 _previewMesh?: member<any>;
 _previewMeshOffset?: member<any>;
@@ -72,14 +75,17 @@ StrokesRootOverride,
 PickMaterials,
 PickColors,
 CurrentMaterial,
+ColorMappings,
 _colorPicker,
 _pickedColor,
+_hideOnStroke,
 _lastUsedMaterial,
 _lastCreatedMaterial,
 MinHullPointDistance,
 FlatShading,
 PointSpread,
 TipAnchor,
+MaterialPreviews,
 _currentHull,
 _previewMesh,
 _previewMeshOffset, } = props;
@@ -109,14 +115,17 @@ _previewMeshOffset, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="PickMaterials" id={typeof PickMaterials === "object" && "id" in PickMaterials ? PickMaterials?.id : undefined} value={typeof PickMaterials === "object" && "value" in PickMaterials ? PickMaterials?.value : PickMaterials} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="PickColors" id={typeof PickColors === "object" && "id" in PickColors ? PickColors?.id : undefined} value={typeof PickColors === "object" && "value" in PickColors ? PickColors?.value : PickColors} /* default: false */  />
 <Member type={`FrooxEngine.AssetRef\`1[FrooxEngine.Material]`} name="CurrentMaterial" id={typeof CurrentMaterial === "object" && "id" in CurrentMaterial ? CurrentMaterial?.id : undefined} value={typeof CurrentMaterial === "object" && "value" in CurrentMaterial ? CurrentMaterial?.value : CurrentMaterial} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.BrushTip+ColorMapping]`} name="ColorMappings" id={typeof ColorMappings === "object" && "id" in ColorMappings ? ColorMappings?.id : undefined} value={typeof ColorMappings === "object" && "value" in ColorMappings ? ColorMappings?.value : ColorMappings} /* default: FrooxEngine.SyncList`1[FrooxEngine.BrushTip+ColorMapping] */  />
 <Member type={`FrooxEngine.SlotCleanupRef\`1[FrooxEngine.NeosColorDialog]`} name="_colorPicker" id={typeof _colorPicker === "object" && "id" in _colorPicker ? _colorPicker?.id : undefined} value={typeof _colorPicker === "object" && "value" in _colorPicker ? _colorPicker?.value : _colorPicker} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="_pickedColor" id={typeof _pickedColor === "object" && "id" in _pickedColor ? _pickedColor?.id : undefined} value={typeof _pickedColor === "object" && "value" in _pickedColor ? _pickedColor?.value : _pickedColor} /* default: [0; 0; 0; 0] */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.Slot]`} name="_hideOnStroke" id={typeof _hideOnStroke === "object" && "id" in _hideOnStroke ? _hideOnStroke?.id : undefined} value={typeof _hideOnStroke === "object" && "value" in _hideOnStroke ? _hideOnStroke?.value : _hideOnStroke} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.Slot] */  />
 <Member type={`FrooxEngine.AssetRef\`1[FrooxEngine.Material]`} name="_lastUsedMaterial" id={typeof _lastUsedMaterial === "object" && "id" in _lastUsedMaterial ? _lastUsedMaterial?.id : undefined} value={typeof _lastUsedMaterial === "object" && "value" in _lastUsedMaterial ? _lastUsedMaterial?.value : _lastUsedMaterial} /* default: ID0 */  />
 <Member type={`FrooxEngine.AssetRef\`1[FrooxEngine.Material]`} name="_lastCreatedMaterial" id={typeof _lastCreatedMaterial === "object" && "id" in _lastCreatedMaterial ? _lastCreatedMaterial?.id : undefined} value={typeof _lastCreatedMaterial === "object" && "value" in _lastCreatedMaterial ? _lastCreatedMaterial?.value : _lastCreatedMaterial} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Double]`} name="MinHullPointDistance" id={typeof MinHullPointDistance === "object" && "id" in MinHullPointDistance ? MinHullPointDistance?.id : undefined} value={typeof MinHullPointDistance === "object" && "value" in MinHullPointDistance ? MinHullPointDistance?.value : MinHullPointDistance} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="FlatShading" id={typeof FlatShading === "object" && "id" in FlatShading ? FlatShading?.id : undefined} value={typeof FlatShading === "object" && "value" in FlatShading ? FlatShading?.value : FlatShading} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="PointSpread" id={typeof PointSpread === "object" && "id" in PointSpread ? PointSpread?.id : undefined} value={typeof PointSpread === "object" && "value" in PointSpread ? PointSpread?.value : PointSpread} /* default: 0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="TipAnchor" id={typeof TipAnchor === "object" && "id" in TipAnchor ? TipAnchor?.id : undefined} value={typeof TipAnchor === "object" && "value" in TipAnchor ? TipAnchor?.value : TipAnchor} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.MeshRenderer]`} name="MaterialPreviews" id={typeof MaterialPreviews === "object" && "id" in MaterialPreviews ? MaterialPreviews?.id : undefined} value={typeof MaterialPreviews === "object" && "value" in MaterialPreviews ? MaterialPreviews?.value : MaterialPreviews} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.MeshRenderer] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.ConvexHullMesh]`} name="_currentHull" id={typeof _currentHull === "object" && "id" in _currentHull ? _currentHull?.id : undefined} value={typeof _currentHull === "object" && "value" in _currentHull ? _currentHull?.value : _currentHull} /* default: ID0 */  />
 <Member type={`FrooxEngine.DriveRef\`1[FrooxEngine.ConvexHullMesh]`} name="_previewMesh" id={typeof _previewMesh === "object" && "id" in _previewMesh ? _previewMesh?.id : undefined} value={typeof _previewMesh === "object" && "value" in _previewMesh ? _previewMesh?.value : _previewMesh} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.float3]`} name="_previewMeshOffset" id={typeof _previewMeshOffset === "object" && "id" in _previewMeshOffset ? _previewMeshOffset?.id : undefined} value={typeof _previewMeshOffset === "object" && "value" in _previewMeshOffset ? _previewMeshOffset?.value : _previewMeshOffset} /* default: ID0 */  />

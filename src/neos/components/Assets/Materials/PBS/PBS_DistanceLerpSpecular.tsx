@@ -35,6 +35,7 @@ EmissionColorFrom?: member<[number, number, number, number]>;
 EmissionColorTo?: member<[number, number, number, number]>;
 OverrideDisplacementDirection?: member<any>;
 LocalSpace?: member<boolean>;
+Points?: member<any>;
 Culling?: member<any>;
 Transparent?: member<boolean>;
 OffsetFactor?: member<number>;
@@ -70,6 +71,7 @@ EmissionColorFrom,
 EmissionColorTo,
 OverrideDisplacementDirection,
 LocalSpace,
+Points,
 Culling,
 Transparent,
 OffsetFactor,
@@ -105,6 +107,7 @@ _transparent, } = props;
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="EmissionColorTo" id={typeof EmissionColorTo === "object" && "id" in EmissionColorTo ? EmissionColorTo?.id : undefined} value={typeof EmissionColorTo === "object" && "value" in EmissionColorTo ? EmissionColorTo?.value : EmissionColorTo} /* default: [0; 0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Nullable\`1[BaseX.float3]]`} name="OverrideDisplacementDirection" id={typeof OverrideDisplacementDirection === "object" && "id" in OverrideDisplacementDirection ? OverrideDisplacementDirection?.id : undefined} value={typeof OverrideDisplacementDirection === "object" && "value" in OverrideDisplacementDirection ? OverrideDisplacementDirection?.value : OverrideDisplacementDirection} /* default: <i>null</i> */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="LocalSpace" id={typeof LocalSpace === "object" && "id" in LocalSpace ? LocalSpace?.id : undefined} value={typeof LocalSpace === "object" && "value" in LocalSpace ? LocalSpace?.value : LocalSpace} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.PBS_DistanceLerpMaterial+Point]`} name="Points" id={typeof Points === "object" && "id" in Points ? Points?.id : undefined} value={typeof Points === "object" && "value" in Points ? Points?.value : Points} /* default: FrooxEngine.SyncList`1[FrooxEngine.PBS_DistanceLerpMaterial+Point] */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.Culling]`} name="Culling" id={typeof Culling === "object" && "id" in Culling ? Culling?.id : undefined} value={typeof Culling === "object" && "value" in Culling ? Culling?.value : Culling} /* default: Off */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Transparent" id={typeof Transparent === "object" && "id" in Transparent ? Transparent?.id : undefined} value={typeof Transparent === "object" && "value" in Transparent ? Transparent?.value : Transparent} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="OffsetFactor" id={typeof OffsetFactor === "object" && "id" in OffsetFactor ? OffsetFactor?.id : undefined} value={typeof OffsetFactor === "object" && "value" in OffsetFactor ? OffsetFactor?.value : OffsetFactor} /* default: 0 */  />

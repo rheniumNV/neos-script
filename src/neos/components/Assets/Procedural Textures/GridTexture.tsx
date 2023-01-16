@@ -23,6 +23,7 @@ Size?: member<[number, number]>;
 Mipmaps?: member<boolean>;
 Format?: member<any>;
 BackgroundColor?: member<[number, number, number, number]>;
+Grids?: member<any>;
     }
     
     export function GridTexture(props: GridTextureInput){
@@ -36,7 +37,8 @@ MipmapBias,
 Size,
 Mipmaps,
 Format,
-BackgroundColor, } = props;
+BackgroundColor,
+Grids, } = props;
     
       return (
         <Component type="FrooxEngine.GridTexture" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -51,6 +53,7 @@ BackgroundColor, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Mipmaps" id={typeof Mipmaps === "object" && "id" in Mipmaps ? Mipmaps?.id : undefined} value={typeof Mipmaps === "object" && "value" in Mipmaps ? Mipmaps?.value : Mipmaps} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[CodeX.TextureFormat]`} name="Format" id={typeof Format === "object" && "id" in Format ? Format?.id : undefined} value={typeof Format === "object" && "value" in Format ? Format?.value : Format} /* default: Unknown */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="BackgroundColor" id={typeof BackgroundColor === "object" && "id" in BackgroundColor ? BackgroundColor?.id : undefined} value={typeof BackgroundColor === "object" && "value" in BackgroundColor ? BackgroundColor?.value : BackgroundColor} /* default: [0; 0; 0; 0] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.GridTexture+Grid]`} name="Grids" id={typeof Grids === "object" && "id" in Grids ? Grids?.id : undefined} value={typeof Grids === "object" && "value" in Grids ? Grids?.value : Grids} /* default: FrooxEngine.SyncList`1[FrooxEngine.GridTexture+Grid] */  />
         </Component>
       );
     };

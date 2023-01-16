@@ -20,6 +20,8 @@ RolloffMode?: member<any>;
 PlayPointMode?: member<any>;
 ChildLimit?: member<number>;
 FilterTag?: member<any>;
+ParentedClips?: member<any>;
+UnparentedClips?: member<any>;
     }
     
     export function ChildParentAudioClipPlayer(props: ChildParentAudioClipPlayerInput){
@@ -30,7 +32,9 @@ MaxDistance,
 RolloffMode,
 PlayPointMode,
 ChildLimit,
-FilterTag, } = props;
+FilterTag,
+ParentedClips,
+UnparentedClips, } = props;
     
       return (
         <Component type="FrooxEngine.ChildParentAudioClipPlayer" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -42,6 +46,8 @@ FilterTag, } = props;
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.ChildParentAudioClipPlayer+PointMode]`} name="PlayPointMode" id={typeof PlayPointMode === "object" && "id" in PlayPointMode ? PlayPointMode?.id : undefined} value={typeof PlayPointMode === "object" && "value" in PlayPointMode ? PlayPointMode?.value : PlayPointMode} /* default: ParentOrigin */  />
 <Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="ChildLimit" id={typeof ChildLimit === "object" && "id" in ChildLimit ? ChildLimit?.id : undefined} value={typeof ChildLimit === "object" && "value" in ChildLimit ? ChildLimit?.value : ChildLimit} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.String]`} name="FilterTag" id={typeof FilterTag === "object" && "id" in FilterTag ? FilterTag?.id : undefined} value={typeof FilterTag === "object" && "value" in FilterTag ? FilterTag?.value : FilterTag} /* default: <i>null</i> */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.RandomAudioClipPlayerBase+ClipData]`} name="ParentedClips" id={typeof ParentedClips === "object" && "id" in ParentedClips ? ParentedClips?.id : undefined} value={typeof ParentedClips === "object" && "value" in ParentedClips ? ParentedClips?.value : ParentedClips} /* default: FrooxEngine.SyncList`1[FrooxEngine.RandomAudioClipPlayerBase+ClipData] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.RandomAudioClipPlayerBase+ClipData]`} name="UnparentedClips" id={typeof UnparentedClips === "object" && "id" in UnparentedClips ? UnparentedClips?.id : undefined} value={typeof UnparentedClips === "object" && "value" in UnparentedClips ? UnparentedClips?.value : UnparentedClips} /* default: FrooxEngine.SyncList`1[FrooxEngine.RandomAudioClipPlayerBase+ClipData] */  />
         </Component>
       );
     };

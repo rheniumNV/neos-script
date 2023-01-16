@@ -42,6 +42,8 @@ OnItemPress?: member<any>;
 OnDisabledItemPress?: member<any>;
 HighPriorityIntegration?: member<boolean>;
 _fontMaterial?: member<any>;
+_items?: member<any>;
+_subItems?: member<any>;
 _itemsRoot?: member<any>;
     }
     
@@ -76,6 +78,8 @@ OnItemPress,
 OnDisabledItemPress,
 HighPriorityIntegration,
 _fontMaterial,
+_items,
+_subItems,
 _itemsRoot, } = props;
     
       return (
@@ -110,6 +114,8 @@ _itemsRoot, } = props;
 <Member type={`FrooxEngine.SyncDelegate\`1[FrooxEngine.DashItemEventHandler]`} name="OnDisabledItemPress" id={typeof OnDisabledItemPress === "object" && "id" in OnDisabledItemPress ? OnDisabledItemPress?.id : undefined} value={typeof OnDisabledItemPress === "object" && "value" in OnDisabledItemPress ? OnDisabledItemPress?.value : OnDisabledItemPress} /* default: FrooxEngine.WorldDelegate */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="HighPriorityIntegration" id={typeof HighPriorityIntegration === "object" && "id" in HighPriorityIntegration ? HighPriorityIntegration?.id : undefined} value={typeof HighPriorityIntegration === "object" && "value" in HighPriorityIntegration ? HighPriorityIntegration?.value : HighPriorityIntegration} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.TextUnlitMaterial]`} name="_fontMaterial" id={typeof _fontMaterial === "object" && "id" in _fontMaterial ? _fontMaterial?.id : undefined} value={typeof _fontMaterial === "object" && "value" in _fontMaterial ? _fontMaterial?.value : _fontMaterial} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.NeosDash+Item]`} name="_items" id={typeof _items === "object" && "id" in _items ? _items?.id : undefined} value={typeof _items === "object" && "value" in _items ? _items?.value : _items} /* default: FrooxEngine.SyncList`1[FrooxEngine.NeosDash+Item] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.NeosDash+Item]`} name="_subItems" id={typeof _subItems === "object" && "id" in _subItems ? _subItems?.id : undefined} value={typeof _subItems === "object" && "value" in _subItems ? _subItems?.value : _subItems} /* default: FrooxEngine.SyncList`1[FrooxEngine.NeosDash+Item] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="_itemsRoot" id={typeof _itemsRoot === "object" && "id" in _itemsRoot ? _itemsRoot?.id : undefined} value={typeof _itemsRoot === "object" && "value" in _itemsRoot ? _itemsRoot?.value : _itemsRoot} /* default: ID0 */  />
         </Component>
       );

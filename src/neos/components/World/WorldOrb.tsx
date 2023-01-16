@@ -15,6 +15,7 @@ import { member, Member, Component } from "../../core";
         Enabled?: member<boolean>;
 SessionStartingUser?: member<any>;
 URL?: member<any>;
+ActiveSessionURLs?: member<any>;
 CreateIfNotExists?: member<any>;
 OpenActionOverride?: member<any>;
 Visit?: member<any>;
@@ -58,6 +59,7 @@ _lastFlash?: member<number>;
       const { id, persistentId, updateOrder, Enabled,
 SessionStartingUser,
 URL,
+ActiveSessionURLs,
 CreateIfNotExists,
 OpenActionOverride,
 Visit,
@@ -101,6 +103,7 @@ _lastFlash, } = props;
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.User]`} name="SessionStartingUser" id={typeof SessionStartingUser === "object" && "id" in SessionStartingUser ? SessionStartingUser?.id : undefined} value={typeof SessionStartingUser === "object" && "value" in SessionStartingUser ? SessionStartingUser?.value : SessionStartingUser} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Uri]`} name="URL" id={typeof URL === "object" && "id" in URL ? URL?.id : undefined} value={typeof URL === "object" && "value" in URL ? URL?.value : URL} /* default: <i>null</i> */  />
+<Member type={`FrooxEngine.SyncFieldList\`1[System.Uri]`} name="ActiveSessionURLs" id={typeof ActiveSessionURLs === "object" && "id" in ActiveSessionURLs ? ActiveSessionURLs?.id : undefined} value={typeof ActiveSessionURLs === "object" && "value" in ActiveSessionURLs ? ActiveSessionURLs?.value : ActiveSessionURLs} /* default: FrooxEngine.SyncFieldList`1[System.Uri] */  />
 <Member type={`FrooxEngine.SyncDelegate\`1[FrooxEngine.WorldCreator]`} name="CreateIfNotExists" id={typeof CreateIfNotExists === "object" && "id" in CreateIfNotExists ? CreateIfNotExists?.id : undefined} value={typeof CreateIfNotExists === "object" && "value" in CreateIfNotExists ? CreateIfNotExists?.value : CreateIfNotExists} /* default: FrooxEngine.WorldDelegate */  />
 <Member type={`FrooxEngine.SyncDelegate\`1[System.Action\`1[FrooxEngine.WorldOrb]]`} name="OpenActionOverride" id={typeof OpenActionOverride === "object" && "id" in OpenActionOverride ? OpenActionOverride?.id : undefined} value={typeof OpenActionOverride === "object" && "value" in OpenActionOverride ? OpenActionOverride?.value : OpenActionOverride} /* default: FrooxEngine.WorldDelegate */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.WorldOrb+VisitState]`} name="Visit" id={typeof Visit === "object" && "id" in Visit ? Visit?.id : undefined} value={typeof Visit === "object" && "value" in Visit ? Visit?.value : Visit} /* default: Visited */  />

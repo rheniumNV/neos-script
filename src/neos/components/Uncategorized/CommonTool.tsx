@@ -41,6 +41,7 @@ _holderRotationOffset?: member<any>;
 _holderRotationReference?: member<any>;
 _originalTwistOffset?: member<number>;
 _userspaceToggleIndicator?: member<any>;
+_settingSyncs?: member<any>;
 TooltipHolder?: member<any>;
 ShowInteractionHints?: member<boolean>;
 _grabberSphereActive?: member<any>;
@@ -85,6 +86,7 @@ _holderRotationOffset,
 _holderRotationReference,
 _originalTwistOffset,
 _userspaceToggleIndicator,
+_settingSyncs,
 TooltipHolder,
 ShowInteractionHints,
 _grabberSphereActive,
@@ -129,6 +131,7 @@ _itemShelf, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Nullable\`1[BaseX.floatQ]]`} name="_holderRotationReference" id={typeof _holderRotationReference === "object" && "id" in _holderRotationReference ? _holderRotationReference?.id : undefined} value={typeof _holderRotationReference === "object" && "value" in _holderRotationReference ? _holderRotationReference?.value : _holderRotationReference} /* default: <i>null</i> */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="_originalTwistOffset" id={typeof _originalTwistOffset === "object" && "id" in _originalTwistOffset ? _originalTwistOffset?.id : undefined} value={typeof _originalTwistOffset === "object" && "value" in _originalTwistOffset ? _originalTwistOffset?.value : _originalTwistOffset} /* default: 0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.RingMesh]`} name="_userspaceToggleIndicator" id={typeof _userspaceToggleIndicator === "object" && "id" in _userspaceToggleIndicator ? _userspaceToggleIndicator?.id : undefined} value={typeof _userspaceToggleIndicator === "object" && "value" in _userspaceToggleIndicator ? _userspaceToggleIndicator?.value : _userspaceToggleIndicator} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.SettingSync]`} name="_settingSyncs" id={typeof _settingSyncs === "object" && "id" in _settingSyncs ? _settingSyncs?.id : undefined} value={typeof _settingSyncs === "object" && "value" in _settingSyncs ? _settingSyncs?.value : _settingSyncs} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.SettingSync] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="TooltipHolder" id={typeof TooltipHolder === "object" && "id" in TooltipHolder ? TooltipHolder?.id : undefined} value={typeof TooltipHolder === "object" && "value" in TooltipHolder ? TooltipHolder?.value : TooltipHolder} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="ShowInteractionHints" id={typeof ShowInteractionHints === "object" && "id" in ShowInteractionHints ? ShowInteractionHints?.id : undefined} value={typeof ShowInteractionHints === "object" && "value" in ShowInteractionHints ? ShowInteractionHints?.value : ShowInteractionHints} /* default: false */  />
 <Member type={`FrooxEngine.FieldDrive\`1[System.Boolean]`} name="_grabberSphereActive" id={typeof _grabberSphereActive === "object" && "id" in _grabberSphereActive ? _grabberSphereActive?.id : undefined} value={typeof _grabberSphereActive === "object" && "value" in _grabberSphereActive ? _grabberSphereActive?.value : _grabberSphereActive} /* default: ID0 */  />

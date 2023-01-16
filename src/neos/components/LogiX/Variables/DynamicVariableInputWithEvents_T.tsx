@@ -12,15 +12,30 @@ import { member, Member, Component } from "../../../core";
         id?:string;
         persistentId?:string;
         updateOrder?:member<number>;
-        
+        Enabled?: member<boolean>;
+_activeVisual?: member<any>;
+_variableName?: member<any>;
+DetectingUser?: member<any>;
+OnSpaceLinked?: member<any>;
+OnSpaceUnlinked?: member<any>;
     }
     
     export function DynamicVariableInputWithEvents_T(props: DynamicVariableInputWithEvents_TInput){
-      const {type:{T:{name: T},}, id, persistentId, updateOrder,  } = props;
+      const {type:{T:{name: T},}, id, persistentId, updateOrder, Enabled,
+_activeVisual,
+_variableName,
+DetectingUser,
+OnSpaceLinked,
+OnSpaceUnlinked, } = props;
     
       return (
         <Component type={`FrooxEngine.LogiX.Data.DynamicVariableInputWithEvents\`1[${[T,]}]`} id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.CleanupRef\`1[FrooxEngine.Slot]`} name="_activeVisual" id={typeof _activeVisual === "object" && "id" in _activeVisual ? _activeVisual?.id : undefined} value={typeof _activeVisual === "object" && "value" in _activeVisual ? _activeVisual?.value : _activeVisual} /* default: ID0 */  />
+<Member type={`FrooxEngine.Sync\`1[System.String]`} name="_variableName" id={typeof _variableName === "object" && "id" in _variableName ? _variableName?.id : undefined} value={typeof _variableName === "object" && "value" in _variableName ? _variableName?.value : _variableName} /* default: <i>null</i> */  />
+<Member type={`FrooxEngine.LogiX.Input\`1[FrooxEngine.User]`} name="DetectingUser" id={typeof DetectingUser === "object" && "id" in DetectingUser ? DetectingUser?.id : undefined} value={typeof DetectingUser === "object" && "value" in DetectingUser ? DetectingUser?.value : DetectingUser} /* default: null */  />
+<Member type={`FrooxEngine.LogiX.Impulse`} name="OnSpaceLinked" id={typeof OnSpaceLinked === "object" && "id" in OnSpaceLinked ? OnSpaceLinked?.id : undefined} value={typeof OnSpaceLinked === "object" && "value" in OnSpaceLinked ? OnSpaceLinked?.value : OnSpaceLinked} /* default: FrooxEngine.WorldDelegate */  />
+<Member type={`FrooxEngine.LogiX.Impulse`} name="OnSpaceUnlinked" id={typeof OnSpaceUnlinked === "object" && "id" in OnSpaceUnlinked ? OnSpaceUnlinked?.id : undefined} value={typeof OnSpaceUnlinked === "object" && "value" in OnSpaceUnlinked ? OnSpaceUnlinked?.value : OnSpaceUnlinked} /* default: FrooxEngine.WorldDelegate */  />
         </Component>
       );
     };

@@ -27,6 +27,8 @@ UnparentEverythingOnDestroy?: member<boolean>;
 TransformRestoreMode?: member<any>;
 RestoreNode?: member<any>;
 RestoreReference?: member<any>;
+Filters?: member<any>;
+UserFilters?: member<any>;
 UserAnchored?: member<any>;
 UserStay?: member<any>;
 UserReleased?: member<any>;
@@ -34,6 +36,7 @@ _originalSpace?: member<any>;
 _originalPosition?: member<[number, number, number]>;
 _originalRotation?: member<any>;
 _originalScale?: member<number>;
+_dummyObjectSlots?: member<any>;
     }
     
     export function AvatarAnchor(props: AvatarAnchorInput){
@@ -52,13 +55,16 @@ UnparentEverythingOnDestroy,
 TransformRestoreMode,
 RestoreNode,
 RestoreReference,
+Filters,
+UserFilters,
 UserAnchored,
 UserStay,
 UserReleased,
 _originalSpace,
 _originalPosition,
 _originalRotation,
-_originalScale, } = props;
+_originalScale,
+_dummyObjectSlots, } = props;
     
       return (
         <Component type="FrooxEngine.CommonAvatar.AvatarAnchor" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -77,6 +83,8 @@ _originalScale, } = props;
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.CommonAvatar.AvatarAnchor+RestoreMode]`} name="TransformRestoreMode" id={typeof TransformRestoreMode === "object" && "id" in TransformRestoreMode ? TransformRestoreMode?.id : undefined} value={typeof TransformRestoreMode === "object" && "value" in TransformRestoreMode ? TransformRestoreMode?.value : TransformRestoreMode} /* default: None */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.UserRoot+UserNode]`} name="RestoreNode" id={typeof RestoreNode === "object" && "id" in RestoreNode ? RestoreNode?.id : undefined} value={typeof RestoreNode === "object" && "value" in RestoreNode ? RestoreNode?.value : RestoreNode} /* default: None */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="RestoreReference" id={typeof RestoreReference === "object" && "id" in RestoreReference ? RestoreReference?.id : undefined} value={typeof RestoreReference === "object" && "value" in RestoreReference ? RestoreReference?.value : RestoreReference} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.CommonAvatar.AvatarAnchor+BodyNodeFilters]`} name="Filters" id={typeof Filters === "object" && "id" in Filters ? Filters?.id : undefined} value={typeof Filters === "object" && "value" in Filters ? Filters?.value : Filters} /* default: FrooxEngine.SyncList`1[FrooxEngine.CommonAvatar.AvatarAnchor+BodyNodeFilters] */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.IAvatarAnchorUserFilter]`} name="UserFilters" id={typeof UserFilters === "object" && "id" in UserFilters ? UserFilters?.id : undefined} value={typeof UserFilters === "object" && "value" in UserFilters ? UserFilters?.value : UserFilters} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.IAvatarAnchorUserFilter] */  />
 <Member type={`FrooxEngine.SyncDelegate\`1[FrooxEngine.CommonAvatar.AvatarAnchorUserEvent]`} name="UserAnchored" id={typeof UserAnchored === "object" && "id" in UserAnchored ? UserAnchored?.id : undefined} value={typeof UserAnchored === "object" && "value" in UserAnchored ? UserAnchored?.value : UserAnchored} /* default: FrooxEngine.WorldDelegate */  />
 <Member type={`FrooxEngine.SyncDelegate\`1[FrooxEngine.CommonAvatar.AvatarAnchorUserEvent]`} name="UserStay" id={typeof UserStay === "object" && "id" in UserStay ? UserStay?.id : undefined} value={typeof UserStay === "object" && "value" in UserStay ? UserStay?.value : UserStay} /* default: FrooxEngine.WorldDelegate */  />
 <Member type={`FrooxEngine.SyncDelegate\`1[FrooxEngine.CommonAvatar.AvatarAnchorUserEvent]`} name="UserReleased" id={typeof UserReleased === "object" && "id" in UserReleased ? UserReleased?.id : undefined} value={typeof UserReleased === "object" && "value" in UserReleased ? UserReleased?.value : UserReleased} /* default: FrooxEngine.WorldDelegate */  />
@@ -84,6 +92,7 @@ _originalScale, } = props;
 <Member type={`FrooxEngine.Sync\`1[BaseX.float3]`} name="_originalPosition" id={typeof _originalPosition === "object" && "id" in _originalPosition ? _originalPosition?.id : undefined} value={typeof _originalPosition === "object" && "value" in _originalPosition ? _originalPosition?.value : _originalPosition} /* default: [0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.floatQ]`} name="_originalRotation" id={typeof _originalRotation === "object" && "id" in _originalRotation ? _originalRotation?.id : undefined} value={typeof _originalRotation === "object" && "value" in _originalRotation ? _originalRotation?.value : _originalRotation} /* default: [0; 0; 0; 1] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="_originalScale" id={typeof _originalScale === "object" && "id" in _originalScale ? _originalScale?.id : undefined} value={typeof _originalScale === "object" && "value" in _originalScale ? _originalScale?.value : _originalScale} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.CommonAvatar.AvatarObjectSlot]`} name="_dummyObjectSlots" id={typeof _dummyObjectSlots === "object" && "id" in _dummyObjectSlots ? _dummyObjectSlots?.id : undefined} value={typeof _dummyObjectSlots === "object" && "value" in _dummyObjectSlots ? _dummyObjectSlots?.value : _dummyObjectSlots} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.CommonAvatar.AvatarObjectSlot] */  />
         </Component>
       );
     };

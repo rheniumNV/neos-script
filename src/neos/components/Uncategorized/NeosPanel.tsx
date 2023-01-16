@@ -21,6 +21,8 @@ ShowHandle?: member<boolean>;
 Padding?: member<number>;
 ZPadding?: member<number>;
 Thickness?: member<number>;
+WhiteList?: member<any>;
+BlackList?: member<any>;
 Color?: member<[number, number, number, number]>;
 _material?: member<any>;
 _panelMesh?: member<any>;
@@ -46,6 +48,7 @@ _handleAnchorPoint?: member<any>;
 _handleAnchorPointPosition?: member<any>;
 _userspaceOwner?: member<any>;
 _helpGenerator?: member<any>;
+_titleButtons?: member<any>;
 _highlightedButton?: member<any>;
 _helpDialog?: member<any>;
 _pinButton?: member<any>;
@@ -62,6 +65,8 @@ ShowHandle,
 Padding,
 ZPadding,
 Thickness,
+WhiteList,
+BlackList,
 Color,
 _material,
 _panelMesh,
@@ -87,6 +92,7 @@ _handleAnchorPoint,
 _handleAnchorPointPosition,
 _userspaceOwner,
 _helpGenerator,
+_titleButtons,
 _highlightedButton,
 _helpDialog,
 _pinButton,
@@ -103,6 +109,8 @@ CloseOverride, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Padding" id={typeof Padding === "object" && "id" in Padding ? Padding?.id : undefined} value={typeof Padding === "object" && "value" in Padding ? Padding?.value : Padding} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="ZPadding" id={typeof ZPadding === "object" && "id" in ZPadding ? ZPadding?.id : undefined} value={typeof ZPadding === "object" && "value" in ZPadding ? ZPadding?.value : ZPadding} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Thickness" id={typeof Thickness === "object" && "id" in Thickness ? Thickness?.id : undefined} value={typeof Thickness === "object" && "value" in Thickness ? Thickness?.value : Thickness} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.IBounded]`} name="WhiteList" id={typeof WhiteList === "object" && "id" in WhiteList ? WhiteList?.id : undefined} value={typeof WhiteList === "object" && "value" in WhiteList ? WhiteList?.value : WhiteList} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.IBounded] */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.IBounded]`} name="BlackList" id={typeof BlackList === "object" && "id" in BlackList ? BlackList?.id : undefined} value={typeof BlackList === "object" && "value" in BlackList ? BlackList?.value : BlackList} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.IBounded] */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="Color" id={typeof Color === "object" && "id" in Color ? Color?.id : undefined} value={typeof Color === "object" && "value" in Color ? Color?.value : Color} /* default: [0; 0; 0; 0] */  />
 <Member type={`FrooxEngine.DriveRef\`1[FrooxEngine.PBS_RimMetallic]`} name="_material" id={typeof _material === "object" && "id" in _material ? _material?.id : undefined} value={typeof _material === "object" && "value" in _material ? _material?.value : _material} /* default: ID0 */  />
 <Member type={`FrooxEngine.DriveRef\`1[FrooxEngine.BevelSoliPlaneMesh]`} name="_panelMesh" id={typeof _panelMesh === "object" && "id" in _panelMesh ? _panelMesh?.id : undefined} value={typeof _panelMesh === "object" && "value" in _panelMesh ? _panelMesh?.value : _panelMesh} /* default: ID0 */  />
@@ -128,6 +136,7 @@ CloseOverride, } = props;
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.float3]`} name="_handleAnchorPointPosition" id={typeof _handleAnchorPointPosition === "object" && "id" in _handleAnchorPointPosition ? _handleAnchorPointPosition?.id : undefined} value={typeof _handleAnchorPointPosition === "object" && "value" in _handleAnchorPointPosition ? _handleAnchorPointPosition?.value : _handleAnchorPointPosition} /* default: ID0 */  />
 <Member type={`FrooxEngine.UserRef`} name="_userspaceOwner" id={typeof _userspaceOwner === "object" && "id" in _userspaceOwner ? _userspaceOwner?.id : undefined} value={typeof _userspaceOwner === "object" && "value" in _userspaceOwner ? _userspaceOwner?.value : _userspaceOwner} /* default: Element:\ ID0,\ Type:\ FrooxEngine\.UserRef,\ World:\ null,\ IsRemoved:\ false,\ Name:\ \r\n */  />
 <Member type={`FrooxEngine.SyncDelegate\`1[System.Action\`1[FrooxEngine.NeosCanvasPanel]]`} name="_helpGenerator" id={typeof _helpGenerator === "object" && "id" in _helpGenerator ? _helpGenerator?.id : undefined} value={typeof _helpGenerator === "object" && "value" in _helpGenerator ? _helpGenerator?.value : _helpGenerator} /* default: FrooxEngine.WorldDelegate */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.NeosPanel+TitleButton]`} name="_titleButtons" id={typeof _titleButtons === "object" && "id" in _titleButtons ? _titleButtons?.id : undefined} value={typeof _titleButtons === "object" && "value" in _titleButtons ? _titleButtons?.value : _titleButtons} /* default: FrooxEngine.SyncList`1[FrooxEngine.NeosPanel+TitleButton] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosPanel+TitleButton]`} name="_highlightedButton" id={typeof _highlightedButton === "object" && "id" in _highlightedButton ? _highlightedButton?.id : undefined} value={typeof _highlightedButton === "object" && "value" in _highlightedButton ? _highlightedButton?.value : _highlightedButton} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosCanvasPanel]`} name="_helpDialog" id={typeof _helpDialog === "object" && "id" in _helpDialog ? _helpDialog?.id : undefined} value={typeof _helpDialog === "object" && "value" in _helpDialog ? _helpDialog?.value : _helpDialog} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosPanel+TitleButton]`} name="_pinButton" id={typeof _pinButton === "object" && "id" in _pinButton ? _pinButton?.id : undefined} value={typeof _pinButton === "object" && "value" in _pinButton ? _pinButton?.value : _pinButton} /* default: ID0 */  />

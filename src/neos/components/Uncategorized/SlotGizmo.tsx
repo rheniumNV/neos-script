@@ -35,6 +35,7 @@ _nameActive?: member<any>;
 _xPosSegment?: member<any>;
 _yPosSegment?: member<any>;
 _zPosSegment?: member<any>;
+_boundsAnchorPositions?: member<any>;
 _rootAnchor?: member<any>;
 _translationGizmo?: member<any>;
 _rotationGizmo?: member<any>;
@@ -66,6 +67,7 @@ _nameActive,
 _xPosSegment,
 _yPosSegment,
 _zPosSegment,
+_boundsAnchorPositions,
 _rootAnchor,
 _translationGizmo,
 _rotationGizmo,
@@ -97,6 +99,7 @@ _isLocalSpace, } = props;
 <Member type={`FrooxEngine.DriveRef\`1[FrooxEngine.SegmentMesh]`} name="_xPosSegment" id={typeof _xPosSegment === "object" && "id" in _xPosSegment ? _xPosSegment?.id : undefined} value={typeof _xPosSegment === "object" && "value" in _xPosSegment ? _xPosSegment?.value : _xPosSegment} /* default: ID0 */  />
 <Member type={`FrooxEngine.DriveRef\`1[FrooxEngine.SegmentMesh]`} name="_yPosSegment" id={typeof _yPosSegment === "object" && "id" in _yPosSegment ? _yPosSegment?.id : undefined} value={typeof _yPosSegment === "object" && "value" in _yPosSegment ? _yPosSegment?.value : _yPosSegment} /* default: ID0 */  />
 <Member type={`FrooxEngine.DriveRef\`1[FrooxEngine.SegmentMesh]`} name="_zPosSegment" id={typeof _zPosSegment === "object" && "id" in _zPosSegment ? _zPosSegment?.id : undefined} value={typeof _zPosSegment === "object" && "value" in _zPosSegment ? _zPosSegment?.value : _zPosSegment} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.SlotGizmo+AnchorInfo]`} name="_boundsAnchorPositions" id={typeof _boundsAnchorPositions === "object" && "id" in _boundsAnchorPositions ? _boundsAnchorPositions?.id : undefined} value={typeof _boundsAnchorPositions === "object" && "value" in _boundsAnchorPositions ? _boundsAnchorPositions?.value : _boundsAnchorPositions} /* default: FrooxEngine.SyncList`1[FrooxEngine.SlotGizmo+AnchorInfo] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.PointAnchor]`} name="_rootAnchor" id={typeof _rootAnchor === "object" && "id" in _rootAnchor ? _rootAnchor?.id : undefined} value={typeof _rootAnchor === "object" && "value" in _rootAnchor ? _rootAnchor?.value : _rootAnchor} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.TranslationGizmo]`} name="_translationGizmo" id={typeof _translationGizmo === "object" && "id" in _translationGizmo ? _translationGizmo?.id : undefined} value={typeof _translationGizmo === "object" && "value" in _translationGizmo ? _translationGizmo?.value : _translationGizmo} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.RotationGizmo]`} name="_rotationGizmo" id={typeof _rotationGizmo === "object" && "id" in _rotationGizmo ? _rotationGizmo?.id : undefined} value={typeof _rotationGizmo === "object" && "value" in _rotationGizmo ? _rotationGizmo?.value : _rotationGizmo} /* default: ID0 */  />

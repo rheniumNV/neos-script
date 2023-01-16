@@ -22,6 +22,7 @@ _accessLevel?: member<any>;
 CustomStart?: member<any>;
 _presetIndex?: member<number>;
 _uiBuilt?: member<boolean>;
+_accessLevelRadios?: member<any>;
 _initialized?: member<boolean>;
     }
     
@@ -36,6 +37,7 @@ _accessLevel,
 CustomStart,
 _presetIndex,
 _uiBuilt,
+_accessLevelRadios,
 _initialized, } = props;
     
       return (
@@ -50,6 +52,7 @@ _initialized, } = props;
 <Member type={`FrooxEngine.SyncDelegate\`1[System.Action\`1[FrooxEngine.NewWorldDialog]]`} name="CustomStart" id={typeof CustomStart === "object" && "id" in CustomStart ? CustomStart?.id : undefined} value={typeof CustomStart === "object" && "value" in CustomStart ? CustomStart?.value : CustomStart} /* default: FrooxEngine.WorldDelegate */  />
 <Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="_presetIndex" id={typeof _presetIndex === "object" && "id" in _presetIndex ? _presetIndex?.id : undefined} value={typeof _presetIndex === "object" && "value" in _presetIndex ? _presetIndex?.value : _presetIndex} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_uiBuilt" id={typeof _uiBuilt === "object" && "id" in _uiBuilt ? _uiBuilt?.id : undefined} value={typeof _uiBuilt === "object" && "value" in _uiBuilt ? _uiBuilt?.value : _uiBuilt} /* default: false */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.UIX.ValueRadio\`1[CloudX.Shared.SessionAccessLevel]]`} name="_accessLevelRadios" id={typeof _accessLevelRadios === "object" && "id" in _accessLevelRadios ? _accessLevelRadios?.id : undefined} value={typeof _accessLevelRadios === "object" && "value" in _accessLevelRadios ? _accessLevelRadios?.value : _accessLevelRadios} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.UIX.ValueRadio`1[CloudX.Shared.SessionAccessLevel]] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_initialized" id={typeof _initialized === "object" && "id" in _initialized ? _initialized?.id : undefined} value={typeof _initialized === "object" && "value" in _initialized ? _initialized?.value : _initialized} /* default: false */  />
         </Component>
       );

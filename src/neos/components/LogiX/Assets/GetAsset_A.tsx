@@ -12,15 +12,21 @@ import { member, Member, Component } from "../../../core";
         id?:string;
         persistentId?:string;
         updateOrder?:member<number>;
-        
+        Enabled?: member<boolean>;
+_activeVisual?: member<any>;
+Provider?: member<any>;
     }
     
     export function GetAsset_A(props: GetAsset_AInput){
-      const {type:{A:{name: A},}, id, persistentId, updateOrder,  } = props;
+      const {type:{A:{name: A},}, id, persistentId, updateOrder, Enabled,
+_activeVisual,
+Provider, } = props;
     
       return (
         <Component type={`FrooxEngine.LogiX.Assets.GetAsset\`1[${[A,]}]`} id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.CleanupRef\`1[FrooxEngine.Slot]`} name="_activeVisual" id={typeof _activeVisual === "object" && "id" in _activeVisual ? _activeVisual?.id : undefined} value={typeof _activeVisual === "object" && "value" in _activeVisual ? _activeVisual?.value : _activeVisual} /* default: ID0 */  />
+<Member type={`FrooxEngine.LogiX.Input\`1[FrooxEngine.IAssetProvider\`1[A]]`} name="Provider" id={typeof Provider === "object" && "id" in Provider ? Provider?.id : undefined} value={typeof Provider === "object" && "value" in Provider ? Provider?.value : Provider} /* default: null */  />
         </Component>
       );
     };

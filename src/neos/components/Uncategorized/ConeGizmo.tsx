@@ -38,6 +38,7 @@ MinAngle?: member<number>;
 MaxAngle?: member<number>;
 _visualRoot?: member<any>;
 _visualRot?: member<any>;
+_handles?: member<any>;
 _heightMesh?: member<any>;
 _coneLineMesh?: member<any>;
     }
@@ -69,6 +70,7 @@ MinAngle,
 MaxAngle,
 _visualRoot,
 _visualRot,
+_handles,
 _heightMesh,
 _coneLineMesh, } = props;
     
@@ -100,6 +102,7 @@ _coneLineMesh, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MaxAngle" id={typeof MaxAngle === "object" && "id" in MaxAngle ? MaxAngle?.id : undefined} value={typeof MaxAngle === "object" && "value" in MaxAngle ? MaxAngle?.value : MaxAngle} /* default: 0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="_visualRoot" id={typeof _visualRoot === "object" && "id" in _visualRoot ? _visualRoot?.id : undefined} value={typeof _visualRoot === "object" && "value" in _visualRoot ? _visualRoot?.value : _visualRoot} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.floatQ]`} name="_visualRot" id={typeof _visualRot === "object" && "id" in _visualRot ? _visualRot?.id : undefined} value={typeof _visualRot === "object" && "value" in _visualRot ? _visualRot?.value : _visualRot} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.ConeGizmo+Handle]`} name="_handles" id={typeof _handles === "object" && "id" in _handles ? _handles?.id : undefined} value={typeof _handles === "object" && "value" in _handles ? _handles?.value : _handles} /* default: FrooxEngine.SyncList`1[FrooxEngine.ConeGizmo+Handle] */  />
 <Member type={`FrooxEngine.DriveRef\`1[FrooxEngine.SegmentMesh]`} name="_heightMesh" id={typeof _heightMesh === "object" && "id" in _heightMesh ? _heightMesh?.id : undefined} value={typeof _heightMesh === "object" && "value" in _heightMesh ? _heightMesh?.value : _heightMesh} /* default: ID0 */  />
 <Member type={`FrooxEngine.DriveRef\`1[FrooxEngine.SegmentMesh]`} name="_coneLineMesh" id={typeof _coneLineMesh === "object" && "id" in _coneLineMesh ? _coneLineMesh?.id : undefined} value={typeof _coneLineMesh === "object" && "value" in _coneLineMesh ? _coneLineMesh?.value : _coneLineMesh} /* default: ID0 */  />
         </Component>

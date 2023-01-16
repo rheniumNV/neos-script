@@ -26,6 +26,7 @@ TargetRadius?: member<any>;
 RadiusSpace?: member<any>;
 RimRadius?: member<number>;
 RimRadiusDistanceScale?: member<number>;
+_handles?: member<any>;
     }
     
     export function SphereGizmo(props: SphereGizmoInput){
@@ -42,7 +43,8 @@ _snapHighlight,
 TargetRadius,
 RadiusSpace,
 RimRadius,
-RimRadiusDistanceScale, } = props;
+RimRadiusDistanceScale,
+_handles, } = props;
     
       return (
         <Component type="FrooxEngine.SphereGizmo" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -60,6 +62,7 @@ RimRadiusDistanceScale, } = props;
 <Member type={`FrooxEngine.RootSpace`} name="RadiusSpace" id={typeof RadiusSpace === "object" && "id" in RadiusSpace ? RadiusSpace?.id : undefined} value={typeof RadiusSpace === "object" && "value" in RadiusSpace ? RadiusSpace?.value : RadiusSpace} /* default: Element:\ ID0,\ Type:\ FrooxEngine\.RootSpace,\ World:\ null,\ IsRemoved:\ false,\ Name:\ \r\n */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="RimRadius" id={typeof RimRadius === "object" && "id" in RimRadius ? RimRadius?.id : undefined} value={typeof RimRadius === "object" && "value" in RimRadius ? RimRadius?.value : RimRadius} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="RimRadiusDistanceScale" id={typeof RimRadiusDistanceScale === "object" && "id" in RimRadiusDistanceScale ? RimRadiusDistanceScale?.id : undefined} value={typeof RimRadiusDistanceScale === "object" && "value" in RimRadiusDistanceScale ? RimRadiusDistanceScale?.value : RimRadiusDistanceScale} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.SphereGizmo+Handle]`} name="_handles" id={typeof _handles === "object" && "id" in _handles ? _handles?.id : undefined} value={typeof _handles === "object" && "value" in _handles ? _handles?.value : _handles} /* default: FrooxEngine.SyncList`1[FrooxEngine.SphereGizmo+Handle] */  />
         </Component>
       );
     };

@@ -16,6 +16,7 @@ import { member, Member, Component } from "../../../core";
 Node?: member<any>;
 EquipOrderPriority?: member<number>;
 RunAfterInputUpdate?: member<boolean>;
+MutuallyExclusiveNodes?: member<any>;
 IsTracking?: member<any>;
 SourceIsTracking?: member<any>;
 SourceIsActive?: member<any>;
@@ -32,6 +33,7 @@ _active?: member<any>;
 Node,
 EquipOrderPriority,
 RunAfterInputUpdate,
+MutuallyExclusiveNodes,
 IsTracking,
 SourceIsTracking,
 SourceIsActive,
@@ -48,6 +50,7 @@ _active, } = props;
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.BodyNode]`} name="Node" id={typeof Node === "object" && "id" in Node ? Node?.id : undefined} value={typeof Node === "object" && "value" in Node ? Node?.value : Node} /* default: NONE */  />
 <Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="EquipOrderPriority" id={typeof EquipOrderPriority === "object" && "id" in EquipOrderPriority ? EquipOrderPriority?.id : undefined} value={typeof EquipOrderPriority === "object" && "value" in EquipOrderPriority ? EquipOrderPriority?.value : EquipOrderPriority} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="RunAfterInputUpdate" id={typeof RunAfterInputUpdate === "object" && "id" in RunAfterInputUpdate ? RunAfterInputUpdate?.id : undefined} value={typeof RunAfterInputUpdate === "object" && "value" in RunAfterInputUpdate ? RunAfterInputUpdate?.value : RunAfterInputUpdate} /* default: false */  />
+<Member type={`FrooxEngine.SyncFieldList\`1[FrooxEngine.BodyNode]`} name="MutuallyExclusiveNodes" id={typeof MutuallyExclusiveNodes === "object" && "id" in MutuallyExclusiveNodes ? MutuallyExclusiveNodes?.id : undefined} value={typeof MutuallyExclusiveNodes === "object" && "value" in MutuallyExclusiveNodes ? MutuallyExclusiveNodes?.value : MutuallyExclusiveNodes} /* default: FrooxEngine.SyncFieldList`1[FrooxEngine.BodyNode] */  />
 <Member type={`FrooxEngine.RawOutput\`1[System.Boolean]`} name="IsTracking" id={typeof IsTracking === "object" && "id" in IsTracking ? IsTracking?.id : undefined} value={typeof IsTracking === "object" && "value" in IsTracking ? IsTracking?.value : IsTracking} /* default: FrooxEngine.RawOutput`1[System.Boolean] */  />
 <Member type={`FrooxEngine.RawOutput\`1[System.Boolean]`} name="SourceIsTracking" id={typeof SourceIsTracking === "object" && "id" in SourceIsTracking ? SourceIsTracking?.id : undefined} value={typeof SourceIsTracking === "object" && "value" in SourceIsTracking ? SourceIsTracking?.value : SourceIsTracking} /* default: FrooxEngine.RawOutput`1[System.Boolean] */  />
 <Member type={`FrooxEngine.RawOutput\`1[System.Boolean]`} name="SourceIsActive" id={typeof SourceIsActive === "object" && "id" in SourceIsActive ? SourceIsActive?.id : undefined} value={typeof SourceIsActive === "object" && "value" in SourceIsActive ? SourceIsActive?.value : SourceIsActive} /* default: FrooxEngine.RawOutput`1[System.Boolean] */  />

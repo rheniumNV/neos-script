@@ -20,6 +20,7 @@ Offset?: member<number>;
 Arc?: member<number>;
 FillWholeArc?: member<boolean>;
 RotationOffset?: member<number>;
+Items?: member<any>;
     }
     
     export function CircleAligner(props: CircleAlignerInput){
@@ -30,7 +31,8 @@ Radius,
 Offset,
 Arc,
 FillWholeArc,
-RotationOffset, } = props;
+RotationOffset,
+Items, } = props;
     
       return (
         <Component type="FrooxEngine.CircleAligner" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -42,6 +44,7 @@ RotationOffset, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Arc" id={typeof Arc === "object" && "id" in Arc ? Arc?.id : undefined} value={typeof Arc === "object" && "value" in Arc ? Arc?.value : Arc} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="FillWholeArc" id={typeof FillWholeArc === "object" && "id" in FillWholeArc ? FillWholeArc?.id : undefined} value={typeof FillWholeArc === "object" && "value" in FillWholeArc ? FillWholeArc?.value : FillWholeArc} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="RotationOffset" id={typeof RotationOffset === "object" && "id" in RotationOffset ? RotationOffset?.id : undefined} value={typeof RotationOffset === "object" && "value" in RotationOffset ? RotationOffset?.value : RotationOffset} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.CircleAligner+Item]`} name="Items" id={typeof Items === "object" && "id" in Items ? Items?.id : undefined} value={typeof Items === "object" && "value" in Items ? Items?.value : Items} /* default: FrooxEngine.SyncList`1[FrooxEngine.CircleAligner+Item] */  />
         </Component>
       );
     };

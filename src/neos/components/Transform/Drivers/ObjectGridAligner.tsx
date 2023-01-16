@@ -21,6 +21,7 @@ HorizontalAlignment?: member<any>;
 VerticalAlignment?: member<any>;
 RowAxis?: member<any>;
 ColumnAxis?: member<any>;
+Items?: member<any>;
     }
     
     export function ObjectGridAligner(props: ObjectGridAlignerInput){
@@ -32,7 +33,8 @@ LerpSpeed,
 HorizontalAlignment,
 VerticalAlignment,
 RowAxis,
-ColumnAxis, } = props;
+ColumnAxis,
+Items, } = props;
     
       return (
         <Component type="FrooxEngine.ObjectGridAligner" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -45,6 +47,7 @@ ColumnAxis, } = props;
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.ObjectGridAligner+Align]`} name="VerticalAlignment" id={typeof VerticalAlignment === "object" && "id" in VerticalAlignment ? VerticalAlignment?.id : undefined} value={typeof VerticalAlignment === "object" && "value" in VerticalAlignment ? VerticalAlignment?.value : VerticalAlignment} /* default: Neg */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.ObjectGridAligner+AxisDir]`} name="RowAxis" id={typeof RowAxis === "object" && "id" in RowAxis ? RowAxis?.id : undefined} value={typeof RowAxis === "object" && "value" in RowAxis ? RowAxis?.value : RowAxis} /* default: Xpos */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.ObjectGridAligner+AxisDir]`} name="ColumnAxis" id={typeof ColumnAxis === "object" && "id" in ColumnAxis ? ColumnAxis?.id : undefined} value={typeof ColumnAxis === "object" && "value" in ColumnAxis ? ColumnAxis?.value : ColumnAxis} /* default: Xpos */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.ObjectGridAligner+Item]`} name="Items" id={typeof Items === "object" && "id" in Items ? Items?.id : undefined} value={typeof Items === "object" && "value" in Items ? Items?.value : Items} /* default: FrooxEngine.SyncList`1[FrooxEngine.ObjectGridAligner+Item] */  />
         </Component>
       );
     };

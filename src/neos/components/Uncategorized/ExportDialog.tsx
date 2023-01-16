@@ -19,6 +19,7 @@ _name?: member<any>;
 _radioGroup?: member<any>;
 _cancel?: member<any>;
 _export?: member<any>;
+_exportOptions?: member<any>;
     }
     
     export function ExportDialog(props: ExportDialogInput){
@@ -28,7 +29,8 @@ _style,
 _name,
 _radioGroup,
 _cancel,
-_export, } = props;
+_export,
+_exportOptions, } = props;
     
       return (
         <Component type="FrooxEngine.ExportDialog" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -39,6 +41,7 @@ _export, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosRadioGroup]`} name="_radioGroup" id={typeof _radioGroup === "object" && "id" in _radioGroup ? _radioGroup?.id : undefined} value={typeof _radioGroup === "object" && "value" in _radioGroup ? _radioGroup?.value : _radioGroup} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosButton]`} name="_cancel" id={typeof _cancel === "object" && "id" in _cancel ? _cancel?.id : undefined} value={typeof _cancel === "object" && "value" in _cancel ? _cancel?.value : _cancel} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosButton]`} name="_export" id={typeof _export === "object" && "id" in _export ? _export?.id : undefined} value={typeof _export === "object" && "value" in _export ? _export?.value : _export} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.ExportDialog+ExportOption]`} name="_exportOptions" id={typeof _exportOptions === "object" && "id" in _exportOptions ? _exportOptions?.id : undefined} value={typeof _exportOptions === "object" && "value" in _exportOptions ? _exportOptions?.value : _exportOptions} /* default: FrooxEngine.SyncList`1[FrooxEngine.ExportDialog+ExportOption] */  />
         </Component>
       );
     };

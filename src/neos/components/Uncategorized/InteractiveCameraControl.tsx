@@ -34,6 +34,9 @@ AnchorInterpolationSpeed?: member<number>;
 AnchorLinearInterpolation?: member<boolean>;
 Mode?: member<any>;
 FramingTargetOverride?: member<any>;
+CameraOperators?: member<any>;
+GroupIncludeUsers?: member<any>;
+GroupExcludeUsers?: member<any>;
 RenderForEveryone?: member<boolean>;
 AnyoneCanInteract?: member<boolean>;
 RenderPrivateUI?: member<boolean>;
@@ -108,6 +111,9 @@ AnchorInterpolationSpeed,
 AnchorLinearInterpolation,
 Mode,
 FramingTargetOverride,
+CameraOperators,
+GroupIncludeUsers,
+GroupExcludeUsers,
 RenderForEveryone,
 AnyoneCanInteract,
 RenderPrivateUI,
@@ -182,6 +188,9 @@ _previewMaterial, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AnchorLinearInterpolation" id={typeof AnchorLinearInterpolation === "object" && "id" in AnchorLinearInterpolation ? AnchorLinearInterpolation?.id : undefined} value={typeof AnchorLinearInterpolation === "object" && "value" in AnchorLinearInterpolation ? AnchorLinearInterpolation?.value : AnchorLinearInterpolation} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.CameraPositioningMode]`} name="Mode" id={typeof Mode === "object" && "id" in Mode ? Mode?.id : undefined} value={typeof Mode === "object" && "value" in Mode ? Mode?.value : Mode} /* default: SmoothFirstPerson */  />
 <Member type={`FrooxEngine.Sync\`1[System.String]`} name="FramingTargetOverride" id={typeof FramingTargetOverride === "object" && "id" in FramingTargetOverride ? FramingTargetOverride?.id : undefined} value={typeof FramingTargetOverride === "object" && "value" in FramingTargetOverride ? FramingTargetOverride?.value : FramingTargetOverride} /* default: <i>null</i> */  />
+<Member type={`FrooxEngine.SyncFieldList\`1[System.String]`} name="CameraOperators" id={typeof CameraOperators === "object" && "id" in CameraOperators ? CameraOperators?.id : undefined} value={typeof CameraOperators === "object" && "value" in CameraOperators ? CameraOperators?.value : CameraOperators} /* default: FrooxEngine.SyncFieldList`1[System.String] */  />
+<Member type={`FrooxEngine.SyncFieldList\`1[System.String]`} name="GroupIncludeUsers" id={typeof GroupIncludeUsers === "object" && "id" in GroupIncludeUsers ? GroupIncludeUsers?.id : undefined} value={typeof GroupIncludeUsers === "object" && "value" in GroupIncludeUsers ? GroupIncludeUsers?.value : GroupIncludeUsers} /* default: FrooxEngine.SyncFieldList`1[System.String] */  />
+<Member type={`FrooxEngine.SyncFieldList\`1[System.String]`} name="GroupExcludeUsers" id={typeof GroupExcludeUsers === "object" && "id" in GroupExcludeUsers ? GroupExcludeUsers?.id : undefined} value={typeof GroupExcludeUsers === "object" && "value" in GroupExcludeUsers ? GroupExcludeUsers?.value : GroupExcludeUsers} /* default: FrooxEngine.SyncFieldList`1[System.String] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="RenderForEveryone" id={typeof RenderForEveryone === "object" && "id" in RenderForEveryone ? RenderForEveryone?.id : undefined} value={typeof RenderForEveryone === "object" && "value" in RenderForEveryone ? RenderForEveryone?.value : RenderForEveryone} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AnyoneCanInteract" id={typeof AnyoneCanInteract === "object" && "id" in AnyoneCanInteract ? AnyoneCanInteract?.id : undefined} value={typeof AnyoneCanInteract === "object" && "value" in AnyoneCanInteract ? AnyoneCanInteract?.value : AnyoneCanInteract} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="RenderPrivateUI" id={typeof RenderPrivateUI === "object" && "id" in RenderPrivateUI ? RenderPrivateUI?.id : undefined} value={typeof RenderPrivateUI === "object" && "value" in RenderPrivateUI ? RenderPrivateUI?.value : RenderPrivateUI} /* default: false */  />

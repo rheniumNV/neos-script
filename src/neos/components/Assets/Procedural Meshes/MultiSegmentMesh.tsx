@@ -17,6 +17,7 @@ HighPriorityIntegration?: member<boolean>;
 OverrideBoundingBox?: member<boolean>;
 OverridenBoundingBox?: member<any>;
 Sides?: member<number>;
+Segments?: member<any>;
     }
     
     export function MultiSegmentMesh(props: MultiSegmentMeshInput){
@@ -24,7 +25,8 @@ Sides?: member<number>;
 HighPriorityIntegration,
 OverrideBoundingBox,
 OverridenBoundingBox,
-Sides, } = props;
+Sides,
+Segments, } = props;
     
       return (
         <Component type="FrooxEngine.MultiSegmentMesh" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -33,6 +35,7 @@ Sides, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="OverrideBoundingBox" id={typeof OverrideBoundingBox === "object" && "id" in OverrideBoundingBox ? OverrideBoundingBox?.id : undefined} value={typeof OverrideBoundingBox === "object" && "value" in OverrideBoundingBox ? OverrideBoundingBox?.value : OverrideBoundingBox} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.BoundingBox]`} name="OverridenBoundingBox" id={typeof OverridenBoundingBox === "object" && "id" in OverridenBoundingBox ? OverridenBoundingBox?.id : undefined} value={typeof OverridenBoundingBox === "object" && "value" in OverridenBoundingBox ? OverridenBoundingBox?.value : OverridenBoundingBox} /* default: Center: [0; 0; 0] Size: [0; 0; 0] -- Min: [0; 0; 0] Max: [0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="Sides" id={typeof Sides === "object" && "id" in Sides ? Sides?.id : undefined} value={typeof Sides === "object" && "value" in Sides ? Sides?.value : Sides} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.MultiSegmentMesh+SegmentInfo]`} name="Segments" id={typeof Segments === "object" && "id" in Segments ? Segments?.id : undefined} value={typeof Segments === "object" && "value" in Segments ? Segments?.value : Segments} /* default: FrooxEngine.SyncList`1[FrooxEngine.MultiSegmentMesh+SegmentInfo] */  />
         </Component>
       );
     };
