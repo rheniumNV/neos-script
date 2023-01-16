@@ -1,0 +1,33 @@
+{
+  "name": "neos-script",
+  "version": "0.1.0",
+  "description": "",
+  "main": "core/index.js",
+  "types": "core/index.d.ts",
+  "scripts": {
+    "build": "run-s build:*",
+    "build:jsx-runtime": "tsc --project ./src/jsx-runtime",
+    "build:neos": "tsc --project ./src/neos",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "neos",
+    "neos-script",
+    "7zbson"
+  ],
+  "author": "rhenium",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.18",
+    "@types/uuid": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "neos-script": "file:../neos-script",
+    "uuid": "^9.0.0"
+  }
+}

@@ -1,0 +1,33 @@
+import { member, Member, Component } from "../../../core";
+    
+    declare global {
+      namespace JSX {
+        interface IntrinsicElements {
+          component: any;
+        }
+      }
+    }
+    export interface DynamicBlendShapeDriverInput {
+        
+        id?:string;
+        persistentId?:string;
+        updateOrder?:member<number>;
+        Enabled?: member<boolean>;
+Renderer?: member<any>;
+_lastRenderer?: member<any>;
+    }
+    
+    export function DynamicBlendShapeDriver(props: DynamicBlendShapeDriverInput){
+      const { id, persistentId, updateOrder, Enabled,
+Renderer,
+_lastRenderer, } = props;
+    
+      return (
+        <Component type="FrooxEngine.DynamicBlendShapeDriver" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.SkinnedMeshRenderer]`} name="Renderer" id={typeof Renderer === "object" && "id" in Renderer ? Renderer?.id : undefined} value={typeof Renderer === "object" && "value" in Renderer ? Renderer?.value : Renderer} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.SkinnedMeshRenderer]`} name="_lastRenderer" id={typeof _lastRenderer === "object" && "id" in _lastRenderer ? _lastRenderer?.id : undefined} value={typeof _lastRenderer === "object" && "value" in _lastRenderer ? _lastRenderer?.value : _lastRenderer} /* default: ID0 */  />
+        </Component>
+      );
+    };
+    

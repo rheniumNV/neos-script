@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "target": "ES5",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "jsxImportSource": "neos-script-jsx-runtime",
+    "resolveJsonModule": true,
+    "rootDir": "./",
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "include": ["./**/*.ts", "./**/*.json"],
+  "exclude": []
+}

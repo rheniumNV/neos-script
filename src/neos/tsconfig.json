@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "target": "ES5",
+    "module": "CommonJS",
+    "jsx": "react-jsx",
+    "jsxImportSource": "neos-script",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "rootDir": "./",
+    "outDir": "../../",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": false
+  },
+  "include": ["./**/*.tsx", "./**/*.tsx"],
+  "exclude": ["../../node_modules"]
+}
