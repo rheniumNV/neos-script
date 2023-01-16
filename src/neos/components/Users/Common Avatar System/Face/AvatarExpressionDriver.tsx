@@ -17,6 +17,7 @@ DataSource?: member<any>;
 StrengthMultiplier?: member<number>;
 VolumeSource?: member<any>;
 SilenceSource?: member<any>;
+ExpressionDrivers?: member<any>;
     }
     
     export function AvatarExpressionDriver(props: AvatarExpressionDriverInput){
@@ -24,7 +25,8 @@ SilenceSource?: member<any>;
 DataSource,
 StrengthMultiplier,
 VolumeSource,
-SilenceSource, } = props;
+SilenceSource,
+ExpressionDrivers, } = props;
     
       return (
         <Component type="FrooxEngine.CommonAvatar.AvatarExpressionDriver" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -33,6 +35,7 @@ SilenceSource, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="StrengthMultiplier" id={typeof StrengthMultiplier === "object" && "id" in StrengthMultiplier ? StrengthMultiplier?.id : undefined} value={typeof StrengthMultiplier === "object" && "value" in StrengthMultiplier ? StrengthMultiplier?.value : StrengthMultiplier} /* default: 0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.IField\`1[System.Single]]`} name="VolumeSource" id={typeof VolumeSource === "object" && "id" in VolumeSource ? VolumeSource?.id : undefined} value={typeof VolumeSource === "object" && "value" in VolumeSource ? VolumeSource?.value : VolumeSource} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.IField\`1[System.Single]]`} name="SilenceSource" id={typeof SilenceSource === "object" && "id" in SilenceSource ? SilenceSource?.id : undefined} value={typeof SilenceSource === "object" && "value" in SilenceSource ? SilenceSource?.value : SilenceSource} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.CommonAvatar.AvatarExpressionDriver+ExpressionDriver]`} name="ExpressionDrivers" id={typeof ExpressionDrivers === "object" && "id" in ExpressionDrivers ? ExpressionDrivers?.id : undefined} value={typeof ExpressionDrivers === "object" && "value" in ExpressionDrivers ? ExpressionDrivers?.value : ExpressionDrivers} /* default: FrooxEngine.SyncList`1[FrooxEngine.CommonAvatar.AvatarExpressionDriver+ExpressionDriver] */  />
         </Component>
       );
     };

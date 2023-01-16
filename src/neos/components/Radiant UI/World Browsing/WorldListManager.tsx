@@ -43,6 +43,7 @@ MinUptime?: member<number>;
 MaxUptime?: member<number>;
 ParentSessionId?: member<any>;
 Visited?: member<any>;
+SortProperties?: member<any>;
 IsSearching?: member<boolean>;
 HasMoreResults?: member<boolean>;
 TotalResults?: member<number>;
@@ -81,6 +82,7 @@ MinUptime,
 MaxUptime,
 ParentSessionId,
 Visited,
+SortProperties,
 IsSearching,
 HasMoreResults,
 TotalResults,
@@ -119,6 +121,7 @@ FilteredResults, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Double]`} name="MaxUptime" id={typeof MaxUptime === "object" && "id" in MaxUptime ? MaxUptime?.id : undefined} value={typeof MaxUptime === "object" && "value" in MaxUptime ? MaxUptime?.value : MaxUptime} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.String]`} name="ParentSessionId" id={typeof ParentSessionId === "object" && "id" in ParentSessionId ? ParentSessionId?.id : undefined} value={typeof ParentSessionId === "object" && "value" in ParentSessionId ? ParentSessionId?.value : ParentSessionId} /* default: <i>null</i> */  />
 <Member type={`FrooxEngine.Sync\`1[System.Nullable\`1[System.Boolean]]`} name="Visited" id={typeof Visited === "object" && "id" in Visited ? Visited?.id : undefined} value={typeof Visited === "object" && "value" in Visited ? Visited?.value : Visited} /* default: <i>null</i> */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.WorldListManager+SortProperty]`} name="SortProperties" id={typeof SortProperties === "object" && "id" in SortProperties ? SortProperties?.id : undefined} value={typeof SortProperties === "object" && "value" in SortProperties ? SortProperties?.value : SortProperties} /* default: FrooxEngine.SyncList`1[FrooxEngine.WorldListManager+SortProperty] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="IsSearching" id={typeof IsSearching === "object" && "id" in IsSearching ? IsSearching?.id : undefined} value={typeof IsSearching === "object" && "value" in IsSearching ? IsSearching?.value : IsSearching} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="HasMoreResults" id={typeof HasMoreResults === "object" && "id" in HasMoreResults ? HasMoreResults?.id : undefined} value={typeof HasMoreResults === "object" && "value" in HasMoreResults ? HasMoreResults?.value : HasMoreResults} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="TotalResults" id={typeof TotalResults === "object" && "id" in TotalResults ? TotalResults?.id : undefined} value={typeof TotalResults === "object" && "value" in TotalResults ? TotalResults?.value : TotalResults} /* default: 0 */  />

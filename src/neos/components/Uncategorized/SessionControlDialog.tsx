@@ -45,6 +45,8 @@ _editMode?: member<any>;
 _copySessionURL?: member<any>;
 _copyWorldURL?: member<any>;
 _copyRecordURL?: member<any>;
+_accessLevelRadios?: member<any>;
+_accessLevelRadiosButtons?: member<any>;
 _worldNameSync?: member<any>;
 _descriptionSync?: member<any>;
 _maxUsersSync?: member<any>;
@@ -63,6 +65,7 @@ _slideSwap?: member<any>;
 _saveWorld?: member<any>;
 _saveWorldAs?: member<any>;
 _saveWorldCopy?: member<any>;
+_tabButtons?: member<any>;
     }
     
     export function SessionControlDialog(props: SessionControlDialogInput){
@@ -99,6 +102,8 @@ _editMode,
 _copySessionURL,
 _copyWorldURL,
 _copyRecordURL,
+_accessLevelRadios,
+_accessLevelRadiosButtons,
 _worldNameSync,
 _descriptionSync,
 _maxUsersSync,
@@ -116,7 +121,8 @@ _uiContentRoot,
 _slideSwap,
 _saveWorld,
 _saveWorldAs,
-_saveWorldCopy, } = props;
+_saveWorldCopy,
+_tabButtons, } = props;
     
       return (
         <Component type="FrooxEngine.SessionControlDialog" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -153,6 +159,8 @@ _saveWorldCopy, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.UIX.Button]`} name="_copySessionURL" id={typeof _copySessionURL === "object" && "id" in _copySessionURL ? _copySessionURL?.id : undefined} value={typeof _copySessionURL === "object" && "value" in _copySessionURL ? _copySessionURL?.value : _copySessionURL} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.UIX.Button]`} name="_copyWorldURL" id={typeof _copyWorldURL === "object" && "id" in _copyWorldURL ? _copyWorldURL?.id : undefined} value={typeof _copyWorldURL === "object" && "value" in _copyWorldURL ? _copyWorldURL?.value : _copyWorldURL} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.UIX.Button]`} name="_copyRecordURL" id={typeof _copyRecordURL === "object" && "id" in _copyRecordURL ? _copyRecordURL?.id : undefined} value={typeof _copyRecordURL === "object" && "value" in _copyRecordURL ? _copyRecordURL?.value : _copyRecordURL} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.UIX.Radio]`} name="_accessLevelRadios" id={typeof _accessLevelRadios === "object" && "id" in _accessLevelRadios ? _accessLevelRadios?.id : undefined} value={typeof _accessLevelRadios === "object" && "value" in _accessLevelRadios ? _accessLevelRadios?.value : _accessLevelRadios} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.UIX.Radio] */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.UIX.Button]`} name="_accessLevelRadiosButtons" id={typeof _accessLevelRadiosButtons === "object" && "id" in _accessLevelRadiosButtons ? _accessLevelRadiosButtons?.id : undefined} value={typeof _accessLevelRadiosButtons === "object" && "value" in _accessLevelRadiosButtons ? _accessLevelRadiosButtons?.value : _accessLevelRadiosButtons} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.UIX.Button] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.WorldValueSync\`1[System.String]]`} name="_worldNameSync" id={typeof _worldNameSync === "object" && "id" in _worldNameSync ? _worldNameSync?.id : undefined} value={typeof _worldNameSync === "object" && "value" in _worldNameSync ? _worldNameSync?.value : _worldNameSync} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.WorldValueSync\`1[System.String]]`} name="_descriptionSync" id={typeof _descriptionSync === "object" && "id" in _descriptionSync ? _descriptionSync?.id : undefined} value={typeof _descriptionSync === "object" && "value" in _descriptionSync ? _descriptionSync?.value : _descriptionSync} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.WorldValueSync\`1[System.Int32]]`} name="_maxUsersSync" id={typeof _maxUsersSync === "object" && "id" in _maxUsersSync ? _maxUsersSync?.id : undefined} value={typeof _maxUsersSync === "object" && "value" in _maxUsersSync ? _maxUsersSync?.value : _maxUsersSync} /* default: ID0 */  />
@@ -171,6 +179,7 @@ _saveWorldCopy, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.UIX.Button]`} name="_saveWorld" id={typeof _saveWorld === "object" && "id" in _saveWorld ? _saveWorld?.id : undefined} value={typeof _saveWorld === "object" && "value" in _saveWorld ? _saveWorld?.value : _saveWorld} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.UIX.Button]`} name="_saveWorldAs" id={typeof _saveWorldAs === "object" && "id" in _saveWorldAs ? _saveWorldAs?.id : undefined} value={typeof _saveWorldAs === "object" && "value" in _saveWorldAs ? _saveWorldAs?.value : _saveWorldAs} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.UIX.Button]`} name="_saveWorldCopy" id={typeof _saveWorldCopy === "object" && "id" in _saveWorldCopy ? _saveWorldCopy?.id : undefined} value={typeof _saveWorldCopy === "object" && "value" in _saveWorldCopy ? _saveWorldCopy?.value : _saveWorldCopy} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.UIX.Button]`} name="_tabButtons" id={typeof _tabButtons === "object" && "id" in _tabButtons ? _tabButtons?.id : undefined} value={typeof _tabButtons === "object" && "value" in _tabButtons ? _tabButtons?.value : _tabButtons} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.UIX.Button] */  />
         </Component>
       );
     };

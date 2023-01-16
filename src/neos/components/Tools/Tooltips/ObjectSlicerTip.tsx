@@ -23,6 +23,8 @@ ApplyToObjectRoot?: member<boolean>;
 EdgeColor?: member<[number, number, number, number]>;
 EdgeStart?: member<number>;
 EdgeEnd?: member<number>;
+_slicers?: member<any>;
+_sliceMaterials?: member<any>;
     }
     
     export function ObjectSlicerTip(props: ObjectSlicerTipInput){
@@ -36,7 +38,9 @@ _gripPosesGenerated,
 ApplyToObjectRoot,
 EdgeColor,
 EdgeStart,
-EdgeEnd, } = props;
+EdgeEnd,
+_slicers,
+_sliceMaterials, } = props;
     
       return (
         <Component type="FrooxEngine.ObjectSlicerTip" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -51,6 +55,8 @@ EdgeEnd, } = props;
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="EdgeColor" id={typeof EdgeColor === "object" && "id" in EdgeColor ? EdgeColor?.id : undefined} value={typeof EdgeColor === "object" && "value" in EdgeColor ? EdgeColor?.value : EdgeColor} /* default: [0; 0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="EdgeStart" id={typeof EdgeStart === "object" && "id" in EdgeStart ? EdgeStart?.id : undefined} value={typeof EdgeStart === "object" && "value" in EdgeStart ? EdgeStart?.value : EdgeStart} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="EdgeEnd" id={typeof EdgeEnd === "object" && "id" in EdgeEnd ? EdgeEnd?.id : undefined} value={typeof EdgeEnd === "object" && "value" in EdgeEnd ? EdgeEnd?.value : EdgeEnd} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.GenericSlicer]`} name="_slicers" id={typeof _slicers === "object" && "id" in _slicers ? _slicers?.id : undefined} value={typeof _slicers === "object" && "value" in _slicers ? _slicers?.value : _slicers} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.GenericSlicer] */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.PBS_Slice]`} name="_sliceMaterials" id={typeof _sliceMaterials === "object" && "id" in _sliceMaterials ? _sliceMaterials?.id : undefined} value={typeof _sliceMaterials === "object" && "value" in _sliceMaterials ? _sliceMaterials?.value : _sliceMaterials} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.PBS_Slice] */  />
         </Component>
       );
     };

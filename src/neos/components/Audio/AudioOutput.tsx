@@ -27,6 +27,7 @@ DistanceSpace?: member<any>;
 MinScale?: member<number>;
 MaxScale?: member<number>;
 IgnoreReverbZones?: member<boolean>;
+excludedUsers?: member<any>;
     }
     
     export function AudioOutput(props: AudioOutputInput){
@@ -44,7 +45,8 @@ AudioTypeGroup,
 DistanceSpace,
 MinScale,
 MaxScale,
-IgnoreReverbZones, } = props;
+IgnoreReverbZones,
+excludedUsers, } = props;
     
       return (
         <Component type="FrooxEngine.AudioOutput" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -63,6 +65,7 @@ IgnoreReverbZones, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MinScale" id={typeof MinScale === "object" && "id" in MinScale ? MinScale?.id : undefined} value={typeof MinScale === "object" && "value" in MinScale ? MinScale?.value : MinScale} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MaxScale" id={typeof MaxScale === "object" && "id" in MaxScale ? MaxScale?.id : undefined} value={typeof MaxScale === "object" && "value" in MaxScale ? MaxScale?.value : MaxScale} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="IgnoreReverbZones" id={typeof IgnoreReverbZones === "object" && "id" in IgnoreReverbZones ? IgnoreReverbZones?.id : undefined} value={typeof IgnoreReverbZones === "object" && "value" in IgnoreReverbZones ? IgnoreReverbZones?.value : IgnoreReverbZones} /* default: false */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.User]`} name="excludedUsers" id={typeof excludedUsers === "object" && "id" in excludedUsers ? excludedUsers?.id : undefined} value={typeof excludedUsers === "object" && "value" in excludedUsers ? excludedUsers?.value : excludedUsers} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.User] */  />
         </Component>
       );
     };

@@ -76,6 +76,7 @@ PupilSizeNoiseOffset?: member<number>;
 EyeTrackingPupilSizeSmoothSpeed?: member<number>;
 MiniExpressionProbability?: member<number>;
 MiniExpressionInterval?: member<number>;
+MiniExpressions?: member<any>;
     }
     
     export function EyeManager(props: EyeManagerInput){
@@ -142,7 +143,8 @@ PupilSizeNoiseSpeed,
 PupilSizeNoiseOffset,
 EyeTrackingPupilSizeSmoothSpeed,
 MiniExpressionProbability,
-MiniExpressionInterval, } = props;
+MiniExpressionInterval,
+MiniExpressions, } = props;
     
       return (
         <Component type="FrooxEngine.CommonAvatar.EyeManager" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -210,6 +212,7 @@ MiniExpressionInterval, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="EyeTrackingPupilSizeSmoothSpeed" id={typeof EyeTrackingPupilSizeSmoothSpeed === "object" && "id" in EyeTrackingPupilSizeSmoothSpeed ? EyeTrackingPupilSizeSmoothSpeed?.id : undefined} value={typeof EyeTrackingPupilSizeSmoothSpeed === "object" && "value" in EyeTrackingPupilSizeSmoothSpeed ? EyeTrackingPupilSizeSmoothSpeed?.value : EyeTrackingPupilSizeSmoothSpeed} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MiniExpressionProbability" id={typeof MiniExpressionProbability === "object" && "id" in MiniExpressionProbability ? MiniExpressionProbability?.id : undefined} value={typeof MiniExpressionProbability === "object" && "value" in MiniExpressionProbability ? MiniExpressionProbability?.value : MiniExpressionProbability} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MiniExpressionInterval" id={typeof MiniExpressionInterval === "object" && "id" in MiniExpressionInterval ? MiniExpressionInterval?.id : undefined} value={typeof MiniExpressionInterval === "object" && "value" in MiniExpressionInterval ? MiniExpressionInterval?.value : MiniExpressionInterval} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.CommonAvatar.EyeManager+MiniExpression]`} name="MiniExpressions" id={typeof MiniExpressions === "object" && "id" in MiniExpressions ? MiniExpressions?.id : undefined} value={typeof MiniExpressions === "object" && "value" in MiniExpressions ? MiniExpressions?.value : MiniExpressions} /* default: FrooxEngine.SyncList`1[FrooxEngine.CommonAvatar.EyeManager+MiniExpression] */  />
         </Component>
       );
     };

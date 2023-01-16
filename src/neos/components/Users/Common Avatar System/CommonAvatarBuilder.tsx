@@ -14,6 +14,7 @@ import { member, Member, Component } from "../../../core";
         updateOrder?:member<number>;
         Enabled?: member<boolean>;
 LoadCloudAvatars?: member<boolean>;
+CustomAvatarTemplates?: member<any>;
 AutoInject?: member<any>;
 SetupNameBadges?: member<boolean>;
 SetupIconBadges?: member<boolean>;
@@ -38,6 +39,7 @@ FillEmptySlots?: member<boolean>;
     export function CommonAvatarBuilder(props: CommonAvatarBuilderInput){
       const { id, persistentId, updateOrder, Enabled,
 LoadCloudAvatars,
+CustomAvatarTemplates,
 AutoInject,
 SetupNameBadges,
 SetupIconBadges,
@@ -62,6 +64,7 @@ FillEmptySlots, } = props;
         <Component type="FrooxEngine.CommonAvatarBuilder" id={id} persistentId={persistentId} updateOrder={updateOrder}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="LoadCloudAvatars" id={typeof LoadCloudAvatars === "object" && "id" in LoadCloudAvatars ? LoadCloudAvatars?.id : undefined} value={typeof LoadCloudAvatars === "object" && "value" in LoadCloudAvatars ? LoadCloudAvatars?.value : LoadCloudAvatars} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.CommonAvatarBuilder+AvatarTemplate]`} name="CustomAvatarTemplates" id={typeof CustomAvatarTemplates === "object" && "id" in CustomAvatarTemplates ? CustomAvatarTemplates?.id : undefined} value={typeof CustomAvatarTemplates === "object" && "value" in CustomAvatarTemplates ? CustomAvatarTemplates?.value : CustomAvatarTemplates} /* default: FrooxEngine.SyncList`1[FrooxEngine.CommonAvatarBuilder+AvatarTemplate] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="AutoInject" id={typeof AutoInject === "object" && "id" in AutoInject ? AutoInject?.id : undefined} value={typeof AutoInject === "object" && "value" in AutoInject ? AutoInject?.value : AutoInject} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="SetupNameBadges" id={typeof SetupNameBadges === "object" && "id" in SetupNameBadges ? SetupNameBadges?.id : undefined} value={typeof SetupNameBadges === "object" && "value" in SetupNameBadges ? SetupNameBadges?.value : SetupNameBadges} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="SetupIconBadges" id={typeof SetupIconBadges === "object" && "id" in SetupIconBadges ? SetupIconBadges?.id : undefined} value={typeof SetupIconBadges === "object" && "value" in SetupIconBadges ? SetupIconBadges?.value : SetupIconBadges} /* default: false */  />

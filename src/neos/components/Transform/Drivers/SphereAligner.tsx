@@ -22,6 +22,7 @@ NormalizedStart?: member<number>;
 NormalizedEnd?: member<number>;
 HorizontalStart?: member<number>;
 HorizontalEnd?: member<number>;
+Items?: member<any>;
     }
     
     export function SphereAligner(props: SphereAlignerInput){
@@ -34,7 +35,8 @@ RotationOffset,
 NormalizedStart,
 NormalizedEnd,
 HorizontalStart,
-HorizontalEnd, } = props;
+HorizontalEnd,
+Items, } = props;
     
       return (
         <Component type="FrooxEngine.SphereAligner" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -48,6 +50,7 @@ HorizontalEnd, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="NormalizedEnd" id={typeof NormalizedEnd === "object" && "id" in NormalizedEnd ? NormalizedEnd?.id : undefined} value={typeof NormalizedEnd === "object" && "value" in NormalizedEnd ? NormalizedEnd?.value : NormalizedEnd} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="HorizontalStart" id={typeof HorizontalStart === "object" && "id" in HorizontalStart ? HorizontalStart?.id : undefined} value={typeof HorizontalStart === "object" && "value" in HorizontalStart ? HorizontalStart?.value : HorizontalStart} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="HorizontalEnd" id={typeof HorizontalEnd === "object" && "id" in HorizontalEnd ? HorizontalEnd?.id : undefined} value={typeof HorizontalEnd === "object" && "value" in HorizontalEnd ? HorizontalEnd?.value : HorizontalEnd} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.SphereAligner+Item]`} name="Items" id={typeof Items === "object" && "id" in Items ? Items?.id : undefined} value={typeof Items === "object" && "value" in Items ? Items?.value : Items} /* default: FrooxEngine.SyncList`1[FrooxEngine.SphereAligner+Item] */  />
         </Component>
       );
     };

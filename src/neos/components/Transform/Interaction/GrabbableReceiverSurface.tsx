@@ -19,6 +19,7 @@ TweenTime?: member<number>;
 MaxDistance?: member<number>;
 Offset?: member<number>;
 CheckOffset?: member<number>;
+Directions?: member<any>;
 TagFilter?: member<any>;
     }
     
@@ -30,6 +31,7 @@ TweenTime,
 MaxDistance,
 Offset,
 CheckOffset,
+Directions,
 TagFilter, } = props;
     
       return (
@@ -41,6 +43,7 @@ TagFilter, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MaxDistance" id={typeof MaxDistance === "object" && "id" in MaxDistance ? MaxDistance?.id : undefined} value={typeof MaxDistance === "object" && "value" in MaxDistance ? MaxDistance?.value : MaxDistance} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Offset" id={typeof Offset === "object" && "id" in Offset ? Offset?.id : undefined} value={typeof Offset === "object" && "value" in Offset ? Offset?.value : Offset} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="CheckOffset" id={typeof CheckOffset === "object" && "id" in CheckOffset ? CheckOffset?.id : undefined} value={typeof CheckOffset === "object" && "value" in CheckOffset ? CheckOffset?.value : CheckOffset} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncFieldList\`1[BaseX.float3]`} name="Directions" id={typeof Directions === "object" && "id" in Directions ? Directions?.id : undefined} value={typeof Directions === "object" && "value" in Directions ? Directions?.value : Directions} /* default: FrooxEngine.SyncFieldList`1[BaseX.float3] */  />
 <Member type={`FrooxEngine.TagFilter`} name="TagFilter" id={typeof TagFilter === "object" && "id" in TagFilter ? TagFilter?.id : undefined} value={typeof TagFilter === "object" && "value" in TagFilter ? TagFilter?.value : TagFilter} /* default: Element:\ ID0,\ Type:\ FrooxEngine\.TagFilter,\ World:\ null,\ IsRemoved:\ false,\ Name:\ \r\n */  />
         </Component>
       );

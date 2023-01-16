@@ -61,8 +61,13 @@ _leftCamOrientation?: member<any>;
 _rightCamOrientation?: member<any>;
 _cameraRendering?: member<any>;
 _secondaryCameraRendering?: member<any>;
+ExclusiveOperators?: member<any>;
+ControlActiveFields?: member<any>;
+RenderOnlyForUsers?: member<any>;
 ForceVisualsOff?: member<boolean>;
+VisualActiveFields?: member<any>;
 AutoHideProximity?: member<number>;
+ForceEyeAttentionUsers?: member<any>;
 SimulatingUser?: member<any>;
 DestroyOnUserLeave?: member<any>;
 PositioningMode?: member<any>;
@@ -79,6 +84,8 @@ FirstPersonRoll?: member<number>;
 FirstPersonOffset?: member<number>;
 GroupIncludeRadius?: member<number>;
 GroupExcludeRadius?: member<number>;
+ForceGroupInclude?: member<any>;
+ForceGroupExclude?: member<any>;
 PositionSmoothSpeed?: member<number>;
 AnglePositionSmoothSpeed?: member<number>;
 FramingSmoothSpeed?: member<number>;
@@ -147,8 +154,13 @@ _leftCamOrientation,
 _rightCamOrientation,
 _cameraRendering,
 _secondaryCameraRendering,
+ExclusiveOperators,
+ControlActiveFields,
+RenderOnlyForUsers,
 ForceVisualsOff,
+VisualActiveFields,
 AutoHideProximity,
+ForceEyeAttentionUsers,
 SimulatingUser,
 DestroyOnUserLeave,
 PositioningMode,
@@ -165,6 +177,8 @@ FirstPersonRoll,
 FirstPersonOffset,
 GroupIncludeRadius,
 GroupExcludeRadius,
+ForceGroupInclude,
+ForceGroupExclude,
 PositionSmoothSpeed,
 AnglePositionSmoothSpeed,
 FramingSmoothSpeed,
@@ -233,8 +247,13 @@ _releaseRotation, } = props;
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.floatQ]`} name="_rightCamOrientation" id={typeof _rightCamOrientation === "object" && "id" in _rightCamOrientation ? _rightCamOrientation?.id : undefined} value={typeof _rightCamOrientation === "object" && "value" in _rightCamOrientation ? _rightCamOrientation?.value : _rightCamOrientation} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[System.Boolean]`} name="_cameraRendering" id={typeof _cameraRendering === "object" && "id" in _cameraRendering ? _cameraRendering?.id : undefined} value={typeof _cameraRendering === "object" && "value" in _cameraRendering ? _cameraRendering?.value : _cameraRendering} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[System.Boolean]`} name="_secondaryCameraRendering" id={typeof _secondaryCameraRendering === "object" && "id" in _secondaryCameraRendering ? _secondaryCameraRendering?.id : undefined} value={typeof _secondaryCameraRendering === "object" && "value" in _secondaryCameraRendering ? _secondaryCameraRendering?.value : _secondaryCameraRendering} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.UserRef]`} name="ExclusiveOperators" id={typeof ExclusiveOperators === "object" && "id" in ExclusiveOperators ? ExclusiveOperators?.id : undefined} value={typeof ExclusiveOperators === "object" && "value" in ExclusiveOperators ? ExclusiveOperators?.value : ExclusiveOperators} /* default: FrooxEngine.SyncList`1[FrooxEngine.UserRef] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.FieldDrive\`1[System.Boolean]]`} name="ControlActiveFields" id={typeof ControlActiveFields === "object" && "id" in ControlActiveFields ? ControlActiveFields?.id : undefined} value={typeof ControlActiveFields === "object" && "value" in ControlActiveFields ? ControlActiveFields?.value : ControlActiveFields} /* default: FrooxEngine.SyncList`1[FrooxEngine.FieldDrive`1[System.Boolean]] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.UserRef]`} name="RenderOnlyForUsers" id={typeof RenderOnlyForUsers === "object" && "id" in RenderOnlyForUsers ? RenderOnlyForUsers?.id : undefined} value={typeof RenderOnlyForUsers === "object" && "value" in RenderOnlyForUsers ? RenderOnlyForUsers?.value : RenderOnlyForUsers} /* default: FrooxEngine.SyncList`1[FrooxEngine.UserRef] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="ForceVisualsOff" id={typeof ForceVisualsOff === "object" && "id" in ForceVisualsOff ? ForceVisualsOff?.id : undefined} value={typeof ForceVisualsOff === "object" && "value" in ForceVisualsOff ? ForceVisualsOff?.value : ForceVisualsOff} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.FieldDrive\`1[System.Boolean]]`} name="VisualActiveFields" id={typeof VisualActiveFields === "object" && "id" in VisualActiveFields ? VisualActiveFields?.id : undefined} value={typeof VisualActiveFields === "object" && "value" in VisualActiveFields ? VisualActiveFields?.value : VisualActiveFields} /* default: FrooxEngine.SyncList`1[FrooxEngine.FieldDrive`1[System.Boolean]] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="AutoHideProximity" id={typeof AutoHideProximity === "object" && "id" in AutoHideProximity ? AutoHideProximity?.id : undefined} value={typeof AutoHideProximity === "object" && "value" in AutoHideProximity ? AutoHideProximity?.value : AutoHideProximity} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.UserRef]`} name="ForceEyeAttentionUsers" id={typeof ForceEyeAttentionUsers === "object" && "id" in ForceEyeAttentionUsers ? ForceEyeAttentionUsers?.id : undefined} value={typeof ForceEyeAttentionUsers === "object" && "value" in ForceEyeAttentionUsers ? ForceEyeAttentionUsers?.value : ForceEyeAttentionUsers} /* default: FrooxEngine.SyncList`1[FrooxEngine.UserRef] */  />
 <Member type={`FrooxEngine.UserRef`} name="SimulatingUser" id={typeof SimulatingUser === "object" && "id" in SimulatingUser ? SimulatingUser?.id : undefined} value={typeof SimulatingUser === "object" && "value" in SimulatingUser ? SimulatingUser?.value : SimulatingUser} /* default: Element:\ ID0,\ Type:\ FrooxEngine\.UserRef,\ World:\ null,\ IsRemoved:\ false,\ Name:\ \r\n */  />
 <Member type={`FrooxEngine.UserRef`} name="DestroyOnUserLeave" id={typeof DestroyOnUserLeave === "object" && "id" in DestroyOnUserLeave ? DestroyOnUserLeave?.id : undefined} value={typeof DestroyOnUserLeave === "object" && "value" in DestroyOnUserLeave ? DestroyOnUserLeave?.value : DestroyOnUserLeave} /* default: Element:\ ID0,\ Type:\ FrooxEngine\.UserRef,\ World:\ null,\ IsRemoved:\ false,\ Name:\ \r\n */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.CameraPositioningMode]`} name="PositioningMode" id={typeof PositioningMode === "object" && "id" in PositioningMode ? PositioningMode?.id : undefined} value={typeof PositioningMode === "object" && "value" in PositioningMode ? PositioningMode?.value : PositioningMode} /* default: SmoothFirstPerson */  />
@@ -251,6 +270,8 @@ _releaseRotation, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="FirstPersonOffset" id={typeof FirstPersonOffset === "object" && "id" in FirstPersonOffset ? FirstPersonOffset?.id : undefined} value={typeof FirstPersonOffset === "object" && "value" in FirstPersonOffset ? FirstPersonOffset?.value : FirstPersonOffset} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="GroupIncludeRadius" id={typeof GroupIncludeRadius === "object" && "id" in GroupIncludeRadius ? GroupIncludeRadius?.id : undefined} value={typeof GroupIncludeRadius === "object" && "value" in GroupIncludeRadius ? GroupIncludeRadius?.value : GroupIncludeRadius} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="GroupExcludeRadius" id={typeof GroupExcludeRadius === "object" && "id" in GroupExcludeRadius ? GroupExcludeRadius?.id : undefined} value={typeof GroupExcludeRadius === "object" && "value" in GroupExcludeRadius ? GroupExcludeRadius?.value : GroupExcludeRadius} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.UserRef]`} name="ForceGroupInclude" id={typeof ForceGroupInclude === "object" && "id" in ForceGroupInclude ? ForceGroupInclude?.id : undefined} value={typeof ForceGroupInclude === "object" && "value" in ForceGroupInclude ? ForceGroupInclude?.value : ForceGroupInclude} /* default: FrooxEngine.SyncList`1[FrooxEngine.UserRef] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.UserRef]`} name="ForceGroupExclude" id={typeof ForceGroupExclude === "object" && "id" in ForceGroupExclude ? ForceGroupExclude?.id : undefined} value={typeof ForceGroupExclude === "object" && "value" in ForceGroupExclude ? ForceGroupExclude?.value : ForceGroupExclude} /* default: FrooxEngine.SyncList`1[FrooxEngine.UserRef] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="PositionSmoothSpeed" id={typeof PositionSmoothSpeed === "object" && "id" in PositionSmoothSpeed ? PositionSmoothSpeed?.id : undefined} value={typeof PositionSmoothSpeed === "object" && "value" in PositionSmoothSpeed ? PositionSmoothSpeed?.value : PositionSmoothSpeed} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="AnglePositionSmoothSpeed" id={typeof AnglePositionSmoothSpeed === "object" && "id" in AnglePositionSmoothSpeed ? AnglePositionSmoothSpeed?.id : undefined} value={typeof AnglePositionSmoothSpeed === "object" && "value" in AnglePositionSmoothSpeed ? AnglePositionSmoothSpeed?.value : AnglePositionSmoothSpeed} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="FramingSmoothSpeed" id={typeof FramingSmoothSpeed === "object" && "id" in FramingSmoothSpeed ? FramingSmoothSpeed?.id : undefined} value={typeof FramingSmoothSpeed === "object" && "value" in FramingSmoothSpeed ? FramingSmoothSpeed?.value : FramingSmoothSpeed} /* default: 0 */  />

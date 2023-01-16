@@ -22,6 +22,7 @@ _currentWorld?: member<any>;
 _unreadCount?: member<any>;
 _joinButton?: member<any>;
 _rawUsername?: member<any>;
+_alternateNames?: member<any>;
     }
     
     export function FriendItem(props: FriendItemInput){
@@ -34,7 +35,8 @@ _username,
 _currentWorld,
 _unreadCount,
 _joinButton,
-_rawUsername, } = props;
+_rawUsername,
+_alternateNames, } = props;
     
       return (
         <Component type="FrooxEngine.FriendItem" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -48,6 +50,7 @@ _rawUsername, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.UIX.Text]`} name="_unreadCount" id={typeof _unreadCount === "object" && "id" in _unreadCount ? _unreadCount?.id : undefined} value={typeof _unreadCount === "object" && "value" in _unreadCount ? _unreadCount?.value : _unreadCount} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.UIX.Button]`} name="_joinButton" id={typeof _joinButton === "object" && "id" in _joinButton ? _joinButton?.id : undefined} value={typeof _joinButton === "object" && "value" in _joinButton ? _joinButton?.value : _joinButton} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.String]`} name="_rawUsername" id={typeof _rawUsername === "object" && "id" in _rawUsername ? _rawUsername?.id : undefined} value={typeof _rawUsername === "object" && "value" in _rawUsername ? _rawUsername?.value : _rawUsername} /* default: <i>null</i> */  />
+<Member type={`FrooxEngine.SyncFieldList\`1[System.String]`} name="_alternateNames" id={typeof _alternateNames === "object" && "id" in _alternateNames ? _alternateNames?.id : undefined} value={typeof _alternateNames === "object" && "value" in _alternateNames ? _alternateNames?.value : _alternateNames} /* default: FrooxEngine.SyncFieldList`1[System.String] */  />
         </Component>
       );
     };

@@ -53,7 +53,9 @@ _avatarLeftKneeHandle?: member<any>;
 _avatarRightKneeHandle?: member<any>;
 _avatarLeftKneeOffset?: member<any>;
 _avatarRightKneeOffset?: member<any>;
+_platformBodyMaterialSets?: member<any>;
 _ground?: member<any>;
+_trackers?: member<any>;
 _visualizationRoot?: member<any>;
 _bodyNodeMaterial?: member<any>;
 _calibrationReferenceMaterial?: member<any>;
@@ -109,7 +111,9 @@ _avatarLeftKneeHandle,
 _avatarRightKneeHandle,
 _avatarLeftKneeOffset,
 _avatarRightKneeOffset,
+_platformBodyMaterialSets,
 _ground,
+_trackers,
 _visualizationRoot,
 _bodyNodeMaterial,
 _calibrationReferenceMaterial,
@@ -165,7 +169,9 @@ _title, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="_avatarRightKneeHandle" id={typeof _avatarRightKneeHandle === "object" && "id" in _avatarRightKneeHandle ? _avatarRightKneeHandle?.id : undefined} value={typeof _avatarRightKneeHandle === "object" && "value" in _avatarRightKneeHandle ? _avatarRightKneeHandle?.value : _avatarRightKneeHandle} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldHook\`1[BaseX.float3]`} name="_avatarLeftKneeOffset" id={typeof _avatarLeftKneeOffset === "object" && "id" in _avatarLeftKneeOffset ? _avatarLeftKneeOffset?.id : undefined} value={typeof _avatarLeftKneeOffset === "object" && "value" in _avatarLeftKneeOffset ? _avatarLeftKneeOffset?.value : _avatarLeftKneeOffset} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldHook\`1[BaseX.float3]`} name="_avatarRightKneeOffset" id={typeof _avatarRightKneeOffset === "object" && "id" in _avatarRightKneeOffset ? _avatarRightKneeOffset?.id : undefined} value={typeof _avatarRightKneeOffset === "object" && "value" in _avatarRightKneeOffset ? _avatarRightKneeOffset?.value : _avatarRightKneeOffset} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.MaterialSet]`} name="_platformBodyMaterialSets" id={typeof _platformBodyMaterialSets === "object" && "id" in _platformBodyMaterialSets ? _platformBodyMaterialSets?.id : undefined} value={typeof _platformBodyMaterialSets === "object" && "value" in _platformBodyMaterialSets ? _platformBodyMaterialSets?.value : _platformBodyMaterialSets} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.MaterialSet] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="_ground" id={typeof _ground === "object" && "id" in _ground ? _ground?.id : undefined} value={typeof _ground === "object" && "value" in _ground ? _ground?.value : _ground} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.FullBodyCalibrator+Tracker]`} name="_trackers" id={typeof _trackers === "object" && "id" in _trackers ? _trackers?.id : undefined} value={typeof _trackers === "object" && "value" in _trackers ? _trackers?.value : _trackers} /* default: FrooxEngine.SyncList`1[FrooxEngine.FullBodyCalibrator+Tracker] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="_visualizationRoot" id={typeof _visualizationRoot === "object" && "id" in _visualizationRoot ? _visualizationRoot?.id : undefined} value={typeof _visualizationRoot === "object" && "value" in _visualizationRoot ? _visualizationRoot?.value : _visualizationRoot} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.FresnelMaterial]`} name="_bodyNodeMaterial" id={typeof _bodyNodeMaterial === "object" && "id" in _bodyNodeMaterial ? _bodyNodeMaterial?.id : undefined} value={typeof _bodyNodeMaterial === "object" && "value" in _bodyNodeMaterial ? _bodyNodeMaterial?.value : _bodyNodeMaterial} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.OverlayFresnelMaterial]`} name="_calibrationReferenceMaterial" id={typeof _calibrationReferenceMaterial === "object" && "id" in _calibrationReferenceMaterial ? _calibrationReferenceMaterial?.id : undefined} value={typeof _calibrationReferenceMaterial === "object" && "value" in _calibrationReferenceMaterial ? _calibrationReferenceMaterial?.value : _calibrationReferenceMaterial} /* default: ID0 */  />

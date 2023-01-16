@@ -15,6 +15,7 @@ import { member, Member, Component } from "../../core";
         Enabled?: member<boolean>;
 Controller?: member<any>;
 AlwaysLocal?: member<boolean>;
+_data?: member<any>;
 _position?: member<any>;
 _rotation?: member<any>;
 _scale?: member<any>;
@@ -30,6 +31,7 @@ IsScalable?: member<boolean>;
       const { id, persistentId, updateOrder, Enabled,
 Controller,
 AlwaysLocal,
+_data,
 _position,
 _rotation,
 _scale,
@@ -45,6 +47,7 @@ IsScalable, } = props;
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.RelayRef\`1[BusinessX.ClassroomDatabaseController]`} name="Controller" id={typeof Controller === "object" && "id" in Controller ? Controller?.id : undefined} value={typeof Controller === "object" && "value" in Controller ? Controller?.value : Controller} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AlwaysLocal" id={typeof AlwaysLocal === "object" && "id" in AlwaysLocal ? AlwaysLocal?.id : undefined} value={typeof AlwaysLocal === "object" && "value" in AlwaysLocal ? AlwaysLocal?.value : AlwaysLocal} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[BusinessX.ClassroomGrabbable+UserData]`} name="_data" id={typeof _data === "object" && "id" in _data ? _data?.id : undefined} value={typeof _data === "object" && "value" in _data ? _data?.value : _data} /* default: FrooxEngine.SyncList`1[BusinessX.ClassroomGrabbable+UserData] */  />
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.float3]`} name="_position" id={typeof _position === "object" && "id" in _position ? _position?.id : undefined} value={typeof _position === "object" && "value" in _position ? _position?.value : _position} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.floatQ]`} name="_rotation" id={typeof _rotation === "object" && "id" in _rotation ? _rotation?.id : undefined} value={typeof _rotation === "object" && "value" in _rotation ? _rotation?.value : _rotation} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.float3]`} name="_scale" id={typeof _scale === "object" && "id" in _scale ? _scale?.id : undefined} value={typeof _scale === "object" && "value" in _scale ? _scale?.value : _scale} /* default: ID0 */  />

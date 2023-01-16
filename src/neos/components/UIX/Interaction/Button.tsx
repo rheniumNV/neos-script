@@ -14,6 +14,15 @@ import { member, Member, Component } from "../../../core";
         updateOrder?:member<number>;
         Enabled?: member<boolean>;
 BaseColor?: member<[number, number, number, number]>;
+ColorDrivers?: member<Array<{
+        ID: string;
+        ColorDrive:{ID:string; Data:string;};
+        TintColorMode:{ID:string; Data:string|'Explicit';};
+        NormalColor:{ID:string; Data:[number, number, number, number];};
+        HighlightColor:{ID:string; Data:[number, number, number, number];};
+        PressColor:{ID:string; Data:[number, number, number, number];};
+        DisabledColor:{ID:string; Data:[number, number, number, number];};
+      }>>;
 __legacy_NormalColor?: member<[number, number, number, number]>;
 __legacy_HighlightColor?: member<[number, number, number, number]>;
 __legacy_PressColor?: member<[number, number, number, number]>;
@@ -41,6 +50,7 @@ HoverLeave?: member<any>;
     export function Button(props: ButtonInput){
       const { id, persistentId, updateOrder, Enabled,
 BaseColor,
+ColorDrivers,
 __legacy_NormalColor,
 __legacy_HighlightColor,
 __legacy_PressColor,
@@ -68,6 +78,7 @@ HoverLeave, } = props;
         <Component type="FrooxEngine.UIX.Button" id={id} persistentId={persistentId} updateOrder={updateOrder}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="BaseColor" id={typeof BaseColor === "object" && "id" in BaseColor ? BaseColor?.id : undefined} value={typeof BaseColor === "object" && "value" in BaseColor ? BaseColor?.value : BaseColor} /* default: [0; 0; 0; 0] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.UIX.InteractionElement+ColorDriver]`} name="ColorDrivers" id={typeof ColorDrivers === "object" && "id" in ColorDrivers ? ColorDrivers?.id : undefined} value={typeof ColorDrivers === "object" && "value" in ColorDrivers ? ColorDrivers?.value : ColorDrivers} /* default: FrooxEngine.SyncList`1[FrooxEngine.UIX.InteractionElement+ColorDriver] */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="__legacy_NormalColor-ID" id={typeof __legacy_NormalColor === "object" && "id" in __legacy_NormalColor ? __legacy_NormalColor?.id : undefined} value={typeof __legacy_NormalColor === "object" && "value" in __legacy_NormalColor ? __legacy_NormalColor?.value : __legacy_NormalColor} /* default: [0; 0; 0; 0] */ idOnly />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="__legacy_HighlightColor-ID" id={typeof __legacy_HighlightColor === "object" && "id" in __legacy_HighlightColor ? __legacy_HighlightColor?.id : undefined} value={typeof __legacy_HighlightColor === "object" && "value" in __legacy_HighlightColor ? __legacy_HighlightColor?.value : __legacy_HighlightColor} /* default: [0; 0; 0; 0] */ idOnly />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="__legacy_PressColor-ID" id={typeof __legacy_PressColor === "object" && "id" in __legacy_PressColor ? __legacy_PressColor?.id : undefined} value={typeof __legacy_PressColor === "object" && "value" in __legacy_PressColor ? __legacy_PressColor?.value : __legacy_PressColor} /* default: [0; 0; 0; 0] */ idOnly />

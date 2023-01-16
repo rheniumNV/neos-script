@@ -17,6 +17,7 @@ AutoUpdate?: member<boolean>;
 FixTransformsEnabled?: member<boolean>;
 Solver?: member<any>;
 componentInitiated?: member<boolean>;
+_drives?: member<any>;
     }
     
     export function VRIK(props: VRIKInput){
@@ -24,7 +25,8 @@ componentInitiated?: member<boolean>;
 AutoUpdate,
 FixTransformsEnabled,
 Solver,
-componentInitiated, } = props;
+componentInitiated,
+_drives, } = props;
     
       return (
         <Component type="FrooxEngine.FinalIK.VRIK" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -33,6 +35,7 @@ componentInitiated, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="FixTransformsEnabled" id={typeof FixTransformsEnabled === "object" && "id" in FixTransformsEnabled ? FixTransformsEnabled?.id : undefined} value={typeof FixTransformsEnabled === "object" && "value" in FixTransformsEnabled ? FixTransformsEnabled?.value : FixTransformsEnabled} /* default: false */  />
 <Member type={`FrooxEngine.FinalIK.IKSolverVR`} name="Solver" id={typeof Solver === "object" && "id" in Solver ? Solver?.id : undefined} value={typeof Solver === "object" && "value" in Solver ? Solver?.value : Solver} /* default: Element:\ ID0,\ Type:\ FrooxEngine\.FinalIK\.IKSolverVR,\ World:\ null,\ IsRemoved:\ false,\ Name:\ \r\n */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="componentInitiated" id={typeof componentInitiated === "object" && "id" in componentInitiated ? componentInitiated?.id : undefined} value={typeof componentInitiated === "object" && "value" in componentInitiated ? componentInitiated?.value : componentInitiated} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.FinalIK.VRIK+BoneDrive]`} name="_drives" id={typeof _drives === "object" && "id" in _drives ? _drives?.id : undefined} value={typeof _drives === "object" && "value" in _drives ? _drives?.value : _drives} /* default: FrooxEngine.SyncList`1[FrooxEngine.FinalIK.VRIK+BoneDrive] */  />
         </Component>
       );
     };

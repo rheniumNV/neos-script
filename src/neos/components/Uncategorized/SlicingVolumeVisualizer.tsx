@@ -19,6 +19,7 @@ _renderer?: member<any>;
 _mesh?: member<any>;
 _collider?: member<any>;
 _scale?: member<any>;
+Slicers?: member<any>;
 _slicePlanes?: member<any>;
 _highlights?: member<any>;
     }
@@ -31,6 +32,7 @@ _renderer,
 _mesh,
 _collider,
 _scale,
+Slicers,
 _slicePlanes,
 _highlights, } = props;
     
@@ -43,6 +45,7 @@ _highlights, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.BoxMesh]`} name="_mesh" id={typeof _mesh === "object" && "id" in _mesh ? _mesh?.id : undefined} value={typeof _mesh === "object" && "value" in _mesh ? _mesh?.value : _mesh} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.BoxCollider]`} name="_collider" id={typeof _collider === "object" && "id" in _collider ? _collider?.id : undefined} value={typeof _collider === "object" && "value" in _collider ? _collider?.value : _collider} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.float3]`} name="_scale" id={typeof _scale === "object" && "id" in _scale ? _scale?.id : undefined} value={typeof _scale === "object" && "value" in _scale ? _scale?.value : _scale} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncRelayList\`1[FrooxEngine.VolumePlaneSlicer]`} name="Slicers" id={typeof Slicers === "object" && "id" in Slicers ? Slicers?.id : undefined} value={typeof Slicers === "object" && "value" in Slicers ? Slicers?.value : Slicers} /* default: FrooxEngine.SyncRelayList`1[FrooxEngine.VolumePlaneSlicer] */  />
 <Member type={`FrooxEngine.DriveRef\`1[FrooxEngine.SyncList\`1[FrooxEngine.VolumeUnlitMaterial+SlicePlane]]`} name="_slicePlanes" id={typeof _slicePlanes === "object" && "id" in _slicePlanes ? _slicePlanes?.id : undefined} value={typeof _slicePlanes === "object" && "value" in _slicePlanes ? _slicePlanes?.value : _slicePlanes} /* default: ID0 */  />
 <Member type={`FrooxEngine.DriveRef\`1[FrooxEngine.SyncList\`1[FrooxEngine.VolumeUnlitMaterial+Highlight]]`} name="_highlights" id={typeof _highlights === "object" && "id" in _highlights ? _highlights?.id : undefined} value={typeof _highlights === "object" && "value" in _highlights ? _highlights?.value : _highlights} /* default: ID0 */  />
         </Component>

@@ -24,6 +24,7 @@ SearchSortBy?: member<any>;
 SearchSortDirection?: member<any>;
 SearchRecordType?: member<any>;
 SubmittedTo?: member<any>;
+FixedSearchTags?: member<any>;
 _listingContainer?: member<any>;
 _detailContainer?: member<any>;
 _listingAnchorMin?: member<any>;
@@ -66,6 +67,7 @@ SearchSortBy,
 SearchSortDirection,
 SearchRecordType,
 SubmittedTo,
+FixedSearchTags,
 _listingContainer,
 _detailContainer,
 _listingAnchorMin,
@@ -108,6 +110,7 @@ _adminActionsRoot, } = props;
 <Member type={`FrooxEngine.Sync\`1[CloudX.Shared.SearchSortDirection]`} name="SearchSortDirection" id={typeof SearchSortDirection === "object" && "id" in SearchSortDirection ? SearchSortDirection?.id : undefined} value={typeof SearchSortDirection === "object" && "value" in SearchSortDirection ? SearchSortDirection?.value : SearchSortDirection} /* default: Ascending */  />
 <Member type={`FrooxEngine.Sync\`1[System.String]`} name="SearchRecordType" id={typeof SearchRecordType === "object" && "id" in SearchRecordType ? SearchRecordType?.id : undefined} value={typeof SearchRecordType === "object" && "value" in SearchRecordType ? SearchRecordType?.value : SearchRecordType} /* default: <i>null</i> */  />
 <Member type={`FrooxEngine.Sync\`1[System.String]`} name="SubmittedTo" id={typeof SubmittedTo === "object" && "id" in SubmittedTo ? SubmittedTo?.id : undefined} value={typeof SubmittedTo === "object" && "value" in SubmittedTo ? SubmittedTo?.value : SubmittedTo} /* default: <i>null</i> */  />
+<Member type={`FrooxEngine.SyncFieldList\`1[System.String]`} name="FixedSearchTags" id={typeof FixedSearchTags === "object" && "id" in FixedSearchTags ? FixedSearchTags?.id : undefined} value={typeof FixedSearchTags === "object" && "value" in FixedSearchTags ? FixedSearchTags?.value : FixedSearchTags} /* default: FrooxEngine.SyncFieldList`1[System.String] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.UIX.RectTransform]`} name="_listingContainer" id={typeof _listingContainer === "object" && "id" in _listingContainer ? _listingContainer?.id : undefined} value={typeof _listingContainer === "object" && "value" in _listingContainer ? _listingContainer?.value : _listingContainer} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.UIX.RectTransform]`} name="_detailContainer" id={typeof _detailContainer === "object" && "id" in _detailContainer ? _detailContainer?.id : undefined} value={typeof _detailContainer === "object" && "value" in _detailContainer ? _detailContainer?.value : _detailContainer} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[BaseX.float2]`} name="_listingAnchorMin" id={typeof _listingAnchorMin === "object" && "id" in _listingAnchorMin ? _listingAnchorMin?.id : undefined} value={typeof _listingAnchorMin === "object" && "value" in _listingAnchorMin ? _listingAnchorMin?.value : _listingAnchorMin} /* default: ID0 */  />

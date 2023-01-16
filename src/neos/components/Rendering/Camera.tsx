@@ -30,6 +30,8 @@ Postprocessing?: member<boolean>;
 ScreenSpaceReflections?: member<boolean>;
 MotionBlur?: member<boolean>;
 RenderShadows?: member<boolean>;
+SelectiveRender?: member<any>;
+ExcludeRender?: member<any>;
     }
     
     export function Camera(props: CameraInput){
@@ -50,7 +52,9 @@ RenderTexture,
 Postprocessing,
 ScreenSpaceReflections,
 MotionBlur,
-RenderShadows, } = props;
+RenderShadows,
+SelectiveRender,
+ExcludeRender, } = props;
     
       return (
         <Component type="FrooxEngine.Camera" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -72,6 +76,8 @@ RenderShadows, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="ScreenSpaceReflections" id={typeof ScreenSpaceReflections === "object" && "id" in ScreenSpaceReflections ? ScreenSpaceReflections?.id : undefined} value={typeof ScreenSpaceReflections === "object" && "value" in ScreenSpaceReflections ? ScreenSpaceReflections?.value : ScreenSpaceReflections} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="MotionBlur" id={typeof MotionBlur === "object" && "id" in MotionBlur ? MotionBlur?.id : undefined} value={typeof MotionBlur === "object" && "value" in MotionBlur ? MotionBlur?.value : MotionBlur} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="RenderShadows" id={typeof RenderShadows === "object" && "id" in RenderShadows ? RenderShadows?.id : undefined} value={typeof RenderShadows === "object" && "value" in RenderShadows ? RenderShadows?.value : RenderShadows} /* default: false */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.Slot]`} name="SelectiveRender" id={typeof SelectiveRender === "object" && "id" in SelectiveRender ? SelectiveRender?.id : undefined} value={typeof SelectiveRender === "object" && "value" in SelectiveRender ? SelectiveRender?.value : SelectiveRender} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.Slot] */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.Slot]`} name="ExcludeRender" id={typeof ExcludeRender === "object" && "id" in ExcludeRender ? ExcludeRender?.id : undefined} value={typeof ExcludeRender === "object" && "value" in ExcludeRender ? ExcludeRender?.value : ExcludeRender} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.Slot] */  />
         </Component>
       );
     };

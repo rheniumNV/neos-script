@@ -28,6 +28,8 @@ MenuRadiusStart?: member<number>;
 MenuThickness?: member<number>;
 FillColor?: member<[number, number, number, number]>;
 OutlineColor?: member<[number, number, number, number]>;
+CircleItemOverrides?: member<any>;
+IndependentSegments?: member<any>;
 OutlineWidth?: member<number>;
     }
     
@@ -48,6 +50,8 @@ MenuRadiusStart,
 MenuThickness,
 FillColor,
 OutlineColor,
+CircleItemOverrides,
+IndependentSegments,
 OutlineWidth, } = props;
     
       return (
@@ -68,6 +72,8 @@ OutlineWidth, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MenuThickness" id={typeof MenuThickness === "object" && "id" in MenuThickness ? MenuThickness?.id : undefined} value={typeof MenuThickness === "object" && "value" in MenuThickness ? MenuThickness?.value : MenuThickness} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="FillColor" id={typeof FillColor === "object" && "id" in FillColor ? FillColor?.id : undefined} value={typeof FillColor === "object" && "value" in FillColor ? FillColor?.value : FillColor} /* default: [0; 0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="OutlineColor" id={typeof OutlineColor === "object" && "id" in OutlineColor ? OutlineColor?.id : undefined} value={typeof OutlineColor === "object" && "value" in OutlineColor ? OutlineColor?.value : OutlineColor} /* default: [0; 0; 0; 0] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.NeosLogoMenuMesh+MenuSegment]`} name="CircleItemOverrides" id={typeof CircleItemOverrides === "object" && "id" in CircleItemOverrides ? CircleItemOverrides?.id : undefined} value={typeof CircleItemOverrides === "object" && "value" in CircleItemOverrides ? CircleItemOverrides?.value : CircleItemOverrides} /* default: FrooxEngine.SyncList`1[FrooxEngine.NeosLogoMenuMesh+MenuSegment] */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.NeosLogoMenuMesh+MenuSegment]`} name="IndependentSegments" id={typeof IndependentSegments === "object" && "id" in IndependentSegments ? IndependentSegments?.id : undefined} value={typeof IndependentSegments === "object" && "value" in IndependentSegments ? IndependentSegments?.value : IndependentSegments} /* default: FrooxEngine.SyncList`1[FrooxEngine.NeosLogoMenuMesh+MenuSegment] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="OutlineWidth" id={typeof OutlineWidth === "object" && "id" in OutlineWidth ? OutlineWidth?.id : undefined} value={typeof OutlineWidth === "object" && "value" in OutlineWidth ? OutlineWidth?.value : OutlineWidth} /* default: 0 */  />
         </Component>
       );

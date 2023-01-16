@@ -60,9 +60,10 @@ function jsx(statement: string | any, rawProps: any, ...a: any[]) {
         ),
       };
     case "component":
-      const { type } = props;
+      const { type, version } = props;
       return {
         Type: type,
+        version,
         Data: _.reduce(
           children,
           (prev, curr) => {
@@ -98,18 +99,39 @@ function jsx(statement: string | any, rawProps: any, ...a: any[]) {
             break;
         }
       });
+      let typeVersions: { [key: string]: number } = {};
+      components.forEach((component: any) => {
+        typeVersions = {
+          ...typeVersions,
+          ...(component.version && component.version !== 0
+            ? { [component.Type]: component.version }
+            : {}),
+        };
+      });
+      assets.forEach((component: any) => {
+        typeVersions = {
+          ...typeVersions,
+          ...(component.version && component.version !== 0
+            ? { [component.Type]: component.version }
+            : {}),
+        };
+      });
+
       const slotId = slotData["ID"];
+      const Children = _.map(slotChildren ?? [], ({ Object, TypeVersions }) => {
+        const { assets: childAssets, ...slot } = Object;
+        assets = [...(assets ?? []), ...(childAssets ?? [])];
+        typeVersions = { ...TypeVersions, typeVersions };
+        return { ...slot, ...{ ParentReference: slotId } };
+      });
       return {
         Object: {
           ...(slotData ?? {}),
           Components: { ID: generateId(), Data: components },
-          Children: _.map(slotChildren ?? [], ({ Object }) => {
-            const { assets: childAssets, ...slot } = Object;
-            assets = [...(assets ?? []), ...(childAssets ?? [])];
-            return { ...slot, ...{ ParentReference: slotId } };
-          }),
-          Assets: assets,
+          Children,
         },
+        Assets: assets,
+        TypeVersions: typeVersions,
       };
   }
 }

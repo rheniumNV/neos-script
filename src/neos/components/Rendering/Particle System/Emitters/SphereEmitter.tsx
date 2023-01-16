@@ -18,6 +18,7 @@ Rate?: member<number>;
 BurstOnActivatedMin?: member<number>;
 BurstOnActivatedMax?: member<number>;
 BurstTimePeriod?: member<number>;
+Bursts?: member<any>;
 Radius?: member<number>;
 EmitFromShell?: member<boolean>;
 RandomDirection?: member<number>;
@@ -33,6 +34,7 @@ Rate,
 BurstOnActivatedMin,
 BurstOnActivatedMax,
 BurstTimePeriod,
+Bursts,
 Radius,
 EmitFromShell,
 RandomDirection,
@@ -48,6 +50,7 @@ DirectionReferencePoint, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="BurstOnActivatedMin" id={typeof BurstOnActivatedMin === "object" && "id" in BurstOnActivatedMin ? BurstOnActivatedMin?.id : undefined} value={typeof BurstOnActivatedMin === "object" && "value" in BurstOnActivatedMin ? BurstOnActivatedMin?.value : BurstOnActivatedMin} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="BurstOnActivatedMax" id={typeof BurstOnActivatedMax === "object" && "id" in BurstOnActivatedMax ? BurstOnActivatedMax?.id : undefined} value={typeof BurstOnActivatedMax === "object" && "value" in BurstOnActivatedMax ? BurstOnActivatedMax?.value : BurstOnActivatedMax} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Double]`} name="BurstTimePeriod" id={typeof BurstTimePeriod === "object" && "id" in BurstTimePeriod ? BurstTimePeriod?.id : undefined} value={typeof BurstTimePeriod === "object" && "value" in BurstTimePeriod ? BurstTimePeriod?.value : BurstTimePeriod} /* default: 0 */  />
+<Member type={`FrooxEngine.SyncLinear\`1[FrooxEngine.ParticleBurst]`} name="Bursts" id={typeof Bursts === "object" && "id" in Bursts ? Bursts?.id : undefined} value={typeof Bursts === "object" && "value" in Bursts ? Bursts?.value : Bursts} /* default: FrooxEngine.SyncLinear`1[FrooxEngine.ParticleBurst] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Radius" id={typeof Radius === "object" && "id" in Radius ? Radius?.id : undefined} value={typeof Radius === "object" && "value" in Radius ? Radius?.value : Radius} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="EmitFromShell" id={typeof EmitFromShell === "object" && "id" in EmitFromShell ? EmitFromShell?.id : undefined} value={typeof EmitFromShell === "object" && "value" in EmitFromShell ? EmitFromShell?.value : EmitFromShell} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="RandomDirection" id={typeof RandomDirection === "object" && "id" in RandomDirection ? RandomDirection?.id : undefined} value={typeof RandomDirection === "object" && "value" in RandomDirection ? RandomDirection?.value : RandomDirection} /* default: 0 */  />

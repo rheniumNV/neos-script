@@ -22,6 +22,7 @@ HorizontalAlign?: member<any>;
 VerticalAlign?: member<any>;
 AlignmentMode?: member<any>;
 Color?: member<[number, number, number, number]>;
+Materials?: member<Array<{ID:string, Data:string}>>;
 LineHeight?: member<number>;
 MaskPattern?: member<any>;
 HorizontalAutoSize?: member<boolean>;
@@ -48,6 +49,7 @@ HorizontalAlign,
 VerticalAlign,
 AlignmentMode,
 Color,
+Materials,
 LineHeight,
 MaskPattern,
 HorizontalAutoSize,
@@ -74,6 +76,7 @@ _legacyAlign, } = props;
 <Member type={`FrooxEngine.Sync\`1[CodeX.TextVerticalAlignment]`} name="VerticalAlign" id={typeof VerticalAlign === "object" && "id" in VerticalAlign ? VerticalAlign?.id : undefined} value={typeof VerticalAlign === "object" && "value" in VerticalAlign ? VerticalAlign?.value : VerticalAlign} /* default: Top */  />
 <Member type={`FrooxEngine.Sync\`1[CodeX.AlignmentMode]`} name="AlignmentMode" id={typeof AlignmentMode === "object" && "id" in AlignmentMode ? AlignmentMode?.id : undefined} value={typeof AlignmentMode === "object" && "value" in AlignmentMode ? AlignmentMode?.value : AlignmentMode} /* default: Geometric */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="Color" id={typeof Color === "object" && "id" in Color ? Color?.id : undefined} value={typeof Color === "object" && "value" in Color ? Color?.value : Color} /* default: [0; 0; 0; 0] */  />
+<Member type={`FrooxEngine.SyncAssetList\`1[FrooxEngine.Material]`} name="Materials" id={typeof Materials === "object" && "id" in Materials ? Materials?.id : undefined} value={typeof Materials === "object" && "value" in Materials ? Materials?.value : Materials} /* default: FrooxEngine.SyncAssetList`1[FrooxEngine.Material] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="LineHeight" id={typeof LineHeight === "object" && "id" in LineHeight ? LineHeight?.id : undefined} value={typeof LineHeight === "object" && "value" in LineHeight ? LineHeight?.value : LineHeight} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.String]`} name="MaskPattern" id={typeof MaskPattern === "object" && "id" in MaskPattern ? MaskPattern?.id : undefined} value={typeof MaskPattern === "object" && "value" in MaskPattern ? MaskPattern?.value : MaskPattern} /* default: <i>null</i> */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="HorizontalAutoSize" id={typeof HorizontalAutoSize === "object" && "id" in HorizontalAutoSize ? HorizontalAutoSize?.id : undefined} value={typeof HorizontalAutoSize === "object" && "value" in HorizontalAutoSize ? HorizontalAutoSize?.value : HorizontalAutoSize} /* default: false */  />

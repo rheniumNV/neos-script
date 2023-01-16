@@ -22,6 +22,7 @@ MipmapBias?: member<number>;
 Size?: member<[number, number]>;
 Mipmaps?: member<boolean>;
 Format?: member<any>;
+Gradient?: member<any>;
 Exp?: member<number>;
 _orientation?: member<any>;
     }
@@ -37,6 +38,7 @@ MipmapBias,
 Size,
 Mipmaps,
 Format,
+Gradient,
 Exp,
 _orientation, } = props;
     
@@ -52,6 +54,7 @@ _orientation, } = props;
 <Member type={`FrooxEngine.Sync\`1[BaseX.int2]`} name="Size" id={typeof Size === "object" && "id" in Size ? Size?.id : undefined} value={typeof Size === "object" && "value" in Size ? Size?.value : Size} /* default: [0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Mipmaps" id={typeof Mipmaps === "object" && "id" in Mipmaps ? Mipmaps?.id : undefined} value={typeof Mipmaps === "object" && "value" in Mipmaps ? Mipmaps?.value : Mipmaps} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[CodeX.TextureFormat]`} name="Format" id={typeof Format === "object" && "id" in Format ? Format?.id : undefined} value={typeof Format === "object" && "value" in Format ? Format?.value : Format} /* default: Unknown */  />
+<Member type={`FrooxEngine.SyncLinear\`1[BaseX.color]`} name="Gradient" id={typeof Gradient === "object" && "id" in Gradient ? Gradient?.id : undefined} value={typeof Gradient === "object" && "value" in Gradient ? Gradient?.value : Gradient} /* default: FrooxEngine.SyncLinear`1[BaseX.color] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Exp" id={typeof Exp === "object" && "id" in Exp ? Exp?.id : undefined} value={typeof Exp === "object" && "value" in Exp ? Exp?.value : Exp} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.GradientStripTexture+StripOrientation]`} name="_orientation" id={typeof _orientation === "object" && "id" in _orientation ? _orientation?.id : undefined} value={typeof _orientation === "object" && "value" in _orientation ? _orientation?.value : _orientation} /* default: Horizontal */  />
         </Component>

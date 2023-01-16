@@ -13,6 +13,9 @@ import { member, Member, Component } from "../../../core";
         persistentId?:string;
         updateOrder?:member<number>;
         Enabled?: member<boolean>;
+SnapperWhitelist?: member<any>;
+SnapperKeywordWhitelist?: member<any>;
+Filters?: member<any>;
 DirectSnapOnly?: member<boolean>;
 MaximumSnapDistance?: member<number>;
 MaximumAngleDeviation?: member<number>;
@@ -24,6 +27,9 @@ proxySphere?: member<any>;
     
     export function SnapTarget(props: SnapTargetInput){
       const { id, persistentId, updateOrder, Enabled,
+SnapperWhitelist,
+SnapperKeywordWhitelist,
+Filters,
 DirectSnapOnly,
 MaximumSnapDistance,
 MaximumAngleDeviation,
@@ -35,6 +41,9 @@ proxySphere, } = props;
       return (
         <Component type="FrooxEngine.SnapTarget" id={id} persistentId={persistentId} updateOrder={updateOrder}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
+<Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.Snapper]`} name="SnapperWhitelist" id={typeof SnapperWhitelist === "object" && "id" in SnapperWhitelist ? SnapperWhitelist?.id : undefined} value={typeof SnapperWhitelist === "object" && "value" in SnapperWhitelist ? SnapperWhitelist?.value : SnapperWhitelist} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.Snapper] */  />
+<Member type={`FrooxEngine.SyncFieldList\`1[System.String]`} name="SnapperKeywordWhitelist" id={typeof SnapperKeywordWhitelist === "object" && "id" in SnapperKeywordWhitelist ? SnapperKeywordWhitelist?.id : undefined} value={typeof SnapperKeywordWhitelist === "object" && "value" in SnapperKeywordWhitelist ? SnapperKeywordWhitelist?.value : SnapperKeywordWhitelist} /* default: FrooxEngine.SyncFieldList`1[System.String] */  />
+<Member type={`FrooxEngine.SyncDelegateList\`1[FrooxEngine.SnapperFilter]`} name="Filters" id={typeof Filters === "object" && "id" in Filters ? Filters?.id : undefined} value={typeof Filters === "object" && "value" in Filters ? Filters?.value : Filters} /* default: FrooxEngine.SyncDelegateList`1[FrooxEngine.SnapperFilter] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="DirectSnapOnly" id={typeof DirectSnapOnly === "object" && "id" in DirectSnapOnly ? DirectSnapOnly?.id : undefined} value={typeof DirectSnapOnly === "object" && "value" in DirectSnapOnly ? DirectSnapOnly?.value : DirectSnapOnly} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MaximumSnapDistance" id={typeof MaximumSnapDistance === "object" && "id" in MaximumSnapDistance ? MaximumSnapDistance?.id : undefined} value={typeof MaximumSnapDistance === "object" && "value" in MaximumSnapDistance ? MaximumSnapDistance?.value : MaximumSnapDistance} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MaximumAngleDeviation" id={typeof MaximumAngleDeviation === "object" && "id" in MaximumAngleDeviation ? MaximumAngleDeviation?.id : undefined} value={typeof MaximumAngleDeviation === "object" && "value" in MaximumAngleDeviation ? MaximumAngleDeviation?.value : MaximumAngleDeviation} /* default: 0 */  />

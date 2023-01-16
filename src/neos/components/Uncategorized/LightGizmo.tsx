@@ -24,6 +24,7 @@ _pointItem?: member<any>;
 _spotItem?: member<any>;
 _directionalItem?: member<any>;
 _settingsItem?: member<any>;
+_menuColorDrives?: member<any>;
 _menuActive?: member<any>;
 _pointIconActive?: member<any>;
 _spotIconActive?: member<any>;
@@ -51,6 +52,7 @@ _pointItem,
 _spotItem,
 _directionalItem,
 _settingsItem,
+_menuColorDrives,
 _menuActive,
 _pointIconActive,
 _spotIconActive,
@@ -78,6 +80,7 @@ _iconMaterial, } = props;
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosLogoMenuController+Item]`} name="_spotItem" id={typeof _spotItem === "object" && "id" in _spotItem ? _spotItem?.id : undefined} value={typeof _spotItem === "object" && "value" in _spotItem ? _spotItem?.value : _spotItem} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosLogoMenuController+Item]`} name="_directionalItem" id={typeof _directionalItem === "object" && "id" in _directionalItem ? _directionalItem?.id : undefined} value={typeof _directionalItem === "object" && "value" in _directionalItem ? _directionalItem?.value : _directionalItem} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.NeosLogoMenuController+Item]`} name="_settingsItem" id={typeof _settingsItem === "object" && "id" in _settingsItem ? _settingsItem?.id : undefined} value={typeof _settingsItem === "object" && "value" in _settingsItem ? _settingsItem?.value : _settingsItem} /* default: ID0 */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.FieldDrive\`1[BaseX.color]]`} name="_menuColorDrives" id={typeof _menuColorDrives === "object" && "id" in _menuColorDrives ? _menuColorDrives?.id : undefined} value={typeof _menuColorDrives === "object" && "value" in _menuColorDrives ? _menuColorDrives?.value : _menuColorDrives} /* default: FrooxEngine.SyncList`1[FrooxEngine.FieldDrive`1[BaseX.color]] */  />
 <Member type={`FrooxEngine.FieldDrive\`1[System.Boolean]`} name="_menuActive" id={typeof _menuActive === "object" && "id" in _menuActive ? _menuActive?.id : undefined} value={typeof _menuActive === "object" && "value" in _menuActive ? _menuActive?.value : _menuActive} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[System.Boolean]`} name="_pointIconActive" id={typeof _pointIconActive === "object" && "id" in _pointIconActive ? _pointIconActive?.id : undefined} value={typeof _pointIconActive === "object" && "value" in _pointIconActive ? _pointIconActive?.value : _pointIconActive} /* default: ID0 */  />
 <Member type={`FrooxEngine.FieldDrive\`1[System.Boolean]`} name="_spotIconActive" id={typeof _spotIconActive === "object" && "id" in _spotIconActive ? _spotIconActive?.id : undefined} value={typeof _spotIconActive === "object" && "value" in _spotIconActive ? _spotIconActive?.value : _spotIconActive} /* default: ID0 */  />

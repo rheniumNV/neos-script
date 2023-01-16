@@ -18,6 +18,7 @@ BaseSize?: member<[number, number, number]>;
 Increment?: member<[number, number, number]>;
 Multiplier?: member<[number, number, number]>;
 NonUniform?: member<boolean>;
+_targets?: member<any>;
     }
     
     export function ScaleAligner(props: ScaleAlignerInput){
@@ -26,7 +27,8 @@ AutoAddChildren,
 BaseSize,
 Increment,
 Multiplier,
-NonUniform, } = props;
+NonUniform,
+_targets, } = props;
     
       return (
         <Component type="FrooxEngine.ScaleAligner" id={id} persistentId={persistentId} updateOrder={updateOrder}>
@@ -36,6 +38,7 @@ NonUniform, } = props;
 <Member type={`FrooxEngine.Sync\`1[BaseX.float3]`} name="Increment" id={typeof Increment === "object" && "id" in Increment ? Increment?.id : undefined} value={typeof Increment === "object" && "value" in Increment ? Increment?.value : Increment} /* default: [0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.float3]`} name="Multiplier" id={typeof Multiplier === "object" && "id" in Multiplier ? Multiplier?.id : undefined} value={typeof Multiplier === "object" && "value" in Multiplier ? Multiplier?.value : Multiplier} /* default: [0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="NonUniform" id={typeof NonUniform === "object" && "id" in NonUniform ? NonUniform?.id : undefined} value={typeof NonUniform === "object" && "value" in NonUniform ? NonUniform?.value : NonUniform} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.ScaleAligner+Target]`} name="_targets" id={typeof _targets === "object" && "id" in _targets ? _targets?.id : undefined} value={typeof _targets === "object" && "value" in _targets ? _targets?.value : _targets} /* default: FrooxEngine.SyncList`1[FrooxEngine.ScaleAligner+Target] */  />
         </Component>
       );
     };

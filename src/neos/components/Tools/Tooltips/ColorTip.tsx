@@ -21,6 +21,7 @@ _overrideActiveTool?: member<any>;
 _gripPosesGenerated?: member<boolean>;
 Color?: member<[number, number, number, number]>;
 EnsureUniqueMaterial?: member<boolean>;
+ColorIndicators?: member<any>;
 _colorDialog?: member<any>;
     }
     
@@ -34,6 +35,7 @@ _overrideActiveTool,
 _gripPosesGenerated,
 Color,
 EnsureUniqueMaterial,
+ColorIndicators,
 _colorDialog, } = props;
     
       return (
@@ -47,6 +49,7 @@ _colorDialog, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="_gripPosesGenerated" id={typeof _gripPosesGenerated === "object" && "id" in _gripPosesGenerated ? _gripPosesGenerated?.id : undefined} value={typeof _gripPosesGenerated === "object" && "value" in _gripPosesGenerated ? _gripPosesGenerated?.value : _gripPosesGenerated} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="Color" id={typeof Color === "object" && "id" in Color ? Color?.id : undefined} value={typeof Color === "object" && "value" in Color ? Color?.value : Color} /* default: [0; 0; 0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="EnsureUniqueMaterial" id={typeof EnsureUniqueMaterial === "object" && "id" in EnsureUniqueMaterial ? EnsureUniqueMaterial?.id : undefined} value={typeof EnsureUniqueMaterial === "object" && "value" in EnsureUniqueMaterial ? EnsureUniqueMaterial?.value : EnsureUniqueMaterial} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.FieldDrive\`1[BaseX.color]]`} name="ColorIndicators" id={typeof ColorIndicators === "object" && "id" in ColorIndicators ? ColorIndicators?.id : undefined} value={typeof ColorIndicators === "object" && "value" in ColorIndicators ? ColorIndicators?.value : ColorIndicators} /* default: FrooxEngine.SyncList`1[FrooxEngine.FieldDrive`1[BaseX.color]] */  />
 <Member type={`FrooxEngine.SlotCleanupRef\`1[FrooxEngine.NeosColorDialog]`} name="_colorDialog" id={typeof _colorDialog === "object" && "id" in _colorDialog ? _colorDialog?.id : undefined} value={typeof _colorDialog === "object" && "value" in _colorDialog ? _colorDialog?.value : _colorDialog} /* default: ID0 */  />
         </Component>
       );

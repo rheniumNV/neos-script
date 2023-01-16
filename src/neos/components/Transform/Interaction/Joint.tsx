@@ -37,6 +37,7 @@ VibrationPreset?: member<any>;
 SnapIncrement?: member<number>;
 SnapTime?: member<number>;
 SnapOnRelease?: member<boolean>;
+SnapOrientations?: member<any>;
 origRotation?: member<any>;
 rotReference?: member<any>;
 dirReference?: member<[number, number, number]>;
@@ -70,6 +71,7 @@ VibrationPreset,
 SnapIncrement,
 SnapTime,
 SnapOnRelease,
+SnapOrientations,
 origRotation,
 rotReference,
 dirReference,
@@ -103,6 +105,7 @@ usePositionTwist, } = props;
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="SnapIncrement" id={typeof SnapIncrement === "object" && "id" in SnapIncrement ? SnapIncrement?.id : undefined} value={typeof SnapIncrement === "object" && "value" in SnapIncrement ? SnapIncrement?.value : SnapIncrement} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="SnapTime" id={typeof SnapTime === "object" && "id" in SnapTime ? SnapTime?.id : undefined} value={typeof SnapTime === "object" && "value" in SnapTime ? SnapTime?.value : SnapTime} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="SnapOnRelease" id={typeof SnapOnRelease === "object" && "id" in SnapOnRelease ? SnapOnRelease?.id : undefined} value={typeof SnapOnRelease === "object" && "value" in SnapOnRelease ? SnapOnRelease?.value : SnapOnRelease} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.Joint+SnapOrientation]`} name="SnapOrientations" id={typeof SnapOrientations === "object" && "id" in SnapOrientations ? SnapOrientations?.id : undefined} value={typeof SnapOrientations === "object" && "value" in SnapOrientations ? SnapOrientations?.value : SnapOrientations} /* default: FrooxEngine.SyncList`1[FrooxEngine.Joint+SnapOrientation] */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.floatQ]`} name="origRotation" id={typeof origRotation === "object" && "id" in origRotation ? origRotation?.id : undefined} value={typeof origRotation === "object" && "value" in origRotation ? origRotation?.value : origRotation} /* default: [0; 0; 0; 1] */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.floatQ]`} name="rotReference" id={typeof rotReference === "object" && "id" in rotReference ? rotReference?.id : undefined} value={typeof rotReference === "object" && "value" in rotReference ? rotReference?.value : rotReference} /* default: [0; 0; 0; 1] */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.float3]`} name="dirReference" id={typeof dirReference === "object" && "id" in dirReference ? dirReference?.id : undefined} value={typeof dirReference === "object" && "value" in dirReference ? dirReference?.value : dirReference} /* default: [0; 0; 0] */  />

@@ -16,6 +16,7 @@ import { member, Member, Component } from "../../../core";
 Style?: member<any>;
 AcceptPhysicalTouch?: member<boolean>;
 AcceptRemoteTouch?: member<boolean>;
+_items?: member<any>;
 Width?: member<number>;
 Height?: member<number>;
 Thickness?: member<number>;
@@ -32,6 +33,7 @@ _rootScale?: member<any>;
 Style,
 AcceptPhysicalTouch,
 AcceptRemoteTouch,
+_items,
 Width,
 Height,
 Thickness,
@@ -48,6 +50,7 @@ _rootScale, } = props;
 <Member type={`FrooxEngine.RelayRef\`1[FrooxEngine.NeosUIStyle]`} name="Style" id={typeof Style === "object" && "id" in Style ? Style?.id : undefined} value={typeof Style === "object" && "value" in Style ? Style?.value : Style} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AcceptPhysicalTouch" id={typeof AcceptPhysicalTouch === "object" && "id" in AcceptPhysicalTouch ? AcceptPhysicalTouch?.id : undefined} value={typeof AcceptPhysicalTouch === "object" && "value" in AcceptPhysicalTouch ? AcceptPhysicalTouch?.value : AcceptPhysicalTouch} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AcceptRemoteTouch" id={typeof AcceptRemoteTouch === "object" && "id" in AcceptRemoteTouch ? AcceptRemoteTouch?.id : undefined} value={typeof AcceptRemoteTouch === "object" && "value" in AcceptRemoteTouch ? AcceptRemoteTouch?.value : AcceptRemoteTouch} /* default: false */  />
+<Member type={`FrooxEngine.SyncList\`1[FrooxEngine.NeosHorizontalChoiceBar+Item]`} name="_items" id={typeof _items === "object" && "id" in _items ? _items?.id : undefined} value={typeof _items === "object" && "value" in _items ? _items?.value : _items} /* default: FrooxEngine.SyncList`1[FrooxEngine.NeosHorizontalChoiceBar+Item] */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Width" id={typeof Width === "object" && "id" in Width ? Width?.id : undefined} value={typeof Width === "object" && "value" in Width ? Width?.value : Width} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Height" id={typeof Height === "object" && "id" in Height ? Height?.id : undefined} value={typeof Height === "object" && "value" in Height ? Height?.value : Height} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Thickness" id={typeof Thickness === "object" && "id" in Thickness ? Thickness?.id : undefined} value={typeof Thickness === "object" && "value" in Thickness ? Thickness?.value : Thickness} /* default: 0 */  />
