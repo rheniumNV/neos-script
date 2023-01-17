@@ -1,17 +1,47 @@
 import _ from "lodash";
 import { v4 as uuidv4 } from "uuid";
 
+export type JSX_Member = {
+  name: string;
+  id?: string;
+  type?: string;
+  value?: any;
+  idOnly?: true;
+  readOnly?: true;
+};
+
+export type JSX_Member_Element = {
+  [key: string]: { ID: string; Data: any } | string | any;
+};
+
+export type JSX_Component = { children: JSX_Member_Element[] };
+export type JSX_Components = { children: JSX_Component[] | undefined };
+export type JSX_SlotData = { children: JSX_Member_Element };
+export type JSX_Slot = { children: [JSX_SlotData, JSX_Components] };
+export type JSX_Children = { children: JSX_Slot[] | undefined };
+export type JSX_Raw = { json: any };
+export type JSX_IdSpace = { children: {} | JSX.Element | JSX.Element[] };
+export type JSX_Id = { key?: string };
+
 declare global {
   export namespace JSX {
-    interface IntrinsicElements {
+    type Element = any;
+
+    interface ElementChildrenAttribute {
+      children: any;
+    }
+    type IntrinsicElements = {
       slot: any;
-      slotData: any;
+      slotData: { children: JSX_Member_Element | Array<JSX_Member_Element> };
       components: any;
       component: any;
       children: any;
       assets: any;
-      member: any;
-    }
+      member: JSX_Member;
+      raw: JSX_Raw;
+      idSpace: JSX_IdSpace;
+      id: JSX_Id;
+    };
   }
 }
 
@@ -19,8 +49,16 @@ type Props = {
   children: JSX.IntrinsicElements | JSX.IntrinsicElements[];
 };
 
+const keyMap = new Map<string, string>();
+function clearKeyMap() {
+  keyMap.clear();
+}
 function generateId(key?: string) {
-  return key ? key : uuidv4();
+  const id = key ? keyMap.get(key) ?? uuidv4() : uuidv4();
+  if (key) {
+    keyMap.set(key, id);
+  }
+  return id;
 }
 
 function jsx(statement: string | any, rawProps: any, ...a: any[]) {
@@ -45,8 +83,8 @@ function jsx(statement: string | any, rawProps: any, ...a: any[]) {
         [name]: readOnly
           ? value
           : idOnly
-          ? generateId(id)
-          : { ID: generateId(id), Data: value },
+          ? id ?? generateId()
+          : { ID: id ?? generateId(), Data: value },
       };
     case "slotData":
       return {
@@ -118,21 +156,37 @@ function jsx(statement: string | any, rawProps: any, ...a: any[]) {
       });
 
       const slotId = slotData["ID"];
-      const Children = _.map(slotChildren ?? [], ({ Object, TypeVersions }) => {
-        const { assets: childAssets, ...slot } = Object;
-        assets = [...(assets ?? []), ...(childAssets ?? [])];
-        typeVersions = { ...TypeVersions, typeVersions };
-        return { ...slot, ...{ ParentReference: slotId } };
-      });
+      const Children = _.map(
+        slotChildren ?? [],
+        ({ Object, Assets, TypeVersions }) => {
+          assets = [...(assets ?? []), ...(Assets ?? [])];
+          typeVersions = { ...TypeVersions, ...typeVersions };
+          return { ...Object, ...{ ParentReference: slotId } };
+        }
+      );
+
+      const Components = {
+        ID: generateId(),
+        Data: components.map(({ version, ...component }: any) => component),
+      };
       return {
         Object: {
           ...(slotData ?? {}),
-          Components: { ID: generateId(), Data: components },
+          Components,
           Children,
         },
         Assets: assets,
         TypeVersions: typeVersions,
       };
+    case "raw":
+      const { json } = props;
+      return json;
+    case "idSpace":
+      clearKeyMap();
+      return children;
+    case "id":
+      const { key } = props;
+      return generateId(key);
   }
 }
 
