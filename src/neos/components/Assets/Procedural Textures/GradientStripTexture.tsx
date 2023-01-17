@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface GradientStripTextureInput {
         
         id?:string;
@@ -43,7 +36,7 @@ Exp,
 _orientation, } = props;
     
       return (
-        <Component type="FrooxEngine.GradientStripTexture" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.GradientStripTexture" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="HighPriorityIntegration" id={typeof HighPriorityIntegration === "object" && "id" in HighPriorityIntegration ? HighPriorityIntegration?.id : undefined} value={typeof HighPriorityIntegration === "object" && "value" in HighPriorityIntegration ? HighPriorityIntegration?.value : HighPriorityIntegration} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.TextureFilterMode]`} name="FilterMode" id={typeof FilterMode === "object" && "id" in FilterMode ? FilterMode?.id : undefined} value={typeof FilterMode === "object" && "value" in FilterMode ? FilterMode?.value : FilterMode} /* default: Point */  />

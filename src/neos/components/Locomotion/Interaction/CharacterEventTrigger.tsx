@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface CharacterEventTriggerInput {
         
         id?:string;
@@ -27,7 +20,7 @@ TriggerLeft,
 IgnoreParentUser, } = props;
     
       return (
-        <Component type="FrooxEngine.CharacterEventTrigger" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CharacterEventTrigger" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="TriggersOnly" id={typeof TriggersOnly === "object" && "id" in TriggersOnly ? TriggersOnly?.id : undefined} value={typeof TriggersOnly === "object" && "value" in TriggersOnly ? TriggersOnly?.value : TriggersOnly} /* default: false */  />
 <Member type={`FrooxEngine.SyncDelegateList\`1[System.Action\`1[BaseX.float3]]`} name="TriggerEntered" id={typeof TriggerEntered === "object" && "id" in TriggerEntered ? TriggerEntered?.id : undefined} value={typeof TriggerEntered === "object" && "value" in TriggerEntered ? TriggerEntered?.value : TriggerEntered} /* default: FrooxEngine.SyncDelegateList`1[System.Action`1[BaseX.float3]] */  />

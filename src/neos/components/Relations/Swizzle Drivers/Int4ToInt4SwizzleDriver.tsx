@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface Int4ToInt4SwizzleDriverInput {
         
         id?:string;

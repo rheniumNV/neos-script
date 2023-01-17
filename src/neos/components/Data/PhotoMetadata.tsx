@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface PhotoMetadataInput {
         
         id?:string;
@@ -47,7 +40,7 @@ Is360,
 StereoLayout, } = props;
     
       return (
-        <Component type="FrooxEngine.PhotoMetadata" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.PhotoMetadata" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.String]`} name="LocationName" id={typeof LocationName === "object" && "id" in LocationName ? LocationName?.id : undefined} value={typeof LocationName === "object" && "value" in LocationName ? LocationName?.value : LocationName} /* default: <i>null</i> */  />
 <Member type={`FrooxEngine.Sync\`1[System.Uri]`} name="LocationURL" id={typeof LocationURL === "object" && "id" in LocationURL ? LocationURL?.id : undefined} value={typeof LocationURL === "object" && "value" in LocationURL ? LocationURL?.value : LocationURL} /* default: <i>null</i> */  />

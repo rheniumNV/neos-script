@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface CommonAvatarBuilderInput {
         
         id?:string;
@@ -61,7 +54,7 @@ EmptyAvatarSlotHandler,
 FillEmptySlots, } = props;
     
       return (
-        <Component type="FrooxEngine.CommonAvatarBuilder" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CommonAvatarBuilder" id={id} persistentId={persistentId} updateOrder={updateOrder} version={3}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="LoadCloudAvatars" id={typeof LoadCloudAvatars === "object" && "id" in LoadCloudAvatars ? LoadCloudAvatars?.id : undefined} value={typeof LoadCloudAvatars === "object" && "value" in LoadCloudAvatars ? LoadCloudAvatars?.value : LoadCloudAvatars} /* default: false */  />
 <Member type={`FrooxEngine.SyncList\`1[FrooxEngine.CommonAvatarBuilder+AvatarTemplate]`} name="CustomAvatarTemplates" id={typeof CustomAvatarTemplates === "object" && "id" in CustomAvatarTemplates ? CustomAvatarTemplates?.id : undefined} value={typeof CustomAvatarTemplates === "object" && "value" in CustomAvatarTemplates ? CustomAvatarTemplates?.value : CustomAvatarTemplates} /* default: FrooxEngine.SyncList`1[FrooxEngine.CommonAvatarBuilder+AvatarTemplate] */  />

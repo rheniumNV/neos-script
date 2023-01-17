@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface CharacterForceFieldInput {
         
         id?:string;
@@ -51,7 +44,7 @@ MinCharacterVelocity,
 CharacterVelocityDampeningSpeed, } = props;
     
       return (
-        <Component type="FrooxEngine.CharacterForceField" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CharacterForceField" id={id} persistentId={persistentId} updateOrder={updateOrder} version={2}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="TriggersOnly" id={typeof TriggersOnly === "object" && "id" in TriggersOnly ? TriggersOnly?.id : undefined} value={typeof TriggersOnly === "object" && "value" in TriggersOnly ? TriggersOnly?.value : TriggersOnly} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.float3]`} name="Force" id={typeof Force === "object" && "id" in Force ? Force?.id : undefined} value={typeof Force === "object" && "value" in Force ? Force?.value : Force} /* default: [0; 0; 0] */  />

@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface SnapTargetInput {
         
         id?:string;
@@ -39,7 +32,7 @@ _snapColliderRadius,
 proxySphere, } = props;
     
       return (
-        <Component type="FrooxEngine.SnapTarget" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.SnapTarget" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.Snapper]`} name="SnapperWhitelist" id={typeof SnapperWhitelist === "object" && "id" in SnapperWhitelist ? SnapperWhitelist?.id : undefined} value={typeof SnapperWhitelist === "object" && "value" in SnapperWhitelist ? SnapperWhitelist?.value : SnapperWhitelist} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.Snapper] */  />
 <Member type={`FrooxEngine.SyncFieldList\`1[System.String]`} name="SnapperKeywordWhitelist" id={typeof SnapperKeywordWhitelist === "object" && "id" in SnapperKeywordWhitelist ? SnapperKeywordWhitelist?.id : undefined} value={typeof SnapperKeywordWhitelist === "object" && "value" in SnapperKeywordWhitelist ? SnapperKeywordWhitelist?.value : SnapperKeywordWhitelist} /* default: FrooxEngine.SyncFieldList`1[System.String] */  />

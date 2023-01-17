@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface Tween_TInput {
         type:{T: {name: string},},
         id?:string;

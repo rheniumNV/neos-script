@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface InteractiveCameraInput {
         
         id?:string;
@@ -197,7 +190,7 @@ _releasePosition,
 _releaseRotation, } = props;
     
       return (
-        <Component type="FrooxEngine.InteractiveCamera" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.InteractiveCamera" id={id} persistentId={persistentId} updateOrder={updateOrder} version={6}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.InteractiveCamera+Mode]`} name="CameraMode" id={typeof CameraMode === "object" && "id" in CameraMode ? CameraMode?.id : undefined} value={typeof CameraMode === "object" && "value" in CameraMode ? CameraMode?.value : CameraMode} /* default: Camera2D */  />
 <Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="PreviewWidth" id={typeof PreviewWidth === "object" && "id" in PreviewWidth ? PreviewWidth?.id : undefined} value={typeof PreviewWidth === "object" && "value" in PreviewWidth ? PreviewWidth?.value : PreviewWidth} /* default: 0 */  />

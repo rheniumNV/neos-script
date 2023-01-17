@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface AvatarHandDataAssignerInput {
         
         id?:string;
@@ -29,7 +22,7 @@ Chirality,
 _equippingSlot, } = props;
     
       return (
-        <Component type="FrooxEngine.CommonAvatar.AvatarHandDataAssigner" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CommonAvatar.AvatarHandDataAssigner" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.SyncRef\`1[FrooxEngine.IFingerPoseSource]]`} name="TargetReference" id={typeof TargetReference === "object" && "id" in TargetReference ? TargetReference?.id : undefined} value={typeof TargetReference === "object" && "value" in TargetReference ? TargetReference?.value : TargetReference} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.TipTouchSource]`} name="TouchSource" id={typeof TouchSource === "object" && "id" in TouchSource ? TouchSource?.id : undefined} value={typeof TouchSource === "object" && "value" in TouchSource ? TouchSource?.value : TouchSource} /* default: ID0 */  />

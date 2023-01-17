@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface AvatarAnchorTouchTriggerInput {
         
         id?:string;
@@ -37,7 +30,7 @@ AcceptRemoteTouch,
 Vibrate, } = props;
     
       return (
-        <Component type="FrooxEngine.CommonAvatar.AvatarAnchorTouchTrigger" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CommonAvatar.AvatarAnchorTouchTrigger" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.CommonAvatar.AvatarAnchor]`} name="Anchor" id={typeof Anchor === "object" && "id" in Anchor ? Anchor?.id : undefined} value={typeof Anchor === "object" && "value" in Anchor ? Anchor?.value : Anchor} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.String]`} name="EnterText" id={typeof EnterText === "object" && "id" in EnterText ? EnterText?.id : undefined} value={typeof EnterText === "object" && "value" in EnterText ? EnterText?.value : EnterText} /* default: <i>null</i> */  />

@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface SnapperInput {
         
         id?:string;
@@ -29,7 +22,7 @@ SnapTargetWhitelist,
 Keywords, } = props;
     
       return (
-        <Component type="FrooxEngine.Snapper" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.Snapper" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="UseBoundingBoxCenter" id={typeof UseBoundingBoxCenter === "object" && "id" in UseBoundingBoxCenter ? UseBoundingBoxCenter?.id : undefined} value={typeof UseBoundingBoxCenter === "object" && "value" in UseBoundingBoxCenter ? UseBoundingBoxCenter?.value : UseBoundingBoxCenter} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="SnapCheckRadius" id={typeof SnapCheckRadius === "object" && "id" in SnapCheckRadius ? SnapCheckRadius?.id : undefined} value={typeof SnapCheckRadius === "object" && "value" in SnapCheckRadius ? SnapCheckRadius?.value : SnapCheckRadius} /* default: 0 */  />

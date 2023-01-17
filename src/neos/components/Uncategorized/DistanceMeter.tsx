@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface DistanceMeterInput {
         
         id?:string;
@@ -45,7 +38,7 @@ MeasurementSpace,
 DistanceText, } = props;
     
       return (
-        <Component type="FrooxEngine.DistanceMeter" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.DistanceMeter" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRefList\`1[FrooxEngine.Slot]`} name="Anchors" id={typeof Anchors === "object" && "id" in Anchors ? Anchors?.id : undefined} value={typeof Anchors === "object" && "value" in Anchors ? Anchors?.value : Anchors} /* default: FrooxEngine.SyncRefList`1[FrooxEngine.Slot] */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="_legacyAnchor0-ID" id={typeof _legacyAnchor0 === "object" && "id" in _legacyAnchor0 ? _legacyAnchor0?.id : undefined} value={typeof _legacyAnchor0 === "object" && "value" in _legacyAnchor0 ? _legacyAnchor0?.value : _legacyAnchor0} /* default: ID0 */ idOnly />

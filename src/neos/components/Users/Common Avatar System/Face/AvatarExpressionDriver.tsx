@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface AvatarExpressionDriverInput {
         
         id?:string;
@@ -29,7 +22,7 @@ SilenceSource,
 ExpressionDrivers, } = props;
     
       return (
-        <Component type="FrooxEngine.CommonAvatar.AvatarExpressionDriver" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CommonAvatar.AvatarExpressionDriver" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.IMouthTrackingSourceComponent]`} name="DataSource" id={typeof DataSource === "object" && "id" in DataSource ? DataSource?.id : undefined} value={typeof DataSource === "object" && "value" in DataSource ? DataSource?.value : DataSource} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="StrengthMultiplier" id={typeof StrengthMultiplier === "object" && "id" in StrengthMultiplier ? StrengthMultiplier?.id : undefined} value={typeof StrengthMultiplier === "object" && "value" in StrengthMultiplier ? StrengthMultiplier?.value : StrengthMultiplier} /* default: 0 */  />

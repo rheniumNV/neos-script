@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface AvatarPoseNodeInput {
         
         id?:string;
@@ -45,7 +38,7 @@ _scale,
 _active, } = props;
     
       return (
-        <Component type="FrooxEngine.CommonAvatar.AvatarPoseNode" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CommonAvatar.AvatarPoseNode" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.BodyNode]`} name="Node" id={typeof Node === "object" && "id" in Node ? Node?.id : undefined} value={typeof Node === "object" && "value" in Node ? Node?.value : Node} /* default: NONE */  />
 <Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="EquipOrderPriority" id={typeof EquipOrderPriority === "object" && "id" in EquipOrderPriority ? EquipOrderPriority?.id : undefined} value={typeof EquipOrderPriority === "object" && "value" in EquipOrderPriority ? EquipOrderPriority?.value : EquipOrderPriority} /* default: 0 */  />

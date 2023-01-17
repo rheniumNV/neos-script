@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface EyeManagerInput {
         
         id?:string;
@@ -147,7 +140,7 @@ MiniExpressionInterval,
 MiniExpressions, } = props;
     
       return (
-        <Component type="FrooxEngine.CommonAvatar.EyeManager" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CommonAvatar.EyeManager" id={id} persistentId={persistentId} updateOrder={updateOrder} version={2}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.RawOutput\`1[BaseX.float3]`} name="TargetPoint" id={typeof TargetPoint === "object" && "id" in TargetPoint ? TargetPoint?.id : undefined} value={typeof TargetPoint === "object" && "value" in TargetPoint ? TargetPoint?.value : TargetPoint} /* default: FrooxEngine.RawOutput`1[BaseX.float3] */  />
 <Member type={`FrooxEngine.RawOutput\`1[BaseX.float3]`} name="LeftEyeTargetPoint" id={typeof LeftEyeTargetPoint === "object" && "id" in LeftEyeTargetPoint ? LeftEyeTargetPoint?.id : undefined} value={typeof LeftEyeTargetPoint === "object" && "value" in LeftEyeTargetPoint ? LeftEyeTargetPoint?.value : LeftEyeTargetPoint} /* default: FrooxEngine.RawOutput`1[BaseX.float3] */  />

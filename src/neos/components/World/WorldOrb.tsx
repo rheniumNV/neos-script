@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface WorldOrbInput {
         
         id?:string;
@@ -99,7 +92,7 @@ _lastTouch,
 _lastFlash, } = props;
     
       return (
-        <Component type="FrooxEngine.WorldOrb" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.WorldOrb" id={id} persistentId={persistentId} updateOrder={updateOrder} version={4}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.User]`} name="SessionStartingUser" id={typeof SessionStartingUser === "object" && "id" in SessionStartingUser ? SessionStartingUser?.id : undefined} value={typeof SessionStartingUser === "object" && "value" in SessionStartingUser ? SessionStartingUser?.value : SessionStartingUser} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Uri]`} name="URL" id={typeof URL === "object" && "id" in URL ? URL?.id : undefined} value={typeof URL === "object" && "value" in URL ? URL?.value : URL} /* default: <i>null</i> */  />

@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface VRIKInput {
         
         id?:string;
@@ -29,7 +22,7 @@ componentInitiated,
 _drives, } = props;
     
       return (
-        <Component type="FrooxEngine.FinalIK.VRIK" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.FinalIK.VRIK" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AutoUpdate" id={typeof AutoUpdate === "object" && "id" in AutoUpdate ? AutoUpdate?.id : undefined} value={typeof AutoUpdate === "object" && "value" in AutoUpdate ? AutoUpdate?.value : AutoUpdate} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="FixTransformsEnabled" id={typeof FixTransformsEnabled === "object" && "id" in FixTransformsEnabled ? FixTransformsEnabled?.id : undefined} value={typeof FixTransformsEnabled === "object" && "value" in FixTransformsEnabled ? FixTransformsEnabled?.value : FixTransformsEnabled} /* default: false */  />

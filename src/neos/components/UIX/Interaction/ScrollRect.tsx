@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface ScrollRectInput {
         
         id?:string;
@@ -29,7 +22,7 @@ ViewportOverride,
 __legacyContent, } = props;
     
       return (
-        <Component type="FrooxEngine.UIX.ScrollRect" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.UIX.ScrollRect" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.float2]`} name="NormalizedPosition" id={typeof NormalizedPosition === "object" && "id" in NormalizedPosition ? NormalizedPosition?.id : undefined} value={typeof NormalizedPosition === "object" && "value" in NormalizedPosition ? NormalizedPosition?.value : NormalizedPosition} /* default: [0; 0] */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.UIX.LayoutHorizontalAlignment]`} name="HorizontalAlign" id={typeof HorizontalAlign === "object" && "id" in HorizontalAlign ? HorizontalAlign?.id : undefined} value={typeof HorizontalAlign === "object" && "value" in HorizontalAlign ? HorizontalAlign?.value : HorizontalAlign} /* default: Left */  />

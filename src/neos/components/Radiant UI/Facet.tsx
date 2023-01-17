@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface FacetInput {
         
         id?:string;
@@ -37,7 +30,7 @@ IsStandalone,
 _canvas, } = props;
     
       return (
-        <Component type="FrooxEngine.Facet" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.Facet" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MinWidth" id={typeof MinWidth === "object" && "id" in MinWidth ? MinWidth?.id : undefined} value={typeof MinWidth === "object" && "value" in MinWidth ? MinWidth?.value : MinWidth} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="MaxWidth" id={typeof MaxWidth === "object" && "id" in MaxWidth ? MaxWidth?.id : undefined} value={typeof MaxWidth === "object" && "value" in MaxWidth ? MaxWidth?.value : MaxWidth} /* default: 0 */  />

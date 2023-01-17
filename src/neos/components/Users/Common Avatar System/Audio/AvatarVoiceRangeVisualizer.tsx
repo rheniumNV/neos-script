@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface AvatarVoiceRangeVisualizerInput {
         
         id?:string;
@@ -37,7 +30,7 @@ _visualSize,
 _visualColor, } = props;
     
       return (
-        <Component type="FrooxEngine.CommonAvatar.AvatarVoiceRangeVisualizer" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CommonAvatar.AvatarVoiceRangeVisualizer" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.IField\`1[System.Single]]`} name="VolumeSource" id={typeof VolumeSource === "object" && "id" in VolumeSource ? VolumeSource?.id : undefined} value={typeof VolumeSource === "object" && "value" in VolumeSource ? VolumeSource?.value : VolumeSource} /* default: ID0 */  />
 <Member type={`FrooxEngine.RelayRef\`1[FrooxEngine.AudioOutput]`} name="AudioOutput" id={typeof AudioOutput === "object" && "id" in AudioOutput ? AudioOutput?.id : undefined} value={typeof AudioOutput === "object" && "value" in AudioOutput ? AudioOutput?.value : AudioOutput} /* default: ID0 */  />

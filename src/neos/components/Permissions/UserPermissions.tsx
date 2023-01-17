@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface UserPermissionsInput {
         
         id?:string;
@@ -33,7 +26,7 @@ AllowAssignRoles,
 AllowSeeOtherRoles, } = props;
     
       return (
-        <Component type="FrooxEngine.UserPermissions" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.UserPermissions" id={id} persistentId={persistentId} updateOrder={updateOrder} version={3}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AllowEnableEditMode" id={typeof AllowEnableEditMode === "object" && "id" in AllowEnableEditMode ? AllowEnableEditMode?.id : undefined} value={typeof AllowEnableEditMode === "object" && "value" in AllowEnableEditMode ? AllowEnableEditMode?.value : AllowEnableEditMode} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AllowRespawn" id={typeof AllowRespawn === "object" && "id" in AllowRespawn ? AllowRespawn?.id : undefined} value={typeof AllowRespawn === "object" && "value" in AllowRespawn ? AllowRespawn?.value : AllowRespawn} /* default: false */  />

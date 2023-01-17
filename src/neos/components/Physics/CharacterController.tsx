@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface CharacterControllerInput {
         
         id?:string;
@@ -91,7 +84,7 @@ __ignoreRaycasts,
 __rootAtBottom, } = props;
     
       return (
-        <Component type="FrooxEngine.CharacterController" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CharacterController" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.User]`} name="SimulatingUser" id={typeof SimulatingUser === "object" && "id" in SimulatingUser ? SimulatingUser?.id : undefined} value={typeof SimulatingUser === "object" && "value" in SimulatingUser ? SimulatingUser?.value : SimulatingUser} /* default: ID0 */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.Slot]`} name="CharacterRoot" id={typeof CharacterRoot === "object" && "id" in CharacterRoot ? CharacterRoot?.id : undefined} value={typeof CharacterRoot === "object" && "value" in CharacterRoot ? CharacterRoot?.value : CharacterRoot} /* default: ID0 */  />

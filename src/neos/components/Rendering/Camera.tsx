@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface CameraInput {
         
         id?:string;
@@ -57,7 +50,7 @@ SelectiveRender,
 ExcludeRender, } = props;
     
       return (
-        <Component type="FrooxEngine.Camera" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.Camera" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="DoubleBuffered" id={typeof DoubleBuffered === "object" && "id" in DoubleBuffered ? DoubleBuffered?.id : undefined} value={typeof DoubleBuffered === "object" && "value" in DoubleBuffered ? DoubleBuffered?.value : DoubleBuffered} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="ForwardOnly" id={typeof ForwardOnly === "object" && "id" in ForwardOnly ? ForwardOnly?.id : undefined} value={typeof ForwardOnly === "object" && "value" in ForwardOnly ? ForwardOnly?.value : ForwardOnly} /* default: false */  />

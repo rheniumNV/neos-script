@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface VRIKAvatarInput {
         
         id?:string;
@@ -235,7 +228,7 @@ _rigCollidersEnabledStates,
 _horizontalTrackingLocked, } = props;
     
       return (
-        <Component type="FrooxEngine.FinalIK.VRIKAvatar" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.FinalIK.VRIKAvatar" id={id} persistentId={persistentId} updateOrder={updateOrder} version={21}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.FinalIK.VRIK]`} name="IK" id={typeof IK === "object" && "id" in IK ? IK?.id : undefined} value={typeof IK === "object" && "value" in IK ? IK?.value : IK} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="HeightCompensation" id={typeof HeightCompensation === "object" && "id" in HeightCompensation ? HeightCompensation?.id : undefined} value={typeof HeightCompensation === "object" && "value" in HeightCompensation ? HeightCompensation?.value : HeightCompensation} /* default: 0 */  />

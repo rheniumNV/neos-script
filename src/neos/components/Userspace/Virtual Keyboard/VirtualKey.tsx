@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface VirtualKeyInput {
         
         id?:string;
@@ -37,7 +30,7 @@ ModifiedAppendString,
 Keyboard, } = props;
     
       return (
-        <Component type="FrooxEngine.VirtualKey" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.VirtualKey" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.Key]`} name="TargetKey" id={typeof TargetKey === "object" && "id" in TargetKey ? TargetKey?.id : undefined} value={typeof TargetKey === "object" && "value" in TargetKey ? TargetKey?.value : TargetKey} /* default: None */  />
 <Member type={`FrooxEngine.Sync\`1[System.String]`} name="AppendString" id={typeof AppendString === "object" && "id" in AppendString ? AppendString?.id : undefined} value={typeof AppendString === "object" && "value" in AppendString ? AppendString?.value : AppendString} /* default: <i>null</i> */  />
