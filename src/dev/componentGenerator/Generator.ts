@@ -1,5 +1,4 @@
 import _ from "lodash";
-import TypeVersions from "./TypeVersions.json";
 
 type TypeDefine<I, O> = {
   define: string;
@@ -79,12 +78,19 @@ export function generateComponent({
   members: rawMembers,
   types,
   depth,
+  typeVersion,
 }: {
   fixedName: string;
   fullName: string;
-  members: { name: string; type: string; default: any; readonly: boolean }[];
+  members: {
+    name: string;
+    type: string;
+    default: any;
+    readonly: boolean;
+  }[];
   types: string[];
   depth: number;
+  typeVersion: number;
 }) {
   const members = rawMembers.map(({ name, type, default: def, readonly }) => ({
     name: name === "true" ? "True" : name === "false" ? "False" : name,
@@ -140,19 +146,10 @@ export function generateComponent({
         )}[\${[${typeNameStr}]}]\`}`
       : `"${fullName}"`;
 
-  const version = _.get(TypeVersions, fullName);
-
   const data = `import { member, Member, Component } from "${_.range(depth)
     .map(() => "../")
     .join("")}core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface ${fixedName}Input {
         ${typeInterfaceUnit}
         id?:string;
@@ -166,7 +163,7 @@ export function generateComponent({
     
       return (
         <Component type=${componentClassName} id={id} persistentId={persistentId} updateOrder={updateOrder}${
-    version ? ` version={${version}}` : ""
+    typeVersion ? ` version={${typeVersion}}` : ""
   }>
         ${memberUnit}
         </Component>

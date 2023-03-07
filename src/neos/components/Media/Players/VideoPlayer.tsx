@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface VideoPlayerInput {
         
         id?:string;
@@ -85,7 +78,7 @@ _assetProxy,
 _referenceProxy, } = props;
     
       return (
-        <Component type="FrooxEngine.VideoPlayer" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.VideoPlayer" id={id} persistentId={persistentId} updateOrder={updateOrder} version={4}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.StereoLayout]`} name="StereoLayout" id={typeof StereoLayout === "object" && "id" in StereoLayout ? StereoLayout?.id : undefined} value={typeof StereoLayout === "object" && "value" in StereoLayout ? StereoLayout?.value : StereoLayout} /* default: None */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.float2]`} name="SizeCompensation" id={typeof SizeCompensation === "object" && "id" in SizeCompensation ? SizeCompensation?.id : undefined} value={typeof SizeCompensation === "object" && "value" in SizeCompensation ? SizeCompensation?.value : SizeCompensation} /* default: [0; 0] */  />

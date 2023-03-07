@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface RecordBrowserDialogInput {
         
         id?:string;
@@ -97,7 +90,7 @@ _detailTagsRoot,
 _adminActionsRoot, } = props;
     
       return (
-        <Component type="FrooxEngine.RecordBrowserDialog" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.RecordBrowserDialog" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.RecordBrowserDialog+Page]`} name="CurrentPage" id={typeof CurrentPage === "object" && "id" in CurrentPage ? CurrentPage?.id : undefined} value={typeof CurrentPage === "object" && "value" in CurrentPage ? CurrentPage?.value : CurrentPage} /* default: Listing */  />
 <Member type={`FrooxEngine.Sync\`1[System.Uri]`} name="DetailRecord" id={typeof DetailRecord === "object" && "id" in DetailRecord ? DetailRecord?.id : undefined} value={typeof DetailRecord === "object" && "value" in DetailRecord ? DetailRecord?.value : DetailRecord} /* default: <i>null</i> */  />

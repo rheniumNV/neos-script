@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface AudioDeviceVolumeInput {
         
         id?:string;
@@ -29,7 +22,7 @@ Smoothing,
 Power, } = props;
     
       return (
-        <Component type="FrooxEngine.AudioDeviceVolume" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.AudioDeviceVolume" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.Sync\`1[System.Int32]`} name="AudioDeviceIndex" id={typeof AudioDeviceIndex === "object" && "id" in AudioDeviceIndex ? AudioDeviceIndex?.id : undefined} value={typeof AudioDeviceIndex === "object" && "value" in AudioDeviceIndex ? AudioDeviceIndex?.value : AudioDeviceIndex} /* default: 0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Volume" id={typeof Volume === "object" && "id" in Volume ? Volume?.id : undefined} value={typeof Volume === "object" && "value" in Volume ? Volume?.value : Volume} /* default: 0 */  />

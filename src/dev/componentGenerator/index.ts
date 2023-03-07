@@ -36,11 +36,13 @@ targetComponents.forEach(
     fullName,
     pathName,
     syncmembers,
+    typeVersion,
   }: {
     name: string;
     fullName: string;
     pathName: string;
     syncmembers: { name: string }[];
+    typeVersion: number;
   }) => {
     const members = _(syncmembers)
       .reject(({ name }) => name === "persistent" || name === "UpdateOrder")
@@ -77,6 +79,7 @@ targetComponents.forEach(
       members,
       types,
       depth,
+      typeVersion,
     });
 
     console.log(fixedName);

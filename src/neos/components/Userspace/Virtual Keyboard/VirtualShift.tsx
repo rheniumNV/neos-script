@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface VirtualShiftInput {
         
         id?:string;
@@ -27,7 +20,7 @@ AlwaysHold,
 _lastPress, } = props;
     
       return (
-        <Component type="FrooxEngine.VirtualShift" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.VirtualShift" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.RelayRef\`1[FrooxEngine.VirtualKeyboard]`} name="Keyboard" id={typeof Keyboard === "object" && "id" in Keyboard ? Keyboard?.id : undefined} value={typeof Keyboard === "object" && "value" in Keyboard ? Keyboard?.value : Keyboard} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="HoldPressInterval" id={typeof HoldPressInterval === "object" && "id" in HoldPressInterval ? HoldPressInterval?.id : undefined} value={typeof HoldPressInterval === "object" && "value" in HoldPressInterval ? HoldPressInterval?.value : HoldPressInterval} /* default: 0 */  />

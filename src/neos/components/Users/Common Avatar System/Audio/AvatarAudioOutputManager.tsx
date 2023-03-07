@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface AvatarAudioOutputManagerInput {
         
         id?:string;
@@ -73,7 +66,7 @@ _scaleCompensation,
 _audioConfiguration, } = props;
     
       return (
-        <Component type="FrooxEngine.CommonAvatar.AvatarAudioOutputManager" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CommonAvatar.AvatarAudioOutputManager" id={id} persistentId={persistentId} updateOrder={updateOrder} version={4}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.AudioOutput]`} name="AudioOutput" id={typeof AudioOutput === "object" && "id" in AudioOutput ? AudioOutput?.id : undefined} value={typeof AudioOutput === "object" && "value" in AudioOutput ? AudioOutput?.value : AudioOutput} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="IsViewVoice" id={typeof IsViewVoice === "object" && "id" in IsViewVoice ? IsViewVoice?.id : undefined} value={typeof IsViewVoice === "object" && "value" in IsViewVoice ? IsViewVoice?.value : IsViewVoice} /* default: false */  />

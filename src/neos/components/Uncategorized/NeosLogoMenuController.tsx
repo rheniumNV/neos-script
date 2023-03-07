@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface NeosLogoMenuControllerInput {
         
         id?:string;
@@ -45,7 +38,7 @@ _independentDrive,
 menuItemsSlot, } = props;
     
       return (
-        <Component type="FrooxEngine.NeosLogoMenuController" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.NeosLogoMenuController" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.TextUnlitMaterial]`} name="DefaultFontMaterial" id={typeof DefaultFontMaterial === "object" && "id" in DefaultFontMaterial ? DefaultFontMaterial?.id : undefined} value={typeof DefaultFontMaterial === "object" && "value" in DefaultFontMaterial ? DefaultFontMaterial?.value : DefaultFontMaterial} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[BaseX.color]`} name="DisabledOutlineColor" id={typeof DisabledOutlineColor === "object" && "id" in DisabledOutlineColor ? DisabledOutlineColor?.id : undefined} value={typeof DisabledOutlineColor === "object" && "value" in DisabledOutlineColor ? DisabledOutlineColor?.value : DisabledOutlineColor} /* default: [0; 0; 0; 0] */  />

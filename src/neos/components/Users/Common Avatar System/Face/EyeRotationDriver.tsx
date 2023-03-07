@@ -1,12 +1,5 @@
 import { member, Member, Component } from "../../../../core";
     
-    declare global {
-      namespace JSX {
-        interface IntrinsicElements {
-          component: any;
-        }
-      }
-    }
     export interface EyeRotationDriverInput {
         
         id?:string;
@@ -29,7 +22,7 @@ MaxSwing,
 Eyes, } = props;
     
       return (
-        <Component type="FrooxEngine.CommonAvatar.EyeRotationDriver" id={id} persistentId={persistentId} updateOrder={updateOrder}>
+        <Component type="FrooxEngine.CommonAvatar.EyeRotationDriver" id={id} persistentId={persistentId} updateOrder={updateOrder} version={1}>
         <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
 <Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.CommonAvatar.EyeManager]`} name="EyeManager" id={typeof EyeManager === "object" && "id" in EyeManager ? EyeManager?.id : undefined} value={typeof EyeManager === "object" && "value" in EyeManager ? EyeManager?.value : EyeManager} /* default: ID0 */  />
 <Member type={`FrooxEngine.Sync\`1[System.Single]`} name="EyeMotionScale" id={typeof EyeMotionScale === "object" && "id" in EyeMotionScale ? EyeMotionScale?.id : undefined} value={typeof EyeMotionScale === "object" && "value" in EyeMotionScale ? EyeMotionScale?.value : EyeMotionScale} /* default: 0 */  />
