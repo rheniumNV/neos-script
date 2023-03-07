@@ -41,6 +41,7 @@ declare global {
       raw: JSX_Raw;
       idSpace: JSX_IdSpace;
       id: JSX_Id;
+      common: any;
     };
   }
 }
@@ -159,7 +160,18 @@ function jsx(statement: string | any, rawProps: any, ...a: any[]) {
       const Children = _.map(
         slotChildren ?? [],
         ({ Object, Assets, TypeVersions }) => {
-          assets = [...(assets ?? []), ...(Assets ?? [])];
+          assets = [
+            ...(assets ?? []),
+            ...(Assets ?? []).filter(
+              (asset: any) =>
+                !_.has(
+                  assets?.map((asset: unknown) =>
+                    _.get(asset, ["Data", "ID"])
+                  ) ?? [],
+                  _.get(asset, ["Data", "ID"])
+                )
+            ),
+          ];
           typeVersions = { ...TypeVersions, ...typeVersions };
           return { ...Object, ...{ ParentReference: slotId } };
         }
