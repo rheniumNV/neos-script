@@ -15,7 +15,7 @@ export function Slot({
   assets,
 }: {
   id?: string;
-  persistentId?: boolean;
+  persistentId?: string;
   name?: string;
   tag?: string;
   active?: boolean;
@@ -30,9 +30,9 @@ export function Slot({
   return (
     <slot>
       <slotData>
-        <Member name="ID" value={id} idOnly />
+        <Member name="ID" id={id} idOnly />
         <Member name="Name" value={name ?? "EmptyObject"} />
-        <Member name="Persistent-Id" value={persistentId} idOnly />
+        <Member name="Persistent-Id" id={persistentId} idOnly />
         <Member name="Tag" value={tag} />
         <Member name="Active" value={active} />
         <Member name="Position" value={position} />
