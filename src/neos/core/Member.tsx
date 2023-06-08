@@ -7,6 +7,7 @@ export function Member({
   value,
   readOnly,
   idOnly,
+  isRaw,
 }: {
   name: string;
   id?: string;
@@ -14,6 +15,7 @@ export function Member({
   value?: any;
   idOnly?: true;
   readOnly?: true;
+  isRaw?: true;
 }) {
   return (
     <member
@@ -22,6 +24,7 @@ export function Member({
       value={value}
       readOnly={readOnly}
       idOnly={idOnly}
+      isRaw={isRaw}
     />
   );
 }

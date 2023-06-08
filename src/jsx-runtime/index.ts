@@ -8,6 +8,7 @@ export type JSX_Member = {
   value?: any;
   idOnly?: true;
   readOnly?: true;
+  isRaw?: true;
 };
 
 export type JSX_Member_Element = {
@@ -79,13 +80,14 @@ function jsx(statement: string | any, rawProps: any, ...a: any[]) {
 
   switch (statement) {
     case "member":
-      const { name, id, value, readOnly, idOnly } = props;
+      const { name, id, value, readOnly, idOnly, isRaw } = props;
       return {
-        [name]: readOnly
-          ? value
-          : idOnly
-          ? id ?? generateId()
-          : { ID: id ?? generateId(), Data: value },
+        [name]:
+          readOnly || isRaw
+            ? value
+            : idOnly
+            ? id ?? generateId()
+            : { ID: id ?? generateId(), Data: value },
       };
     case "slotData":
       return {
