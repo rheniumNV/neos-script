@@ -15,8 +15,8 @@ LocalValue, } = props;
     
       return (
         <Component type={`FrooxEngine.WorldValueSync\`1[${[T,]}]`} id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
-<Member type={`FrooxEngine.RelayRef\`1[FrooxEngine.IField\`1[${T}]]`} name="LocalValue" id={typeof LocalValue === "object" && "id" in LocalValue ? LocalValue?.id : undefined} value={typeof LocalValue === "object" && "value" in LocalValue ? LocalValue?.value : LocalValue} /* default: null */  />
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.RelayRef\`1[FrooxEngine.IField\`1[${T}]]`} name="LocalValue" id={typeof LocalValue === "object" && "id" in LocalValue ? LocalValue?.id : undefined} value={typeof LocalValue === "object" && "value" in LocalValue ? LocalValue?.value : LocalValue} /* default: null */  isRaw={typeof LocalValue === "object" && "isRaw" in LocalValue && LocalValue.isRaw ? true : undefined} />
         </Component>
       );
     };

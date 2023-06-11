@@ -15,8 +15,8 @@ Value, } = props;
     
       return (
         <Component type="FrooxEngine.DebugColorX" id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
-<Member type={`FrooxEngine.Sync\`1[BaseX.colorX]`} name="Value" id={typeof Value === "object" && "id" in Value ? Value?.id : undefined} value={typeof Value === "object" && "value" in Value ? Value?.value : Value} /* default: [0; 0; 0; 0; Linear] */  />
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.Sync\`1[BaseX.colorX]`} name="Value" id={typeof Value === "object" && "id" in Value ? Value?.id : undefined} value={typeof Value === "object" && "value" in Value ? Value?.value : Value} /* default: [0; 0; 0; 0; Linear] */  isRaw={typeof Value === "object" && "isRaw" in Value && Value.isRaw ? true : undefined} />
         </Component>
       );
     };

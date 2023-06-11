@@ -19,10 +19,10 @@ Curvature, } = props;
     
       return (
         <Component type="FrooxEngine.RadiantDashStateSync" id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
-<Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="IsFreeform" id={typeof IsFreeform === "object" && "id" in IsFreeform ? IsFreeform?.id : undefined} value={typeof IsFreeform === "object" && "value" in IsFreeform ? IsFreeform?.value : IsFreeform} /* default: false */  />
-<Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="IsOpen" id={typeof IsOpen === "object" && "id" in IsOpen ? IsOpen?.id : undefined} value={typeof IsOpen === "object" && "value" in IsOpen ? IsOpen?.value : IsOpen} /* default: false */  />
-<Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Curvature" id={typeof Curvature === "object" && "id" in Curvature ? Curvature?.id : undefined} value={typeof Curvature === "object" && "value" in Curvature ? Curvature?.value : Curvature} /* default: 0 */  />
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="IsFreeform" id={typeof IsFreeform === "object" && "id" in IsFreeform ? IsFreeform?.id : undefined} value={typeof IsFreeform === "object" && "value" in IsFreeform ? IsFreeform?.value : IsFreeform} /* default: false */  isRaw={typeof IsFreeform === "object" && "isRaw" in IsFreeform && IsFreeform.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="IsOpen" id={typeof IsOpen === "object" && "id" in IsOpen ? IsOpen?.id : undefined} value={typeof IsOpen === "object" && "value" in IsOpen ? IsOpen?.value : IsOpen} /* default: false */  isRaw={typeof IsOpen === "object" && "isRaw" in IsOpen && IsOpen.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.Sync\`1[System.Single]`} name="Curvature" id={typeof Curvature === "object" && "id" in Curvature ? Curvature?.id : undefined} value={typeof Curvature === "object" && "value" in Curvature ? Curvature?.value : Curvature} /* default: 0 */  isRaw={typeof Curvature === "object" && "isRaw" in Curvature && Curvature.isRaw ? true : undefined} />
         </Component>
       );
     };
