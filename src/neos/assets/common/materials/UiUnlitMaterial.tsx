@@ -133,5 +133,5 @@ export const UiUnlitMaterial = {
         },
       },
     },
-  ],
+  ].map((asset) => <raw json={asset} />),
 };

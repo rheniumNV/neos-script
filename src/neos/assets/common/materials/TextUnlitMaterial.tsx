@@ -92,5 +92,5 @@ export const TextUnlitMaterial = {
         },
       },
     },
-  ],
+  ].map((asset) => <raw json={asset} />),
 };
