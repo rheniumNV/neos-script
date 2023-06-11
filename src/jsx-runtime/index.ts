@@ -114,7 +114,7 @@ function jsx(statement: string | any, rawProps: any, ...a: any[]) {
         ),
       };
     case "children":
-      return { tag: "slotChildren", data: children };
+      return { tag: "slotChildren", data: children.filter((v) => v) };
     case "components":
       return { tag: "components", data: children };
     case "assets":
