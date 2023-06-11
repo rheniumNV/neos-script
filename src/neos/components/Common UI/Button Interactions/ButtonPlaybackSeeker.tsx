@@ -19,10 +19,10 @@ Continous, } = props;
     
       return (
         <Component type="FrooxEngine.ButtonPlaybackSeeker" id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
-<Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.IPlayable]`} name="Playback" id={typeof Playback === "object" && "id" in Playback ? Playback?.id : undefined} value={typeof Playback === "object" && "value" in Playback ? Playback?.value : Playback} /* default: ID0 */  />
-<Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Vertical" id={typeof Vertical === "object" && "id" in Vertical ? Vertical?.id : undefined} value={typeof Vertical === "object" && "value" in Vertical ? Vertical?.value : Vertical} /* default: false */  />
-<Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Continous" id={typeof Continous === "object" && "id" in Continous ? Continous?.id : undefined} value={typeof Continous === "object" && "value" in Continous ? Continous?.value : Continous} /* default: false */  />
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.IPlayable]`} name="Playback" id={typeof Playback === "object" && "id" in Playback ? Playback?.id : undefined} value={typeof Playback === "object" && "value" in Playback ? Playback?.value : Playback} /* default: ID0 */  isRaw={typeof Playback === "object" && "isRaw" in Playback && Playback.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Vertical" id={typeof Vertical === "object" && "id" in Vertical ? Vertical?.id : undefined} value={typeof Vertical === "object" && "value" in Vertical ? Vertical?.value : Vertical} /* default: false */  isRaw={typeof Vertical === "object" && "isRaw" in Vertical && Vertical.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Continous" id={typeof Continous === "object" && "id" in Continous ? Continous?.id : undefined} value={typeof Continous === "object" && "value" in Continous ? Continous?.value : Continous} /* default: false */  isRaw={typeof Continous === "object" && "isRaw" in Continous && Continous.isRaw ? true : undefined} />
         </Component>
       );
     };

@@ -132,8 +132,8 @@ export function generateComponent({
         "[T]",
         "[${T}]"
       )}\`} name="${fixedName}" id={typeof ${name} === "object" && "id" in ${name} ? ${name}?.id : undefined} value={typeof ${name} === "object" && "value" in ${name} ? ${name}?.value : ${name}} /* default: ${def} */ ${
-        readonly ? "idOnly" : ""
-      } />`;
+        readonly ? "readOnly" : ""
+      } isRaw={typeof ${name} === "object" && "isRaw" in ${name} && ${name}.isRaw ? true : undefined} />`;
     })
     .join("\n");
 

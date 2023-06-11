@@ -203,5 +203,5 @@ export const Font = {
         },
       },
     },
-  ],
+  ].map((asset) => <raw json={asset} />),
 };

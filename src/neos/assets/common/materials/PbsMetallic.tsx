@@ -120,5 +120,5 @@ export const PbsMetallic = {
         },
       },
     },
-  ],
+  ].map((asset) => <raw json={asset} />),
 };

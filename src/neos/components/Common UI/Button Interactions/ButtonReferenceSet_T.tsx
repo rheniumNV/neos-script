@@ -17,9 +17,9 @@ SetReference, } = props;
     
       return (
         <Component type={`FrooxEngine.ButtonReferenceSet\`1[${[T,]}]`} id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
-<Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.SyncRef\`1[${T}]]`} name="TargetReference" id={typeof TargetReference === "object" && "id" in TargetReference ? TargetReference?.id : undefined} value={typeof TargetReference === "object" && "value" in TargetReference ? TargetReference?.value : TargetReference} /* default: null */  />
-<Member type={`FrooxEngine.SyncRef\`1[${T}]`} name="SetReference" id={typeof SetReference === "object" && "id" in SetReference ? SetReference?.id : undefined} value={typeof SetReference === "object" && "value" in SetReference ? SetReference?.value : SetReference} /* default: null */  />
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.SyncRef\`1[FrooxEngine.SyncRef\`1[${T}]]`} name="TargetReference" id={typeof TargetReference === "object" && "id" in TargetReference ? TargetReference?.id : undefined} value={typeof TargetReference === "object" && "value" in TargetReference ? TargetReference?.value : TargetReference} /* default: null */  isRaw={typeof TargetReference === "object" && "isRaw" in TargetReference && TargetReference.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.SyncRef\`1[${T}]`} name="SetReference" id={typeof SetReference === "object" && "id" in SetReference ? SetReference?.id : undefined} value={typeof SetReference === "object" && "value" in SetReference ? SetReference?.value : SetReference} /* default: null */  isRaw={typeof SetReference === "object" && "isRaw" in SetReference && SetReference.isRaw ? true : undefined} />
         </Component>
       );
     };

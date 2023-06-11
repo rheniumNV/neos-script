@@ -15,8 +15,8 @@ AspectRatio, } = props;
     
       return (
         <Component type="FrooxEngine.UIX.AspectRatioFitter" id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  />
-<Member type={`FrooxEngine.Sync\`1[System.Single]`} name="AspectRatio" id={typeof AspectRatio === "object" && "id" in AspectRatio ? AspectRatio?.id : undefined} value={typeof AspectRatio === "object" && "value" in AspectRatio ? AspectRatio?.value : AspectRatio} /* default: 0 */  />
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
+<Member type={`FrooxEngine.Sync\`1[System.Single]`} name="AspectRatio" id={typeof AspectRatio === "object" && "id" in AspectRatio ? AspectRatio?.id : undefined} value={typeof AspectRatio === "object" && "value" in AspectRatio ? AspectRatio?.value : AspectRatio} /* default: 0 */  isRaw={typeof AspectRatio === "object" && "isRaw" in AspectRatio && AspectRatio.isRaw ? true : undefined} />
         </Component>
       );
     };
