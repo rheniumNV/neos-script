@@ -55,12 +55,12 @@ export function Slot({
         <Member name="ID" id={id} idOnly />
         <Member name="Persistent-Id" id={persistentId} idOnly />
         <MemberWrapper name="Name" member={name ?? "EmptyObject"} />
-        <MemberWrapper name="Tag" member={tag} />
-        <MemberWrapper name="Active" member={active} />
-        <MemberWrapper name="Position" member={position} />
-        <MemberWrapper name="Rotation" member={rotation} />
-        <MemberWrapper name="Scale" member={scale} />
-        <MemberWrapper name="OrderOffset" member={orderOffset} />
+        <MemberWrapper name="Tag" member={tag ?? ""} />
+        <MemberWrapper name="Active" member={active ?? true} />
+        <MemberWrapper name="Position" member={position ?? [0, 0, 0]} />
+        <MemberWrapper name="Rotation" member={rotation ?? [0, 0, 0, 0]} />
+        <MemberWrapper name="Scale" member={scale ?? [1, 1, 1]} />
+        <MemberWrapper name="OrderOffset" member={orderOffset ?? 0} />
       </slotData>
       <components>{components}</components>
       <children>{children}</children>
