@@ -1,6 +1,6 @@
 {
   "name": "neos-script",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "",
   "main": "core/index.js",
   "types": "core/index.d.ts",
