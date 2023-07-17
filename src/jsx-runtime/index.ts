@@ -175,7 +175,7 @@ function jsx(statement: string | any, rawProps: any, ...a: any[]) {
             ),
           ];
           typeVersions = { ...TypeVersions, ...typeVersions };
-          return { ...Object, ...{ ParentReference: slotId } };
+          return { ...Object, ...{ ParentReference: uuidv4() } };
         }
       );
 
