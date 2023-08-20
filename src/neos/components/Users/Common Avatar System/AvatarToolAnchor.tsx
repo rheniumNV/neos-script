@@ -15,7 +15,7 @@ AnchorPoint, } = props;
     
       return (
         <Component type="FrooxEngine.CommonAvatar.AvatarToolAnchor" id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled ?? true} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
 <Member type={`FrooxEngine.Sync\`1[FrooxEngine.CommonAvatar.AvatarToolAnchor+Point]`} name="AnchorPoint" id={typeof AnchorPoint === "object" && "id" in AnchorPoint ? AnchorPoint?.id : undefined} value={typeof AnchorPoint === "object" && "value" in AnchorPoint ? AnchorPoint?.value : AnchorPoint} /* default: Tooltip */  isRaw={typeof AnchorPoint === "object" && "isRaw" in AnchorPoint && AnchorPoint.isRaw ? true : undefined} />
         </Component>
       );

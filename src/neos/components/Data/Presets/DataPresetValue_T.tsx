@@ -17,7 +17,7 @@ TargetField, } = props;
     
       return (
         <Component type={`FrooxEngine.DataPresetValue\`1[${[T,]}]`} id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled ?? true} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
 <Member type={`FrooxEngine.Sync\`1[${T}]`} name="PresetValue" id={typeof PresetValue === "object" && "id" in PresetValue ? PresetValue?.id : undefined} value={typeof PresetValue === "object" && "value" in PresetValue ? PresetValue?.value : PresetValue} /* default: null */  isRaw={typeof PresetValue === "object" && "isRaw" in PresetValue && PresetValue.isRaw ? true : undefined} />
 <Member type={`FrooxEngine.RelayRef\`1[FrooxEngine.IField\`1[${T}]]`} name="TargetField" id={typeof TargetField === "object" && "id" in TargetField ? TargetField?.id : undefined} value={typeof TargetField === "object" && "value" in TargetField ? TargetField?.value : TargetField} /* default: null */  isRaw={typeof TargetField === "object" && "isRaw" in TargetField && TargetField.isRaw ? true : undefined} />
         </Component>

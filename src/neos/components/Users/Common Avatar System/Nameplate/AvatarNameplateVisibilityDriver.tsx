@@ -17,7 +17,7 @@ Visible, } = props;
     
       return (
         <Component type="FrooxEngine.AvatarNameplateVisibilityDriver" id={id} persistentId={persistentId} updateOrder={updateOrder}>
-        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
+        <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="Enabled" id={typeof Enabled === "object" && "id" in Enabled ? Enabled?.id : undefined} value={typeof Enabled === "object" && "value" in Enabled ? Enabled?.value : Enabled ?? true} /* default: false */  isRaw={typeof Enabled === "object" && "isRaw" in Enabled && Enabled.isRaw ? true : undefined} />
 <Member type={`FrooxEngine.Sync\`1[System.Boolean]`} name="AlwaysShowToContacts" id={typeof AlwaysShowToContacts === "object" && "id" in AlwaysShowToContacts ? AlwaysShowToContacts?.id : undefined} value={typeof AlwaysShowToContacts === "object" && "value" in AlwaysShowToContacts ? AlwaysShowToContacts?.value : AlwaysShowToContacts} /* default: false */  isRaw={typeof AlwaysShowToContacts === "object" && "isRaw" in AlwaysShowToContacts && AlwaysShowToContacts.isRaw ? true : undefined} />
 <Member type={`FrooxEngine.FieldDrive\`1[System.Boolean]`} name="Visible" id={typeof Visible === "object" && "id" in Visible ? Visible?.id : undefined} value={typeof Visible === "object" && "value" in Visible ? Visible?.value : Visible} /* default: ID0 */  isRaw={typeof Visible === "object" && "isRaw" in Visible && Visible.isRaw ? true : undefined} />
         </Component>
