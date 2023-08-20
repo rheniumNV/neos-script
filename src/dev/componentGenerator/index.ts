@@ -50,6 +50,7 @@ targetComponents.forEach(
       name: string;
       type: string;
       default: any;
+      fallback: any;
       readonly: boolean;
     }[];
 

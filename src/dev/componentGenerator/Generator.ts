@@ -86,18 +86,22 @@ export function generateComponent({
     name: string;
     type: string;
     default: any;
+    fallback: any;
     readonly: boolean;
   }[];
   types: string[];
   depth: number;
   typeVersion: number;
 }) {
-  const members = rawMembers.map(({ name, type, default: def, readonly }) => ({
-    name: name === "true" ? "True" : name === "false" ? "False" : name,
-    type,
-    default: def,
-    readonly,
-  }));
+  const members = rawMembers.map(
+    ({ name, type, default: def, fallback, readonly }) => ({
+      name: name === "true" ? "True" : name === "false" ? "False" : name,
+      type,
+      default: def,
+      fallback: name === "Enabled" ? true : fallback,
+      readonly,
+    })
+  );
   const interfaceUnit = _(members)
     .map(({ name, type }) => {
       return `${name}?: member<${_.get(TypeMap, type, anyType).define}>;`;
@@ -125,13 +129,15 @@ export function generateComponent({
     })
     .join("\n");
   const memberUnit = _(members)
-    .map(({ name, type, default: def, readonly }) => {
+    .map(({ name, type, default: def, fallback, readonly }) => {
       const fixedName = readonly ? `${name}-ID` : name;
       return `<Member type={\`${_.replace(
         _.replace(type, new RegExp("`", "g"), "\\`"),
         "[T]",
         "[${T}]"
-      )}\`} name="${fixedName}" id={typeof ${name} === "object" && "id" in ${name} ? ${name}?.id : undefined} value={typeof ${name} === "object" && "value" in ${name} ? ${name}?.value : ${name}} /* default: ${def} */ ${
+      )}\`} name="${fixedName}" id={typeof ${name} === "object" && "id" in ${name} ? ${name}?.id : undefined} value={typeof ${name} === "object" && "value" in ${name} ? ${name}?.value : ${name}${
+        fallback !== undefined ? ` ?? ${JSON.stringify(fallback)}` : ""
+      }} /* default: ${def} */ ${
         readonly ? "readOnly" : ""
       } isRaw={typeof ${name} === "object" && "isRaw" in ${name} && ${name}.isRaw ? true : undefined} />`;
     })
