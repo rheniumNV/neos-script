@@ -20,7 +20,7 @@ export function Component({
       <Member name="ID" id={id} idOnly={true} />
       <Member name="Persistent-ID" id={persistentId} idOnly={true} />
       <Member
-        name="UpdateUpdateOrder"
+        name="UpdateOrder"
         id={
           typeof updateOrder === "object" && "id" in updateOrder
             ? updateOrder.id
@@ -29,7 +29,7 @@ export function Component({
         value={
           typeof updateOrder === "object" && "value" in updateOrder
             ? updateOrder.value
-            : updateOrder
+            : updateOrder ?? 0
         }
       />
       {children}
